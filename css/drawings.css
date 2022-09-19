@@ -7165,6 +7165,7 @@ z-index: 2;
 }
 
 .loop::after {
+  white-space: pre-wrap;
   animation: animateGraph 15s 1;
   content: "for (let x = 0; x < 3; x++) { \0A   doSomething(); \0A }";
   display: inline-block;
