@@ -100,7 +100,7 @@ header > div {
   gap: 0.5rem;
   flex-wrap: wrap;
   align-items: center;
-  font-family: 'Courier New', Courier, monospace, monospace;
+  /* font-family: 'Courier New', Courier, monospace, monospace; */
 }
 
 header > div:last-child a {
