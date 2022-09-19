@@ -3107,6 +3107,7 @@
 }
 
 .invitation {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   cursor:pointer;
   white-space: pre-wrap;
   font: 1.5vmin / 1.5vmin Georgia, Garamon, Timesserif;
