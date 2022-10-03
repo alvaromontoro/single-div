@@ -1,5 +1,92 @@
+/* divtober snack */
+.snack-container {
+  background: #a005;
+}
+
+.snack {
+  --base: #c00;
+  --dark: #a00;
+  font-family: 'Zen Kurenaido', Helvetica, sans-serif;
+  font-style: italic;
+  color: #fff;
+  text-shadow: -0.15vh 0.15vh #000;
+  font-weight: 900;
+  font-size: 2.5vh;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 15.8vh;
+  width: 27vh;
+  height: 36vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-mask:
+    radial-gradient(6% 45% at 0 50%, #0000 98.5%, #000 99.99%) 0 50% / 55% 100% no-repeat,
+    radial-gradient(5% 45% at 100% 50%, #0000 98.5%, #000 99.99%) 100% 55% / 50% 100% no-repeat
+    ;
+  background: 
+    /* bag shadows */
+    radial-gradient(at 0 0, #fcc2, #fcc0, #0000, #0002) 50% 50% / 100% 90%,
+    linear-gradient(#fcc2, #fcc0, #0000, #0002) 50% 50% / 100% 90%,
+    /* logo */
+    radial-gradient(350% 110% at 100% 100%, #0000 33%, #f00 0 90%, #0000 0) 40% 53.15% / 17% 15%,
+    radial-gradient(350% 110% at 0 0, #0000 33%, #f00 0 90%, #0000 0) 60% 46.85% / 17% 15%,
+    radial-gradient(circle, gold 10%, orange 17%, #0000 17.2% 17.6%, #fff0 17.8%),
+    linear-gradient(maroon 90%, white 0) 37% 56.5% / 10% 3%,
+    linear-gradient(white 10%, maroon 0) 63% 43.5% / 10% 3%,
+    radial-gradient(350% 110% at 100% 100%, #0000 33%, #fff 0 90%, #0000 0) 40% 53.4% / 18% 16%,
+    radial-gradient(350% 110% at 0 0, #0000 33%, #fff 0 90%, #0000 0) 60% 46.65% / 18% 16%,
+    radial-gradient(circle, gold 10%, orange 17%, #fff 17.2% 17.6%, #fff0 17.8%),
+    /* chip */
+    linear-gradient(#6302 0 0) 67% 81% / 25% 0.3%,
+    linear-gradient(#6302 0 0) 67% 79.5% / 25% 0.3%,
+    linear-gradient(#6302 0 0) 67% 82.5% / 20% 0.3%,
+    linear-gradient(#6302 0 0) 67% 77.6% / 22% 0.3%,
+    linear-gradient(#6302 0 0) 67% 84% / 22% 0.3%,
+    linear-gradient(#6302 0 0) 67% 76.1% / 17% 0.3%,
+    radial-gradient(farthest-side, #fc6 99.99%, #0000 0) 67% 84% / 25% 12%,
+    /* base */
+    repeating-radial-gradient(circle, #fff1 0 20%, #fff0 0 40%) 50% 50% / 100% 90%,
+    linear-gradient(var(--base) 0 0) 50% 50% / 100% 90%,
+    repeating-linear-gradient(90deg, var(--base) 0 1.5%, var(--dark) 0 2%);
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 84% 0, 84% 3.7%, 84.3% 4.25%, 84.6% 3.7%, 84.6% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.snack::before {
+  content: "BEST BY \a 10/04";
+  text-shadow: none;
+  font-style: normal;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  white-space: pre-wrap;
+  position: absolute;
+  color: black;
+  font-size: 1vh;
+  text-align: center;
+  top: 10%;
+  right: 7%;
+  color: #000c;
+  border-radius: 50% 50%;
+}
+
+.snack::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  bottom: 10%;
+  right: 12%;
+  background: 
+    repeating-linear-gradient(90deg, #0000 0 11%, #6302 0 13%),
+    linear-gradient(90deg, #ec6, #d8b850);
+  border-radius: 50% / 45% 50% 55% 53%;
+  transform: rotate(30deg) skew(-20deg);
+}
+
 /* divtober dry */
-.dry-color:checked ~ .dry {
+#dry-color:checked ~ .dry {
   --rain: #6a6a6a;
   filter: contrast(400%) grayscale(100%);
 }
