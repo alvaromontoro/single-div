@@ -1,3 +1,77 @@
+/* divtober quiet */
+.quiet-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #123;
+}
+
+.quiet-2::before {
+  --x: 50%;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    /* ufo */
+    radial-gradient(10vw 4vw at 50% calc(100% - 75.5vw), #ccc 20%, #0000 0) var(--x) 0 / 50% 50% no-repeat,
+    radial-gradient(10vw 4vw at 50% calc(100% - 75vw), #888 30%, #0000 0) var(--x) 0 / 50% 50% no-repeat,
+    /* sun rising */
+    radial-gradient(circle at 50% calc(100% - 20vw), #ffef 1vw, #fccc, #fc89, #f855, #f851, #fff0 45vw) 50% 100%,
+    radial-gradient(circle at 50% calc(100% - 20vw), #fff 0.5vw, #fff0 4%),
+    /* stars */
+    radial-gradient(circle, #fff5 0.125vmin, #fff0 0) 17% 17% / 31% 31%,
+    radial-gradient(circle, #fff8 0.15vmin, #fff0 0) 11% 21% / 21% 41%,
+    radial-gradient(circle, #fff4 0.125vmin, #fff0 0) 15% 11% / 41% 33%,
+    radial-gradient(circle, #fff3 0.2vmin, #fff0 0) 50% 50% / 37% 25%,
+    radial-gradient(circle, #fff7 0.125vmin, #fff0 0) 57% 13% / 34% 23%,
+    radial-gradient(circle, #ffc5 0.125vmin, #fff0 0) 77% -17% / 23% 27%,
+    /* dark areas */
+    
+    radial-gradient(at 0 0, #123, #1230 50%),
+    radial-gradient(at 100% 0, #123, #1230 80%),
+    radial-gradient(circle at 50% 0, #456, #4560 30%),
+    radial-gradient(at 50% 0, #123 30%, #1230 50%),
+    radial-gradient(100% 100% at 0% 50%, #123, #1230 50%),
+    radial-gradient(100% 100% at 100% 50%, #123, #1230 70%),
+     radial-gradient(50% 25% at 50% calc(100% - 20vw), #34c7, #34c0 45vw) 50% 100%,
+    /* sun rays */
+    repeating-conic-gradient(at 50% calc(100% - 20vw), #ffffff05 0 3%, #fff0 7%),
+    repeating-conic-gradient(at 50% calc(100% - 20vw), #ffffff03 6%, #fff0 11%),
+    repeating-conic-gradient(at 50% calc(100% - 20vw), #ffffff03 1deg, #fff0 3deg)
+    ;
+}
+
+.quiet-2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 85%);
+  width: 250vw;
+  height: 150vw;
+  border-radius: 50%;
+  box-shadow: 0 0 2vmin #fff;
+  background: 
+    /* sun light overflow */
+    radial-gradient(circle at 50% 0, #ffe8, #fcc4, #fc81, #fff0 35vw) 50% 100%,
+    radial-gradient(100% 50% at 50% 0, #fff2, #ff00 20%),
+    /* ground color */
+    radial-gradient(farthest-side at 20% 50%, #2108 80%, #0000),
+    radial-gradient(farthest-side at 70% 50%, #1208 80%, #0000),
+    radial-gradient(70% 50%, #123c 91%, #ffff),
+    /* more sunlight overflow */
+    repeating-conic-gradient(at 50% 0, #fff0 27%, #fff2 34%),
+    repeating-conic-gradient(at 50% 0, #fff0 37%, #fff1 40%),
+    /* base */
+    radial-gradient(farthest-side, #0128 90%, #0123, #eee 99%),
+    linear-gradient(#666, #000 20%)
+}
 /* divtober snack */
 .snack-container {
   background: #a005;

@@ -35,6 +35,12 @@ body > .grand {
   grid-row-end: span 2;
 }
 
+body > .squared {
+  height: 100vw;
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
 body > .interactive::after {
   content: "Interactive";
   display: inline-block;
