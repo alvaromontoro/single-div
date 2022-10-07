@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: cssdrawings.com
+Token: 1eb3e55e6c44cea83e66756e05ac97df07bcac06364e088fcb9b2a606afb2077
