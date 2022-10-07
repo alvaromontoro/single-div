@@ -47,7 +47,7 @@
     /* background sky and lake */
     radial-gradient(at 70% 0%, #dcf5, #cab0 50%) 100% 100% / 100% 15%,
     radial-gradient(100% 140% at 60% 50%, #1230, #1234) 0 85.5% / 100% 1%,
-    linear-gradient(#349, #cab 85vmax, #cab 0, #65a);
+    linear-gradient(#349, #cab 85vw, #cab 0, #65a);
   background-repeat: no-repeat;
 }
 
