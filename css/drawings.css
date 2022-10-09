@@ -547,6 +547,7 @@ radial-gradient( at 50% 100%, #000 50%, #0000 0) 50% 40% / 30% 15% no-repeat,
     radial-gradient(#0008, #0000 30%) 9% 11% / 9% 8%
 }
 /* divtober quiet */
+.quiet-2-container{color:#fff}
 .quiet-2 {
   position: absolute;
   top: 0;
