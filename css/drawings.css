@@ -1,3 +1,102 @@
+/* divtober burger */
+.burger {
+  --bread: #ea7;
+  --cheese: gold;
+  font-size: 0.5vh;
+  width: 80em;
+  height: 80em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    /* face */
+    radial-gradient(circle at 54.5% 39.25%, #fff 0.35em, #0000 0),
+    radial-gradient(circle at 62.5% 39.25%, #fff 0.35em, #0000 0),
+    radial-gradient(circle at 55% 40%, #000 1.25em, #0000 0),
+    radial-gradient(circle at 63% 40%, #000 1.25em, #0000 0),
+    radial-gradient(100% 50% at 53% 41.5%, #f003 2.5%, #0000 0),
+    radial-gradient(100% 50% at 65% 41.5%, #f003 2.5%, #0000 0),
+    radial-gradient(farthest-side at 50% 0, #0000 70%, #000 0 99.9%, #0000 0) 59.5% 42.5% / 4% 2%,
+    /* front arm */
+    radial-gradient(farthest-side at 100% 40%, #0000 90%, #000 0 99.99%, #0000 0) 25% 59% / 13% 10%,
+    radial-gradient(circle at 35% 62.5%, #000 1.5%, #0000 0),
+    /* top bread */
+    radial-gradient(100% 50% at 53% 21.5%, wheat 1.5%, #0000 0),
+    radial-gradient(100% 50% at 44% 20.2%, wheat 1.5%, #0000 0),
+    radial-gradient(100% 50% at 63% 21%, wheat 1.5%, #0000 0),
+    radial-gradient(100% 50% at 57% 19%, wheat 1.5%, #0000 0),
+    radial-gradient(100% 50% at 49% 18%, wheat 1.5%, #0000 0),
+    radial-gradient(100% 50% at 37% 21%, wheat 1.5%, #0000 0),
+    radial-gradient(100% 50% at 41% 17.5%, wheat 1.5%, #0000 0),
+    radial-gradient(farthest-side at 50% 100%, var(--bread) 99.5%, #0000 99.9%) 50% 20% / 80% 20%,
+    radial-gradient(farthest-side at 50% 0%, var(--bread) 99.5%, #0000 99.9%) 50% 39.85% / 80% 10%,
+    /* cheese */
+    conic-gradient(var(--cheese) 77deg, #0000 0 285deg, var(--cheese) 0) 20% 50% / 90% 20%,
+    conic-gradient(var(--cheese) 76.6deg, #0000 0 285.5deg, var(--cheese) 0) 20% 50.65% / 90% 21%,
+    conic-gradient(at 50% 30%, #0000 0 99deg, var(--cheese) 0 259.5deg, #0000 0) 20% 33.4% / 90% 10%,
+    /* patty: beef? veggie? who knows? */
+    radial-gradient(100% 50% at 41% 53%, #0004 1.5%, #0000 0),
+    radial-gradient(circle at 61% 51%, #0004 1.5%, #0000 0),
+    radial-gradient(60% 60% at 71% 48%, #0004 1.5%, #0000 0),
+    radial-gradient(50% 50% at 81% 52%, #0004 1.45%, #0000 0),
+    radial-gradient(110% 80% at 31% 47%, #0004 1.35%, #0000 0),
+    radial-gradient(80% 30% at 21% 53%, #0004 1.15%, #0000 0),
+    radial-gradient(90% 40% at 15% 45%, #0004 1.25%, #0000 0),
+    
+    radial-gradient(50% 90% at 50% 50%, maroon 99%, #0000 0) 50% 45% / 80% 20%,
+    radial-gradient(farthest-side, maroon 99%, #0000 99.9%) 50% 56% / 66% 6%,
+    /* lettuce */
+    radial-gradient(farthest-side, #0b0, green 98%, #0000 99%) 50% 60% / 50% 5%,
+    radial-gradient(farthest-side, green 98%, #0000 99%) 30% 60% / 35% 7%,
+    radial-gradient(farthest-side, #0b0, green 98%, #0000 99%) 18% 57% / 35% 6%,
+    radial-gradient(farthest-side, green 98%, #0000 99%) 30% 60% / 35% 7%,
+    radial-gradient(farthest-side, #0b0, green 98%, #0000 99%) 80% 58% / 45% 5.5%,
+    /* tomato */
+    radial-gradient(farthest-side, tomato 98%, #0000 99%) 50% 60% / 70% 9%,
+    /* bread bottom */
+    radial-gradient(50% 140% at 50% 90%, var(--bread) 98%, #0000 99%) 50% 60% / 72% 20%,
+    radial-gradient(50% 50% at 50% 30%, var(--bread) 98%, #0000 99%) 50% 72% / 71.75% 10%,
+    /* legs */
+    radial-gradient(farthest-side at -35% 135%, #0000 92.5%, #000 0 99.9%, #0000 0) 65% 81% / 13% 13%,
+    /* arm */
+    radial-gradient(farthest-side at 0 0, #0000 90%, #000 0 99.99%, #0000 0) 95% 50% / 13% 10%,
+    radial-gradient(circle at 95% 45%, #000 1.5%, #0000 0),
+    /* speed lines */
+    radial-gradient(100% 70% at 140% 45%, #0000 90%, #000 0 99%, #0000 0) 6% 45% / 3% 10%,
+    radial-gradient(100% 70% at 140% 45%, #0000 90%, #000 0 99%, #0000 0) 4.5% 45% / 3% 9%,
+    radial-gradient(100% 70% at 140% 45%, #0000 90%, #000 0 99%, #0000 0) 3% 45% / 3% 8%,
+    radial-gradient(100% 70% at 140% 50%, #0000 90%, #000 0 99%, #0000 0) 29% 87% / 3% 10%,
+    radial-gradient(100% 70% at 140% 50%, #0000 90%, #000 0 99%, #0000 0) 27.5% 87% / 3% 9%,
+    radial-gradient(100% 70% at 140% 50%, #0000 90%, #000 0 99%, #0000 0) 26% 87% / 3% 8%;
+  background-repeat: no-repeat;
+}
+
+.burger::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(farthest-side at 50% 100%, #000 99%, #0000 0) 46% 88% / 10% 3%;
+  background-repeat: no-repeat;
+  transform: rotate(-40deg);
+}
+
+.burger::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(farthest-side at 35% 35%, #0000 80%, #000 0 99.9%, #0000 0) 45% 81% / 10% 10%,
+    radial-gradient(farthest-side at 0 50%, #000 99%, #0000 0) 41% 89% / 3% 10%;
+  background-repeat: no-repeat;
+  transform: rotate(10deg);
+}
 /* divtober game */
 .game-2-container {
   background: #ca8;
