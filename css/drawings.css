@@ -1,3 +1,73 @@
+/* divtober shadow */
+.shadow-container {
+  background: #aaa;
+}
+
+.shadow {
+  font-size: 2.5vmin;
+  width: 25em;
+  height: 16em;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform-origin: 50% 0;
+  atransform: translate(-50%, -25%) rotateX(-0deg) perspective(1000px) rotateX(-50deg) rotateX(-30deg);
+  transform: translate(-50%, -50%) perspective(1000px) rotateY(-20deg) rotateX(-10deg);
+}
+
+.shadow::before,
+.shadow::after {
+  --c: #666;
+  --bg: 
+    /* s */
+    linear-gradient(var(--c) 0 0) 0 100% / 1em 7.5em,
+    linear-gradient(var(--c) 0 0) 0 0 / 1em 7.5em,
+    linear-gradient(var(--c) 0 0) 0 100% / 3em 1em,
+    linear-gradient(var(--c) 0 0) 2em 100% / 1em 9em,
+    linear-gradient(var(--c) 0 0) 0 7em / 3em 1em,
+    linear-gradient(var(--c) 0 0) 0 0 / 3em 1em,
+    linear-gradient(var(--c) 0 0) 2em 0 / 1em 6.5em,
+    /* h */
+    linear-gradient(var(--c) 0 0) 4em 0 / 1em 100%,
+    linear-gradient(var(--c) 0 0) 6em 0 / 1em 100%,
+    linear-gradient(var(--c) 0 0) 4em 7em / 3em 1em,
+    /* a */
+    linear-gradient(var(--c) 0 0) 8em 0 / 1em 100%,
+    linear-gradient(var(--c) 0 0) 10em 0 / 1em 100%,
+    linear-gradient(var(--c) 0 0) 8em 7em / 3em 1em,
+    linear-gradient(var(--c) 0 0) 8em 0 / 3em 1em,
+    /* d */
+    linear-gradient(var(--c) 0 0) 12em 0 / 1em 100%,
+    linear-gradient(var(--c) 0 0) 14em 0 / 1em 100%,
+    linear-gradient(var(--c) 0 0) 12em 100% / 3em 1em,
+    linear-gradient(var(--c) 0 0) 12em 0 / 3em 1em,
+    /* o */
+    linear-gradient(var(--c) 0 0) 16em 0 / 1em 100%,
+    linear-gradient(var(--c) 0 0) 18em 0 / 1em 100%,
+    linear-gradient(var(--c) 0 0) 16em 100% / 3em 1em,
+    linear-gradient(var(--c) 0 0) 16em 0 / 3em 1em,
+    /* w */
+    linear-gradient(var(--c) 0 0) 20em 0 / 1em 100%,
+    linear-gradient(var(--c) 0 0) 22em 100% / 1em 100%,
+    linear-gradient(var(--c) 0 0) 24em 100% / 1em 100%,
+    linear-gradient(var(--c) 0 0) 20em 100% / 5em 1em;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 14em 0, 15em 1em, 15em 0em, 100% 0, 100% 100%, 15em 16em, 15em 15em, 14em 16em, 0 100%);
+}
+
+.shadow::before {
+  --a: -65deg;
+  --c: #8f8f8f;
+  transform-origin: 50% 100%;
+  transform: skewX(var(--a)) rotateX(calc(-1 * var(--a)));
+}
 /* divtober burger */
 .burger {
   --bread: #ea7;
