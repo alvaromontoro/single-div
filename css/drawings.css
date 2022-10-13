@@ -1,3 +1,87 @@
+/* divtober forever */
+.forever-container {
+  background: darkorange;
+}
+
+.forever{
+  --c: #180527;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100vmin;
+  height: 100vmin;
+  background:
+    /* sisyphus */
+    /* head */
+    radial-gradient(farthest-side at 55% 50%, #000 99%, #0000 0) 38.5% 66.25% / 5% 5%,
+    /* foot back */
+    radial-gradient(farthest-side at 40% 50%, #000 99%, #0000 0) 27.5% 95% / 2% 2%,
+    radial-gradient(farthest-side at 40% 50%, #000 99%, #0000 0) 26.5% 95.75% / 1.5% 5%,
+    radial-gradient(farthest-side, #000 99%, #0000 0) 26.25% 92% / 1.25% 1.25%,
+    /* leg front */
+    radial-gradient(farthest-side at 40% 40%, #000 99%, #0000 0) 36.5% 80% / 8% 2.75%,
+    radial-gradient(farthest-side, #000 99%, #0000 0) 38.5% 88.5% / 2% 5%,
+    /* hand + arm */
+    radial-gradient(circle at 45.5% 64%, #000 2%, #0000 0),
+    radial-gradient(farthest-side at 45% 60%, #000 99%, #0000 0) 45.35% 70% / 1.5% 7%,
+    /* /sisyphus */
+    /* boulder */
+    radial-gradient(at 55% 55%, #000 18%, #0000 0),
+    /* mountain */
+    linear-gradient(340deg, #000 24%, #0000 0),
+    linear-gradient(320deg, #000 35%, #0000 0) 20% 100% / 80% 80%,
+    conic-gradient(at 83% 49%, #0000 60deg, #000 0 180deg, #0000 0),
+    radial-gradient(100% 50% at 80% 100%, #000 50%, #0000 0),
+    radial-gradient(circle at 85% 53.66%, #000 5%, #0000 0),
+    /* sun setting */
+    radial-gradient(farthest-side at 100% 100%, #ff8, #0000);
+  background-repeat: no-repeat;
+}
+
+.forever::before,
+.forever::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    
+    /* arm */
+    radial-gradient(farthest-side at 50% 55%, #000 99%, #0000 0) 38% 47.6% / 7% 2%,
+    /* foot front */
+    radial-gradient(farthest-side at 50% 50%, #000 99%, #0000 0) 22.5% 61.2% / 6% 2%,
+    /* leg back */
+    radial-gradient(circle at 18.45% 56.1%, #000 0.5%, #0000 0),
+    radial-gradient(farthest-side at 60% 80%, #000 99%, #0000 0) 12% 55.5% / 7% 2%;
+  transform: rotate(-45deg);
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.forever::after {
+  transform: rotate(-70deg);
+  opacity: 1;
+  left: -10%;
+  bottom: 0;
+  background:
+    /* arm back */
+    radial-gradient(farthest-side at 45% 60%, #000 99%, #0000 0) 40% 57.25% / 7% 1.5%,
+    /* leg back */
+    radial-gradient(farthest-side at 60% 70%, #000 99%, #0000 0) 13.5% 54.25% / 8% 2.8%,
+    radial-gradient(farthest-side at 60% 70%, #000 99%, #0000 0) 17.25% 60.5% / 7% 2%,
+    /* chest */
+    radial-gradient(farthest-side at 50% 49%, #000 99%, #0000 0) 27.5% 54.75% / 7% 4.5%,
+    radial-gradient(farthest-side at 50% 45%, #000 99%, #0000 0) 22.75% 54.4% / 8% 3.5%,
+    /* gluts */
+    radial-gradient(farthest-side at 50% 55%, #000 99%, #0000 0) 20% 54.25% / 4.5% 3.5%,
+    /* shoulder */
+    radial-gradient(circle at 31.5% 55.25%, #000 1.5%, #0000 0),
+    /* arm */
+    radial-gradient(farthest-side at 50% 45%, #000 99%, #0000 0) 31% 60% / 2.2% 7%;
+  background-repeat: no-repeat;
+}
 /* divtober shadow */
 .shadow-container {
   background: #aaa;
