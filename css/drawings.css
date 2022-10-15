@@ -1,3 +1,67 @@
+/* divtober erase */
+.erase {
+  border-radius: 50%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    linear-gradient(40deg, #0000 50%, #000 0 55%, #0000 0) 100% 60% / 5% 5%,
+    linear-gradient(130deg, #0000 50%, #000 0 55%, #0000 60%) 86% 54% / 5% 5%,
+    linear-gradient(20deg, #0000 50%, #000 0 55%, #0000 0) 91% 49.8% / 3% 5%,
+    radial-gradient(at 90% 50%, #000 1%, #0000 1.5%),
+    radial-gradient(20% 200% at 69% 55%, #000 1%, #0000 1.5%)
+    ;
+  background-repeat: no-repeat;
+  box-shadow: 
+    0 0 10vmin 10vmin #fff,
+    0 0 0 100vmin #3691;
+}
+.erase::before {
+  content: "powerless";
+  font-family: 'Architects Daughter', serif;
+  font-size: 10vmin;
+  display: block;
+  transform: perspective(1000px) rotateX(50deg);
+  -webkit-mask:
+    linear-gradient(90deg, #fff 63%, #fff2 64.75%, #0000 0),
+    linear-gradient(110deg, #00000008 80%, #f000, #0000 96%),
+    linear-gradient(110deg, #00000008 83%, #f001, #0000 85%),
+    linear-gradient(130deg, #0000 66%, #f001, #00000002 86%),
+    linear-gradient(80deg, #00000003 70%, #f000, #00000003 85%),
+    linear-gradient(80deg, #00000003 70%, #f001)
+}
+
+.erase::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 15%;
+  height: 200%;
+  transform: translate(-40%, -20%) rotate(20deg);
+  border-radius: 100% / 10%;
+  -webkit-mask:
+    linear-gradient(#0000 5%, #000 50%);
+  background:
+    linear-gradient(90deg, #0000, #f003) 100% 100% / 100% 18%,
+    linear-gradient(gold, #0000 70%),
+    radial-gradient(70% 50% at 20% 89%, #fee4 0%, #fff0 15%),
+    linear-gradient(90deg, #fff2 3%, #0000 10%),
+    linear-gradient(90deg, #0000, #0001 1%, #0000 10%),
+    radial-gradient(150% 5% at 50% 100%, #f001 60%, #0000 90%),
+    radial-gradient(150% 20% at 100% 100%, #3006, #0000 25%),
+    linear-gradient(90deg, #fff2, #0000 30% 70%, #0002),
+    repeating-linear-gradient(#0000 0 20%, #0001 0 23%, #fffc 25%) 50% 76% / 100% 13%,
+    linear-gradient(90deg, #0000, #fffc, #0000 50% 70%, #1353) 0 78% / 100% 17%,
+    linear-gradient(#0000 65%, #ccc 0 82%, #0000 0),
+    linear-gradient(90deg, #00000008 23%, #fff 25%, #0000 0 73%, #0002 75%,  #0000000c 0) 0 0 / 100% 80%,
+    linear-gradient(#0000 79%, #0002 0, #0000 95%),
+    linear-gradient(gold 80%, pink 0)
+    #00f4
+    ;
+  background-repeat: no-repeat;
+}
 /* divtober forever */
 .forever-container {
   background: darkorange;
