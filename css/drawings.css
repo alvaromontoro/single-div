@@ -1,3 +1,89 @@
+/* divtober stripes */
+.stripes {
+  --r: #f5001a;
+  --b: #111;
+  --w: #fffff8;
+  --h: #ff05;
+  width: 25vw;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 1vmin #0004, 0 3vmin 2vmin -1vmin #0004;
+  background:
+    /**/
+    linear-gradient(var(--b) 0 0) 21.125% 76.75% / 3% 84.5%,
+    linear-gradient(var(--w) 0 0) 5.5% 89.5% / 17% 65.5%,
+    linear-gradient(var(--r) 0 0) 0 38.75% / 16.5% 48%,
+    linear-gradient(var(--w) 0 0) 5% 9% / 43% 18%,
+    /**/
+    linear-gradient(var(--b) 0 0) 100% 78.5% / 17% 2.25%,
+    linear-gradient(var(--w) 0 0) 100% 77% / 33.25% 21%,
+    /**/
+    linear-gradient(var(--b) 0 0) 70% 26% / 17% 2.25%,
+    linear-gradient(var(--r) 0 0) 80.33% 0 / 12.5% 32.5%,
+    /**/
+    linear-gradient(var(--r) 0 0) 100% 6% / 14.75% 16%,
+    linear-gradient(var(--b) 0 0) 96.25% 16% / 2.25% 27%,
+    linear-gradient(var(--w) 0 0) 100% 0 / 7% 20%,
+    linear-gradient(var(--w) 0 0) 100% 22% / 8.5% 40%,
+    /**/
+    linear-gradient(var(--r) 0 0) 54% 56% / 32% 42.5%,
+    linear-gradient(var(--b) 70%, #b02 95%);
+  background-repeat: no-repeat;
+}
+
+.stripes::before {
+  --r: #e01;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(-110%);
+  box-shadow: 0 0 1vmin #0004, 0 3vmin 2vmin -1vmin #0004;
+  background: 
+    /**/
+    linear-gradient(#0003, #0000, #0003 98%, var(--b) 0) 0 50% / 30% 53% no-repeat,
+    repeating-conic-gradient(at 1000% 95%, #0000 0 0.22deg, #fff2 0.23deg 0.25deg, #0004 0.27deg 0.29deg) 0 50% / 30% 53% no-repeat,
+    radial-gradient(160% 130% at 67% 55%, #fff4 0 1.5%, #fff0 30%, #0004 60%) 0 50% / 30% 53% no-repeat,
+    radial-gradient(var(--r) 0 0) 0 50% / 30% 53% no-repeat,
+    /**/
+    linear-gradient(#0003, #0000, #0003 96%, var(--b) 0) 48.5% 50% / 34% 53% no-repeat,
+    repeating-conic-gradient(at 1500% 90%, #0000 0 0.14deg, #fff2 0.15deg 0.16deg, #0004 0.17deg 0.18deg) 48.5% 50% / 34% 53% no-repeat,
+    radial-gradient(160% 130% at 67% 55%, #fff4 0 1.5%, #fff0 30%, #0004 60%) 48.5% 50% / 34% 53% no-repeat,
+    radial-gradient(var(--r) 0 0) 48.5% 50% / 34% 53% no-repeat,
+    /**/
+    linear-gradient(#0003, #0000, #0003 97%, var(--b) 0) 100% 50% / 32% 53% no-repeat,
+    repeating-conic-gradient(at 1050% 91%, #0000 0 0.22deg, #fff2 0.23deg 0.25deg, #0004 0.27deg 0.29deg) 100% 50% / 32% 53% no-repeat,
+    radial-gradient(160% 130% at 70% 55%, #fff4 0 1.5%, #fff0 35%, #0004 58%) 100% 50% / 32% 53% no-repeat,
+    radial-gradient(var(--r) 0 0) 100% 50% / 32% 53% no-repeat,
+    /**/
+    linear-gradient(#0000 0 16.25%, #fffc 0 16.5%, #0000 0 83.75%, #fffc 0 84%, #0000 0),
+    conic-gradient(at 65% 5.25%, var(--r) 90deg, #0000 0) 51.25% 40% / 5% 50% repeat-x,
+    conic-gradient(at 65% 5.25%, var(--r) 90deg, #0000 0) 52.5% 155.25% / 5% 50% repeat-x,
+    linear-gradient(#655, #544) 50% 50% / 100% 65% no-repeat,
+    var(--r);
+  abackground-repeat: no-repeat;
+}
+
+.stripes::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(110%);
+  box-shadow: 0 0 1vmin #0004, 0 3vmin 2vmin -1vmin #0004;
+  background: 
+    linear-gradient(var(--b) 5%, #0000 0 95%, var(--b) 0),
+    linear-gradient(90deg, var(--b) 3.5%, #0000 0 96.5%, var(--b) 0),
+    linear-gradient(var(--r) 65%, var(--w) 0);
+  background-repeat: no-repeat;
+}
 /* divtober erase */
 .erase {
   border-radius: 50%;
