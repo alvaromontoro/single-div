@@ -1,3 +1,75 @@
+/* divtober pun */
+.pun {
+  width: 35vmin;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: 
+    /* face */
+    radial-gradient(circle at 42% 59%, #fff 1%, #fff0 0),
+    radial-gradient(circle at 56% 59%, #fff 1%, #fff0 0),
+    radial-gradient(circle at 43% 60%, #000 3%, #0000 0),
+    radial-gradient(circle at 57% 60%, #000 3%, #0000 0),
+    radial-gradient(farthest-side at 50% 0, #0000 65%, #000 0 99.99%, #0000 0) 50% 65% / 7% 3.5% no-repeat,
+    /* craters */
+    radial-gradient(at 25% 25%, #bbb 10%, #bbb0 0),
+    radial-gradient(circle at 65% 22%, #bbb 5%, #bbb0 0),
+    radial-gradient(circle at 79% 77%, #bbb 7%, #bbb0 0),
+    radial-gradient(circle at 32% 29%, #bbb 6%, #bbb0 0) 30% 50% / 60% 50%,
+    #ccc;
+  box-shadow:
+    40vmin 20vmin 0 -17vmin #fffc,
+    30vmin -20vmin 0 -17.25vmin #fffc,
+    20vmin 50vmin 0 -17vmin #fffc,
+    -50vmin -20vmin 0 -17.25vmin #fffc,
+    -25vmin 15vmin 0 -17.25vmin #fffc,
+    -35vmin 40vmin 0 -17.25vmin #fffc,
+    -15vmin -40vmin 0 -17vmin #fffc,
+    0 0 0 100in #123,
+    inset -3vmin -3vmin #bbb;
+}
+
+.pun::before {
+  content: "Ristorante";
+  font-size: 1.5vmin;
+  font-style: italic;
+  box-sizing: border-box;
+  padding-top: 5.5vmin;
+  padding-left: 3.25vmin;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -81%);
+  width: 50%;
+  height: 30%;
+  background:
+    /* roof */
+    linear-gradient(107deg, #c000 10%, #c00 0) 0 0 / 55% 32% no-repeat,
+    linear-gradient(-107deg, #c000 10%, #c00 0) 100% 0 / 55% 32% no-repeat,
+    radial-gradient(farthest-side at 50% 0, #f00 99%, #f000 0) 0 35% / 10% 10% repeat-x,
+    /* window and door */
+    linear-gradient(#beeeef 0 0) 25% 70% / 45% 50% no-repeat,
+    linear-gradient(#beeeef 0 0) 85% 100% / 20% 60% no-repeat,
+    /* wall */
+    linear-gradient(#fff 0 0) 50% 100% / 88% 70% no-repeat;
+}
+
+.pun::after {
+  content: "Did you hear about the restaurant on the moon? \a The food was good but it had no atmosphere";
+  white-space: pre;
+  color: #fffc;
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Amatic SC', 'Architects Daughter', Helvetica, Arial, sans-serif;
+  font-size: 5vmin;
+  line-height: 55vmin;
+  text-align: center;
+}
 /* divtober stripes */
 .stripes {
   --r: #f5001a;
