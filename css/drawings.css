@@ -1,3 +1,175 @@
+/* divtober ten */
+@keyframes changeJersey {
+  0%, 33.3%, 100% {
+    --jersey-1: #147;
+    --jersey-2: #d22;
+    --pants: #147;
+    --shadow: #0004;
+    --sock-1: #147;
+    --sock-2: #d22;
+    --sock-3: #147;
+    --jersey: radial-gradient(200% 100% at 50% 0, #0000 80%, var(--pants) 80.2%),
+    radial-gradient(75% 350% at 50% 70%, var(--jersey-1) 19%, #0000 19.2%),
+    radial-gradient(45% 100% at 50% 85%, var(--jersey-2) 80%, var(--jersey-1) 0);
+    color: gold;
+  }
+  33.4%, 66.6% {
+    --jersey-1: #9df;
+    --jersey-2: #fff;
+    --pants: #fff;
+    --shadow: #0001;
+    --sock-1: #9df;
+    --sock-2: #9df;
+    --sock-3: #fff;
+    --jersey: radial-gradient(200% 100% at 50% 0, #0000 80%, var(--pants) 80.2%),
+    radial-gradient(75% 350% at 50% 70%, var(--jersey-1) 19%, #0000 19.2%),
+    radial-gradient(45% 100% at 50% 85%, var(--jersey-2) 80%, var(--jersey-1) 0);
+    color: black;
+  }
+  66.7%, 99.9% {
+    --jersey-1: #147;
+    --jersey-2: #d22;
+    --pants: #147;
+    --shadow: #0004;
+    --sock-1: #147;
+    --sock-2: #d22;
+    --sock-3: #147;
+    --jersey: radial-gradient(200% 100% at 50% 0, #0000 80%, var(--pants) 80.2%),
+    radial-gradient(75% 350% at 50% 70%, var(--light) 19%, var(--jersey-2) 19.2% 21.8%, var(--jersey-1) 22%);
+    color: black;
+  }
+}
+
+
+
+.ten {
+  --s: 9s;
+  --skin: #fca;
+  --skin-dark: #eb9;
+  --hair: #630;
+  --dark: #111;
+  --light: #eee;
+  --jersey-1: #147;
+  --jersey-2: #d22;
+  --pants: #147;
+  --shadow: #0004;
+  --sock-1: #147;
+  --sock-2: #d22;
+  --sock-3: #147;
+  --socks: radial-gradient(300% 100% at 66% 0, var(--skin) 40%, var(--sock-1) 40.4% 49%, var(--sock-2) 0 57%, var(--sock-3) 0) 42% 100% / 8.5% 13%,
+    radial-gradient(300% 100% at 40% 0, var(--skin) 43%, var(--sock-1) 43.4% 52%, var(--sock-2) 0 60%, var(--sock-3) 0) 58% 100% / 8.5% 13%;
+  --jersey: radial-gradient(200% 100% at 50% 0, #0000 80%, var(--pants) 80.2%),
+    radial-gradient(75% 350% at 50% 70%, var(--jersey-1) 19%, #0000 19.2%),
+    radial-gradient(45% 100% at 50% 85%, var(--jersey-2) 80%, var(--jersey-1) 0);
+  color: gold;
+  animation: changeJersey var(--s) linear infinite;
+  font-size: 3vmin;
+  width: 30em;
+  height: 30em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background:
+    /* hair */
+    radial-gradient(farthest-side at 50% 100%, var(--hair) 99.7%, #0000 99.99%) 50% 0% / 61.25% 35%,
+    radial-gradient(farthest-side at 100% 100%, var(--hair) 99.7%, #0000 99.99%) 25% 5% / 32% 16.25%,
+    radial-gradient(farthest-side at 100% 130%, var(--hair) 99.7%, #0000 99.99%) 22% 0% / 35% 16%,
+    radial-gradient(farthest-side at 100% 130%, var(--hair) 99.7%, #0000 99.99%) 23% 0% / 33% 11%,
+    /* ears */
+    radial-gradient(circle at 20% 38%, var(--skin-dark) 2%, var(--skin) 0 5%, #0000 5.1%),
+    radial-gradient(circle at 80% 38%, var(--skin-dark) 2%, var(--skin) 0 5%, #0000 5.1%),
+    /* feet */
+    linear-gradient(90deg, #0000 37%, #000 0 47%, #0000 0 53%, #000 0 63%, #0000 0) 0 100% / 100% 3%,
+    radial-gradient(farthest-side at 100% 100%, #000 99.99%, #0000 0) 35% 100% / 4% 3%,
+    radial-gradient(farthest-side at 0% 100%, #000 99.99%, #0000 0) 65.5% 100% / 4% 3%,
+    /* legs */
+    var(--socks),
+    /* arms */
+    radial-gradient(farthest-side at 100% 100%, #0000 80%, var(--jersey-1) 0 99.7%, #0000 99.99%) 38% 72% / 30% 22%,
+    radial-gradient(farthest-side at 0% 100%, #0000 80%, var(--jersey-1) 0 99.7%, #0000 99.99%) 60% 71% / 30% 22%,
+    /* hands */
+    radial-gradient(circle at 29.5% 81.6%, var(--skin) 4%, #0000 0),
+    radial-gradient(circle at 69% 80.7%, var(--skin) 4%, #0000 0),
+    /* background */
+    radial-gradient(farthest-side at 50% 65%, #0000 50%, #9c7),
+    repeating-conic-gradient(at 50% 65%, #0001 0 15deg, #0000 0 30deg),
+    #9c7;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 100vmax #9c7;
+}
+
+.ten::after {
+  content: "";
+  width: 60%;
+  height: 14em;
+  position: absolute;
+  left: 50%;
+  top: 14%;
+  transform: translateX(-50%);
+  border-radius: 50% / 47% 47% 50% 50%;
+  background: 
+    /* mouth */
+    radial-gradient(75% 20% at 50% 81%, var(--skin) 15%, #0000 15.2%),
+    radial-gradient(farthest-side at 50% 0%, var(--skin) 99%, #0000 99.9%) 43% 85% / 10% 5%,
+    radial-gradient(farthest-side at 50% 0%, var(--skin) 99%, #0000 99.9%) 57% 85% / 10% 5%,
+    /* eyes */
+    radial-gradient(circle at 22% 42%, var(--light) 5%, #0000 5.2%),
+    radial-gradient(circle at 72% 42%, var(--light) 5%, #0000 5.2%),
+    radial-gradient(circle at 25% 45%, var(--dark) 10%, #0000 10.2%),
+    radial-gradient(circle at 75% 45%, var(--dark) 10%, #0000 10.2%),
+    /* nose */
+    radial-gradient(circle at 47% 59%, #fff6 2.5%, #0000 2.7%),
+    radial-gradient(circle at 50% 55%, var(--skin) 11%, #0000 11.2%),
+    radial-gradient(circle at 50% 58%, var(--skin-dark) 10%, #0000 10.2%),
+    /* beard */
+    radial-gradient(80% 130% at 50% 100%, var(--hair) 30%, #0000 30.2%),
+    radial-gradient(88% 110% at 50% 0%, #0000 75%, var(--hair) 75.2%),
+    
+    /* eyebrows */
+    linear-gradient(90deg, var(--hair) 3%, #0000 0 97.5%, var(--hair) 0) 50% 29% / 24.5% 6.5%,
+    radial-gradient(farthest-side, var(--skin) 99.7%, #0000 99.99%) 12% 40% / 35% 25%,
+    radial-gradient(farthest-side at 70% 100%, var(--hair) 99.7%, #0000 99.99%) 13% 30% / 28% 15%,
+    radial-gradient(farthest-side, var(--skin) 99.7%, #0000 99.99%) 88% 40% / 35% 25%,
+    radial-gradient(farthest-side at 30% 100%, var(--hair) 99.7%, #0000 99.99%) 87% 30% / 28% 15%,
+    /* head base */
+    radial-gradient(120% 100% at 50% 100%, var(--skin) 92%, var(--hair) 92.2%);
+  background-repeat: no-repeat;
+  box-shadow: 0 -0.6em 0 0.2em var(--hair)
+}
+
+@keyframes changeNumber {
+  0%, 66.6%, 100% {
+    content: "10";
+  }
+  66.7%, 99.9% {
+    content: "30";
+  }
+}
+.ten::before {
+  content: "10";
+  animation: changeNumber var(--s) linear infinite;
+  text-indent: -0.2em;
+  font-family: 'Bowlby One',Helvetica,Arial,sans-serif;
+  font-size: 1.25em;
+  letter-spacing: -0.15em;
+  font-weight: 200;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 80% / 140% 140% 7% 7%;
+  width: 25%;
+  height: 40%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%, 60% 95%, 40% 95%, 40% 100%, 0 100%);
+  background: 
+     radial-gradient(200% 100% at 50% 0, #0000 80%, var(--shadow) 80.2% 84%, #0000 84.2%),
+    var(--jersey);
+  background-repeat: no-repeat;
+}
 /* divtober mythical*/
 .mythical-container {
   background: #0505;
