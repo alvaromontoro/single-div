@@ -1,3 +1,74 @@
+/* divtober only */
+.valuable {
+  --chest: #a74;
+  --chest-dark: #852;
+  --chest-darker: #420;
+  display: inline-block;
+  position: relative;
+  font-size: 70vmin;
+  width: 1em;
+  height: 0.9em;
+  background: 
+    /* lock */
+    radial-gradient(circle at 72% 60%, #000 1.125%, #0000 0),
+    linear-gradient(#000 0 0) 72.25% 61.5% / 1% 3% no-repeat,
+    /* bottom base */
+    radial-gradient(farthest-side, #0003 99.99%, #0000 0) 0.12em 0.62em / 0.3em 0.005em,
+    radial-gradient(farthest-side, #0003 99.99%, #0000 0) 0.12em 0.75em / 0.3em 0.005em,
+    radial-gradient(farthest-side, #0003 99.99%, #0000 0) 0.475em 0.62em / 0.5em 0.005em,
+    radial-gradient(farthest-side, #0003 99.99%, #0000 0) 0.475em 0.75em / 0.5em 0.005em,
+    linear-gradient(90deg, var(--chest-dark) 0.35em, var(--chest) 0) 0.1em 0.50em / 0.9em 0.37em,
+    linear-gradient(90deg, var(--chest-dark) 0.04em, var(--chest-darker) 0 0.06em, #0000 0 0.32em, var(--chest-dark) 0 0.35em, var(--chest) 0 0.38em, #0000 0 0.52em, var(--chest-darker) 0 0.58em, #0000 0 0.84em, var(--chest-dark) 0 0.86em, var(--chest) 0) 0.1em 100% / 0.9em 0.37em,
+    /* treasure */
+    radial-gradient(at 57% 55.5%, gold 2%, #0000 0),
+    radial-gradient(at 57% 55%, orange 2%, #0000 0),
+    radial-gradient(at 44% 52%, gold 3%, #0000 0),
+    radial-gradient(at 44.5% 52%, orange 3%, #0000 0),
+    radial-gradient(at 40.5% 55%, gold 3%, #0000 0),
+    radial-gradient(at 40% 55%, orange 3%, #0000 0),
+    radial-gradient(at 40% 63%, gold 17%, #0000 0),
+    radial-gradient(at 47% 58%, gold 15%, #0000 0),
+    radial-gradient(150% 60% at 44% 60%, gold 15%, #0000 0),
+    /* top */
+    linear-gradient(var(--chest) 0 0) 43.5% 0.168em / 56.5% 0.0175em,
+    linear-gradient(115deg, #0008, #0000 73%) 0.1em 0.185em / 0.8em 0.32em,
+    linear-gradient(115deg, var(--chest-darker) 73%, #0000 0) 0.1em 0.185em / 0.85em 0.32em,
+    /* background */
+    radial-gradient(farthest-side, #fff, #fff0),
+    #0000;
+  background-repeat: no-repeat;
+}
+
+.valuable::before {
+  content: "";
+  position: absolute;
+  width: 0.35em;
+  height: 0.175em;
+  background: radial-gradient(farthest-side at 50% 100%, var(--chest-dark) 99.99%, #0000 0);
+  top: 0.327em;
+  left: 0.1em;
+  transform-origin: 0 100%;
+  transform: rotate(-65deg);
+  filter: drop-shadow(0.24em 0.527em #0002)
+}
+
+.valuable::after {
+  --lightray: #ffd70022;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-mask: radial-gradient(150% 100% at 55% 100%, red 84%, #0000);
+  clip-path: polygon(0 0, 100% 0, 100% 55.5%, 0 55.5%);
+  background: 
+    /* lightning */
+    conic-gradient(from 0.9turn at 42% 60%, var(--lightray) 0 10deg, #0000 0 20deg, var(--lightray) 0 30deg, #0000 0 40deg, var(--lightray) 0 50deg, #0000 0 60deg, var(--lightray) 0 70deg, #0000 0 80deg, var(--lightray) 0 90deg, #0000 0),
+    /* top chest edge */
+    radial-gradient(farthest-side at 50% 100%, var(--chest) 99.99%, #0000 0) 78.5% 0.168em / 0.2em 0.0175em;
+  background-repeat: no-repeat;
+}
 /* divtober ten */
 @keyframes changeJersey {
   0%, 33.3%, 100% {
