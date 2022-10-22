@@ -1,3 +1,75 @@
+/* divtober soft */
+.soft {
+  font-size: 0.65vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50em;
+  height: 80em;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 100% / 35% 35% 20% 20%;
+  background: 
+    /* top tier */
+    radial-gradient(100% 55% at 40% 10%, #fff4, #0000 25%),
+    radial-gradient(215% 54% at 50% 0, #d00 36.5%, #0000 0),
+    linear-gradient(90deg, #0000, #fff3 40%, #0000 70%),
+    radial-gradient(215% 54% at 50% 0, #0003 35%, #e00 38% 50%, #0000 0),
+    /* lines*/
+    radial-gradient(73% 50% at 20% 30%, #e00 60%, #0000 0),
+    radial-gradient(70% 53% at 16.5% 31%, #fff 60%, #0000 0),
+    radial-gradient(70% 60% at 88.5% 70%, #e00 60%, #0000 0),
+    radial-gradient(69% 61% at 90% 68.5%, #fff 60%, #0000 0),
+    /* base */
+    #e00;
+  background-repeat: no-repeat;
+  box-shadow: 
+    inset 10em 0 6em -7em #0005,
+    inset -10em 0 6em -7em #0005,
+    0 1em 2em -2em,
+    0 2em 0 -1em #ccc;
+  clip-path: polygon(0 15.5%, 12.5% 6%, 12.5% 0, 87.5% 0, 87.5% 6%, 100% 15.5%, 100% 110%, 0 110%);
+}
+.soft::before {
+  content: "CSSoda";
+  font-size: 8em;
+  font-family: 'Architects Daughter','Bowlby One','Parisienne',serif;
+  font-style: italic;
+  transform: rotate(-7deg) skew(-10deg);
+  font-weight: 900;
+  color: #fff;
+}
+
+.soft::after {
+  content: "";
+  position: absolute;
+  width: 37.5em;
+  height: 6.8em;
+  border-radius: 100% / 70%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 1em 1em #0003;
+  background: 
+    /* hole */
+    radial-gradient(farthest-side, #0000 80%, #fff4 0 99%, #0000 99.99%) 25% 50% / 7% 5%,
+    radial-gradient(farthest-side, #333 97%, #0000 99.99%) 50% 45% / 27% 15%,
+    radial-gradient(farthest-side, #333 97%, #0000 99.99%) 50% 50% / 18% 12%,
+    /* top cover */
+    radial-gradient(farthest-side, #bbb 99.99%, #0000 0) 50% 46% / 74% 27%,
+    radial-gradient(farthest-side at 50% 100%, #bbb 90%, #bbb 0 95%, #0000 0) 50% 39% / 82.5% 15%,
+    /* rim */
+    radial-gradient(100% 105% at 50% 0, #0000 58%, #bbb 0 60%, #0000 0),
+    radial-gradient(100% 105% at 50% 0, #ccc 0 60%, #0000 0),
+    /* side */
+    linear-gradient(90deg, #0008, #0005 3%, #0000, #fff8 39%, #0000, #0003 97%, #0005)
+    #ccc;
+  background-repeat: no-repeat;
+}
+
 /* divtober only */
 .valuable {
   --chest: #a74;
