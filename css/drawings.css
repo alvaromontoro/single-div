@@ -1,3 +1,56 @@
+/* divtober pop owl */
+.pop-container {
+  background: #cba;
+}
+.pop {
+  --pupil: #000;
+  --eye: #ff0;
+  --beak: #fb0;
+  --color1: #d6a664;
+  --color2: #8d3e00;
+  --color3: #6d3c00;
+  --color4: #441b06;
+  --color1: #741f00;
+  font-size: 0.75vmin;
+  width: 50em;
+  height: 90em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    /* eye */
+    radial-gradient(farthest-side, var(--pupil) 50%, var(--eye) 50.5% 99.5%, #ff00 99.9999%) 0 15em / 25.1em 25.1em,
+    radial-gradient(farthest-side, var(--pupil) 50%, var(--eye) 50.5% 99.5%, #ff00 99.9999%) 100% 15em / 25.1em 25.1em,
+    /* beak */
+    conic-gradient(#fb0 30deg, #fb00 0 330deg, var(--beak) 0) 50% 27.5em / 25em 25em,
+    /* legs */
+    radial-gradient(farthest-side, var(--beak) 99%, #0000 99.99%) 0 75% / 6.25em 6.25em,
+    radial-gradient(farthest-side, var(--beak) 99%, #0000 99.99%) 6.25em 75% / 6.25em 6.25em,
+    radial-gradient(farthest-side, var(--beak) 99%, #0000 99.99%) 12.5em 75% / 6.25em 6.25em,
+    radial-gradient(farthest-side, var(--beak) 99%, #0000 99.99%) 31.25em 75% / 6.25em 6.25em,
+    radial-gradient(farthest-side, var(--beak) 99%, #0000 99.99%) 37.5em 75% / 6.25em 6.25em,
+    radial-gradient(farthest-side, var(--beak) 99%, #0000 99.99%) 100% 75% / 6.25em 6.25em,
+    /* background */
+    radial-gradient(farthest-side at 0 100%, var(--color1) 25%, var(--color2) 0 50%, var(--color3) 0 75%, var(--color4) 0 99.5%, #0a10 99.9999%) 0 0 / 25em 25em,
+    radial-gradient(farthest-side at 100% 100%, var(--color1) 25%, var(--color2) 0 50%, var(--color3) 0 75%, var(--color4) 0 99.5%, #0a10 99.9999%) 100% 0 / 25em 25em,
+    /* variant 1 */
+/*    linear-gradient(90deg, var(--color1) 25%, var(--color2) 0 50%, var(--color3) 0 75%, var(--color4) 0 99.9999%, #0a10 0) 0 24.99em / 25.1em 40em,
+     linear-gradient(to left, var(--color1) 25%, var(--color2) 0 50%, var(--color3) 0 75%, var(--color4) 0 99.9999%, #0a10 0) 100% 24.99em / 25.1em 40em, */
+    /* variant 2 */
+    linear-gradient(90deg, var(--color1) 25%, var(--color2) 0 50%, var(--color3) 0 75%, #0000 0) 0 30.1em / 25em 12em,
+    linear-gradient(to left, var(--color1) 25%, var(--color2) 0 50%, var(--color3) 0 75%, #0000 0) 100% 30.1em / 25em 12em,
+    radial-gradient(farthest-side at 0 0, var(--color1) 25%, var(--color2) 0 50%, var(--color3) 0 75%, #0000 0) 0 42em / 25em 25em,
+    radial-gradient(farthest-side at 100% 0, var(--color1) 25%, var(--color2) 0 50%, var(--color3) 0 75%, #0000 0) 100% 42em / 25em 25em,
+    radial-gradient(farthest-side at 50% 100%, var(--color1) 25%, var(--color2) 0 50%, var(--color3) 0 74.5%, #0000 75%) 50% 0 / 50em 25em,
+    linear-gradient(var(--color4) 0 0) 0 24.99em / 100% 40em,
+    
+    /* tail */
+    radial-gradient(farthest-side at 50% 0%, var(--color4) 25%, var(--color3) 0 50%, var(--color2) 0 75%, var(--color1) 0 99.7%, #fb00 99.9999%) 0 100% / 100% 25.1em,
+    #f000;
+  background-repeat: no-repeat;
+  clip-path: polygon(-100% -100%, 200% -100%, 100% 100%, 60% 100%, 55% 95%, 50% 100%, 45% 95%, 40% 100%, 0% 100%);
+}
 /* divtober soft */
 .soft {
   font-size: 0.65vmin;
