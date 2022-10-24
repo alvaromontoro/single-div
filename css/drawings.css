@@ -1,3 +1,65 @@
+/* divtober cubed */
+.cubed-container {
+  --b: #3698;
+  background: var(--b);
+}
+
+.cubed {
+  --s: 200px;
+  width: var(--s);
+  height: var(--s);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%) perspective(1000px) rotate3d(1,0,0, 60deg) rotate3d(0,0,1, 45deg);
+  transform-style: preserve-3d;
+  background:
+    linear-gradient(#eee 75%, #0000 0),
+    linear-gradient(90deg, #eee 75%, #0000 0),
+    conic-gradient(at 75% 75%, #fff 135deg, #ddd 0);
+  box-shadow: 
+    290.75px 189px 0 -76.75px #eee,
+    /* correction :S */
+    76px 75px 0 -75.25px #fff,
+    75px 76px 0 -75.25px #ddd
+    ;
+  background-repeat: no-repeat;
+}
+
+.cubed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f006, #00f6);
+  transform-origin: 0 50%;
+  transform: rotateX(-90deg) rotateY(90deg) translate(-50%, 50%);
+  background:
+    linear-gradient(#ddd0 25%, #ddd 0),
+    linear-gradient(90deg, #ddd0 25%, #ddd 0),
+    conic-gradient(at 25% 25%, #eee 315deg, #fff 0);
+  background-repeat: no-repeat;
+  box-shadow: 114px 299px 0 -60px #ddd;
+}
+
+.cubed::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 0;
+  transform: rotateX(-90deg);
+  background:
+    linear-gradient(#fff0 25%, #fff 0),
+    linear-gradient(90deg, #fff 75%, #fff0 0),
+    conic-gradient(at 75% 25%, #ddd 45deg, #eee 0);
+  background-repeat: no-repeat;
+  box-shadow: 200px 70px 0 -70px #fff;
+}
 /* divtober pop owl */
 .pop-container {
   background: #cba;
