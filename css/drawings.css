@@ -1,3 +1,85 @@
+/* divtober vintage */
+.vintage-container {
+  background: conic-gradient(aqua 25%,hotpink 0 50%,yellow 0 75%, limegreen 0);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.vintage {
+  --s: 1vw;
+  --w: 36em;
+  --h: 19.4em;
+  font-size: min(1vw, 1vmin);
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  height: var(--h);
+  width: var(--w);
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(farthest-side at 100% 0, #000 95%, #0000 99.99%) 0 0 / 1.5% 24%,
+    radial-gradient(farthest-side at 0 0, #000 95%, #0000 99.99%) 100% 0 / 1.5% 24%,
+    linear-gradient(#000 0 0) 50% 0% / 100% 8.5%,
+    linear-gradient(#000 0 0) 50% 100% / 96% 91%,
+    linear-gradient(#000 0 0) 50% 100% / 100% 75%,
+    #0000
+    ;
+  background-repeat: no-repeat;
+  filter: drop-shadow(50vw 0) drop-shadow(0 50vh);
+  border-radius: 0.25em 0.25em 1em 1em;
+}
+
+.vintage::before {
+  --w: 32em;
+  --h: 9.6em;
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: var(--h);
+  width: var(--w);
+  background: 
+    radial-gradient(circle at 30.5% 10%, #fff 4%, #0000 0),
+    radial-gradient(circle at 69.4% 10%, #fff 4%, #0000 0),
+    radial-gradient(circle at 30.5% 90%, #fff 4%, #0000 0),
+    radial-gradient(circle at 69.4% 90%, #fff 4%, #0000 0),
+    linear-gradient(#fff 0 0) 50% 50% / 40% 100% no-repeat,
+    linear-gradient(#fff 0 0) 50% 50% / 45% 85% no-repeat,
+    radial-gradient(circle at 100% 50%, #fff 20%, #0000 0) 0 50% / 8em 8em no-repeat,
+    radial-gradient(circle at 0% 50%, #fff 20%, #0000 0) 100% 50% / 8em 8em no-repeat,
+    linear-gradient(90deg, #fff9 25%, #0000 0 75%, #fff9 0);
+  border-radius: 10% / 100%;
+  filter: drop-shadow(50vw 0 #fff) drop-shadow(0 50vh #fff);
+}
+
+.vintage::after {
+  --w: 16em;
+  --h: 4.8em;
+  font-size: 2em;
+  display: grid;
+  place-items: center;
+  content: "The Fugitive";
+  white-space: pre;
+  line-height: 1.5;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: var(--h);
+  width: var(--w);
+  font-family: 'Architects Daughter', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', sans-serif;
+  background: 
+    linear-gradient(#0002 18%, #0000 0)50% 50% / 45% 100% no-repeat,
+    repeating-linear-gradient(#0000 0 18%, #0002 0 20%) 50% 50% / 45% 100% no-repeat,
+    linear-gradient(80deg, #0000 50%, #200 0 56%, #0000 0) 5% 0 / 13% 50% no-repeat,
+    linear-gradient(#200 0 0) 81.75% 0 / 1% 50% no-repeat,
+    radial-gradient(circle at 100% 50%, #0000 20%, #200 0 45%, #0000 0) 0 50% / 4em 4em no-repeat,
+    radial-gradient(circle at 0% 50%, #0000 20%, #200 0 25%, #0000 0) 100% 50% / 4em 4em no-repeat;
+  border-radius: 10% / 100%;
+  filter: drop-shadow(50vw 0 #200) drop-shadow(0 50vh #200);
+}
+
 /* divtober luminous */
 .luminous-container {
   background: #212;
