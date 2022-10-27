@@ -1,3 +1,61 @@
+/* divtober grain */
+.grain {
+  width: 25vmin;
+  height: 50vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    linear-gradient(90deg, #ccc, #ccc, #ddd, #ccc) 50% 24.5% / 52% 10%,
+    linear-gradient(#ccc 0 0) 50% 24.5% / 52% 10%,
+    radial-gradient(50% 60% at 65% 75%, #ddd, #0000 80%) 50% 10% / 55% 15%,
+    radial-gradient(50% 50% at 50% 60%, #c0c0c0 99%, #0000 99.99%) 50% 10% / 65% 15%,
+    linear-gradient(83deg, #0000 45%, #eef5 65%, #0000 85%) 50% 94% / 100% 66%,
+    #fff0;
+  background-repeat: no-repeat;
+}
+
+.grain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(farthest-side, #fff 99.99%, #0000 0) 60% 55% / 40% 7%,
+    linear-gradient(97deg, #0000 24%, #fff 0) 20% 90% / 45% 40%,
+    linear-gradient(-97deg, #0000 24%, #ffff 0) 80% 90% / 45% 40%,
+    linear-gradient(97deg, #fff 24%, #69c 0) 0 100% / 55% 70%,
+    linear-gradient(-97deg, #fff 24%, #69c 0) 100% 100% / 55% 70%,
+    #fff;
+  background-repeat: no-repeat;
+  filter: blur(0.75vmin) contrast(50) hue-rotate(60deg) grayscale(0.8) brightness(1.2);
+  box-shadow: 0 0 0 1vmin #fff;
+  mix-blend-mode: multiply;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: 100%;
+  background:
+    radial-gradient(farthest-side at 50% 0, #beeeef88, #beeeef00) 50% 100% / 100% 2%,
+radial-gradient(circle at 50% 100%, #dde 0.5vmin, #0000 0) 100% 96% / 5% 50%,
+    radial-gradient(circle at 43% 75%, #000 0.7vmin, #0000 0.75vmin),
+    radial-gradient(circle at 57% 75%, #000 0.7vmin, #0000 0.75vmin),
+    radial-gradient(farthest-side at 50% 0%, #0000 60%, #000 0 99.99%, #0000 0) 50% 78% / 7% 2%,
+    linear-gradient(97deg, #0000 23%, #ccd4 0, #ccd0 70%) 21.5% 90% / 45% 60%,
+    linear-gradient(-97deg, #0000 23%, #ccd4 0, #ccd0 70%) 78.5% 90% / 45% 60%,
+    #0000
+    ;
+  background-repeat: no-repeat;
+}
 /* divtober vintage */
 .vintage-container {
   background: conic-gradient(aqua 25%,hotpink 0 50%,yellow 0 75%, limegreen 0);
