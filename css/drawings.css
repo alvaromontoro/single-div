@@ -1,3 +1,158 @@
+/* divtober monster */
+.monster {
+  --railing-color1: #eb3647;
+  --railing-color2: #ff7884;
+  --railing-color3: #e85869;
+  --railing-color4: #ff6874;
+  
+  --railing-color1: #db4657;
+  --railing-color2: #ef8894;
+  --railing-color3: #d86879;
+  --railing-color4: #ef7884;
+  
+  --pos: 18em;
+  --floor1: repeating-linear-gradient(80deg, #0000 0 7em, #ba8867cc  7.1em) 50% 100% / 100vmax 15em,
+    repeating-linear-gradient(80deg, #0000 0 10em, #9e764edd 0 10.1em, #fec68e 10.3em) 50% 100% / 100vmax 15em,
+    repeating-linear-gradient(80deg, #0000 0 13em, #d49d7b 13.2em) 50% 100% / 100vmax 15em,
+    repeating-linear-gradient(80deg, #0000 0 17em, #d49d7bcc 17.2em) 50% 100% / 100vmax 10em,
+    repeating-linear-gradient(80deg, #0000 4em, #d49d7b66 0 4.2em, #0000 0 11em) 50% 95% / 100vmax 10em,
+    linear-gradient(#0000 85em, #ca9573  0) 50% 100% / 100vmax 100em;
+  --floor2: 
+    radial-gradient(200% 56% at 45% 130%, #0000 80%, var(--railing-color1) 80.1% 85%, var(--railing-color2) 85.1%, #f06070 85.5%, var(--railing-color4) 90%, #0000 90.1%) 50% 100% / 100vmax 100em no-repeat,
+    repeating-linear-gradient(80deg, #0000 0 7em, #ba8867cc  7.1em) 50% 100% / 100vmax 15em no-repeat,
+    repeating-linear-gradient(80deg, #0000 0 10em, #9e764edd 0 10.1em, #fec68e 10.3em) 50% 100% / 100vmax 15em no-repeat,
+    repeating-linear-gradient(80deg, #0000 0 13em, #d49d7b 13.2em) 50% 100% / 100vmax 15em no-repeat,
+    repeating-linear-gradient(80deg, #0000 0 17em, #d49d7bcc 17.2em) 50% 100% / 100vmax 10em no-repeat,
+    repeating-linear-gradient(80deg, #0000 4em, #d49d7b66 0 4.2em, #0000 0 11em) 50% 95% / 100vmax 10em no-repeat,
+    radial-gradient(200% 56% at 45% 130%, #ca9573 82%, #0000 0) 50% 100% / 100vmax 100em no-repeat;
+  --railing1: repeating-linear-gradient(90deg, #0000 0 30em, var(--railing-color1) 0 34em) 0% calc(100% - 17em) / 100% 24em repeat-x,
+    repeating-linear-gradient(90deg, #0000 0 13em, var(--railing-color1) 0 17em) 0% calc(100% - 17em) / 100% 12em repeat-x,
+    linear-gradient(#0000 56em, var(--railing-color4) 0 57.5em, var(--railing-color1) 0 61em, #0000 0),
+    linear-gradient(#0000 68em, var(--railing-color4) 0 69.5em, var(--railing-color1) 0 73em, #0000 0),
+    linear-gradient(#0000 80em, var(--railing-color4) 0 81.5em, var(--railing-color1) 0 85em, #0000 0);
+  --railing2:
+    conic-gradient(at 5% 0.25%, #0000 270deg, #0001 0) 0% calc(100% - 16em) / 34em 25em repeat-x,
+    conic-gradient(at 11% 0.25%, #0000 270deg, #edd3 0) 10% calc(100% - 17em) / 34em 25em repeat-x,
+    conic-gradient(at 7% 0.25%, #0000 260deg, #9002 270deg) 13% calc(100% - 17em) / 24em 25em repeat-x,
+    
+    conic-gradient(at 9% 0.25%, #0000 270deg, #0001 0) 5% calc(100% - 5em) / 34em 25em repeat-x,
+    conic-gradient(at 11% 0.25%, #0000 270deg, #edd3 0) 9% calc(100% - 6em) / 34em 25em repeat-x,
+    conic-gradient(at 7% 0.25%, #0000 260deg, #9001 270deg) 7% calc(100% - 4em) / 24em 25em repeat-x,
+    
+    radial-gradient(0.5% 50% at 31.5em 50%, #9001 50%, #0000) 0% calc(100% - 16em) / 34em 25em repeat-x,
+    radial-gradient(0.35% 50% at 32.5em 50%, #edd1 50%, #0000) 0% calc(100% - 22em) / 34em 20em repeat-x,
+    radial-gradient(0.35% 40% at 32.5em 40%, #8002 50%, #0000) 0% calc(100% - 23em) / 34em 20em repeat-x,
+    radial-gradient(0.25% 50% at 16.25em 50%, #fff3 40%, #0000) 0% calc(100% - 15em) / 17em 10em repeat-x,
+    radial-gradient(0.35% 50% at 16.25em 50%, #9003 50%, #0000) 0% calc(100% - 15em) / 17em 10em repeat-x,
+    radial-gradient(0.25% 50% at 14em 50%, #fff1 30%, #0000) 0% calc(100% - 17em) / 34em 12em repeat-x,
+    repeating-linear-gradient(90deg, #0000 0 30em, var(--railing-color1) 0 34em) 0% calc(100% - 15em) / 100% 25em repeat-x,
+    repeating-linear-gradient(90deg, #0000 0 13em, var(--railing-color1) 0 17em) 0% calc(100% - 15em) / 100% 13em repeat-x,
+    radial-gradient(200% 56% at 45% 130%, #0000 80%, var(--railing-color1) 80.1% 85%, var(--railing-color2) 85.1%, var(--railing-color3) 85.5%, var(--railing-color4) 88%, #0000 88.1%) 50% calc(100% - 13em) / 100vmax 100em repeat-x,
+    radial-gradient(200% 56% at 45% 130%, #0000 80%, var(--railing-color1) 80.1% 85%, var(--railing-color2) 85.1%, var(--railing-color3) 85.5%, var(--railing-color4) 88%, #0000 88.1%) 50% calc(100% - 25em) / 100vmax 100em repeat-x;
+  --clouds: 
+    radial-gradient(farthest-side, #fff7 80%, #fff0) 30% 89% / 75% 30% no-repeat,
+    radial-gradient(farthest-side, #fff6 80%, #ccc0) 30% 89% / 35% 35% no-repeat,
+    radial-gradient(farthest-side, #fff8 80%, #fff0) 140% 77% / 75% 50% no-repeat,
+    radial-gradient(farthest-side, #fffc 60%, #fff0) 105% 43% / 30% 30% no-repeat,
+    radial-gradient(farthest-side, #fff7 60%, #ccc1, #ccc0) 75% 63% / 30% 30% no-repeat,
+    radial-gradient(farthest-side, #fff9 80%, #fff0) 50% 43% / 60% 30% no-repeat,
+    radial-gradient(farthest-side, #fff9 80%, #fff0) 35% 63% / 46% 30% no-repeat,
+    radial-gradient(farthest-side, #fff8 80%, #fff0) 66% 53% / 60% 50% no-repeat,
+    radial-gradient(farthest-side, #fffc 80%, #fff0) 140% 73% / 60% 50% no-repeat,
+    radial-gradient(farthest-side, #ccc5 60%, #fff0) 96% 40% / 30% 30% no-repeat,
+    radial-gradient(farthest-side, #fffc 80%, #fff0) 90% 25% / 40% 10% no-repeat,
+    radial-gradient(farthest-side, #fffc 80%, #fff0) 90% 20% / 20% 20% no-repeat,
+    radial-gradient(farthest-side, #fffc 80%, #fff0) 105% 24% / 30% 20% no-repeat,
+    radial-gradient(farthest-side, #fffc 80%, #fff0) 90% 26% / 30% 23% no-repeat,
+    radial-gradient(farthest-side, #fffc 80%, #fff0) 76% 25% / 30% 20% no-repeat,
+    radial-gradient(farthest-side, #dfdfe822 80%, #ccc0) 90% 16% / 30% 23% no-repeat,
+    radial-gradient(farthest-side, #dfdfe833 80%, #ccc0) 70% 21% / 20% 20% no-repeat,
+    radial-gradient(farthest-side, #fffc 80%, #fff0) 120% 11% / 30% 20% no-repeat,
+    radial-gradient(farthest-side, #fffc 80%, #ccc0) 83% 11% / 35% 25% no-repeat,
+    radial-gradient(farthest-side, #fff9 80%, #fff0) 96% 5% / 30% 30em no-repeat,
+    radial-gradient(farthest-side, #fff8 60%, #fff0) 60% 18% / 30% 20% no-repeat,
+    linear-gradient(#0000 0 0) no-repeat;
+  --vegetation: 
+    radial-gradient(150% 100% at 40% 0, #0000 65%, #a0c387 0, #65916c);
+  --base: 
+    linear-gradient(#87e1f100, #fff8 30%, #87e1f1),
+    #baeefc;
+  position: absolute;
+  font-size: 0.9vh;
+  width: 100vw;
+  height: 90vh;
+  top: 0;
+  left: 0;
+  background:
+    var(--railing2),
+    var(--floor2),
+/*     var(--vegetation), */
+    var(--clouds),
+    var(--base)
+    ;
+}
+
+.monster::after {
+  --mask: #eaeedb;
+  --line: #000;
+  --deco: #967b9d;
+  content: "";
+  position: absolute;
+  left: 48.5%;
+  top: calc(1em + var(--pos));
+  transform: translateX(-50%);
+  width: 10.8em;
+  height: 16em;
+  border-radius: 100% / 70% 70% 150% 150%;
+  box-shadow: inset -1em 0 0 -0.25em #baaea1, 0 0 2px 0.75em #000;
+  background: 
+    /* eyes */
+    radial-gradient(20% 6% at 76% 39.5%, var(--line) 52%, #0000 53%),
+    radial-gradient(20% 6% at 24% 39.5%, var(--line) 52%, #0000 53%),
+    radial-gradient(150% 120% at 50% 0, #0000 50%, var(--line) 55% 73%, #0000 77%) 19% 45% / 16% 5%,
+    radial-gradient(150% 120% at 49% 0, #0000 50%, var(--line) 55% 73%, #0000 77%) 81% 45% / 16% 5%,
+    /* mouth */
+    radial-gradient(102% 100% at 50% 0, var(--line) 0 52%, #0000 53%) 54% 90.5% / 42% 10%,
+    radial-gradient(150% 120% at 49% 0, #0000 50%, var(--line) 52% 75%, #0000 77%) 50% 91% / 17% 5%,
+    /* marks */
+    radial-gradient(80% 11.5% at 50% 42%, var(--mask) 99.9%, #0000 0),
+    radial-gradient(21% 100% at 50% 42%, var(--mask) 99.9%, #0000 0),
+    radial-gradient(50% 52% at 50% 43%, var(--deco) 70%, #0000 0),
+    var(--mask);
+  background-repeat: no-repeat;
+}
+
+.monster::before {
+  content: "";
+  position: absolute;
+  left: 48.5%;
+  top: var(--pos);
+  transform: translateX(-50%);
+  width: 27em;
+  height: 79em;
+  border-radius: 100% / 90% 94% 5% 5%;
+  background: 
+    radial-gradient(farthest-side at 50% 120%, #000 99.99%, #0000 0) 51% 0% / 52% 12%,
+    radial-gradient(farthest-side at 50% 100%, #000 99.99%, #0000 0) 48% 0% / 52% 13%,
+    radial-gradient(farthest-side, #000 99.99%, #0000 0) 50% 10% / 80% 70%,
+    radial-gradient(farthest-side, #000 99.99%, #0000 0) 20% 100% / 80% 90%,
+    radial-gradient(farthest-side, #000 99.99%, #0000 0) 88% 100% / 75% 90%,
+    radial-gradient(farthest-side at 50% 100%, #000 99.99%, #0000 0) 50.5% 100% / 97% 99%,
+
+    #fff;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 1em #fff;
+  filter: blur(0.75em) contrast(40) blur(1px);
+  -webkit-mask: 
+    linear-gradient(90deg, #0001, #0000 15% 90%, #0001),
+    linear-gradient(#000 25%, #0000 50%),
+    linear-gradient(#0008 50%, #0000),
+    radial-gradient(100% 100% at 50% 0, #000, #0000) 50% 50% / 100% 100% no-repeat,
+    radial-gradient(70% 110% at 50% 0, #000a, #0000 90%) 50% 50% / 100% 100% no-repeat,
+    radial-gradient(100% 50% at 50% 0, #000 10%, #0000) 50% 50% / 100% 100% no-repeat;
+  mix-blend-mode: multiply;
+}
+
 /* divtober grain */
 .grain {
   width: 25vmin;
