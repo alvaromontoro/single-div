@@ -1,3 +1,269 @@
+/* divtober brew */
+/*  Based on: https://secure.img1-fg.wfcdn.com/im/27140039/resize-h3200-w3200%5Ecompr-r85/5916/59164908/Bodum+Brazil+French+Press+Coffee+Maker.jpg */
+.brew {
+  --plastic: #222;
+  --plastic2: #2a2a2c;
+  --plastic3: #38383a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vmin;
+  aspect-ratio: 1;
+  background:    
+    /* top handle */
+    radial-gradient(60% 50%, var(--plastic), #0000 99.99%) 42.5% 8% / 8% 4.4%,
+    radial-gradient(50% 100% at 50% 130%, #0000, #ffffff0c 80%, #0000 0) 42.5% 5% / 10% 5%,
+    radial-gradient(circle at 43.25% 11.125%, var(--plastic) 4.4%, #0000 0),
+    radial-gradient(80% 120% at 50% 130%, #0000, #0003 80%, #0000 0) 43.25% 15% / 6% 2.5%,
+    /* top cover */
+    linear-gradient(#fff2, #fff0 60%) 39% 15.5% / 39% 4%,
+    radial-gradient(farthest-side, var(--plastic) 99%, #0000 99.99%) 39% 15.5% / 39% 4%,
+    radial-gradient(farthest-side, #fff 40%, #fff0) 40% 15.75% / 32% 4%,
+    linear-gradient(90deg, var(--plastic3), var(--plastic2) 10% 90%, var(--plastic3)) 39% 17.25% / 39% 2%,
+    radial-gradient(farthest-side, var(--plastic2) 99%, #0000 99.99%) 39% 17.5% / 39% 4%,
+    /* pouring tip */
+    radial-gradient(farthest-side at 150% 100%, #fff8 70%, #0002 99%, #0000 99.99%) 20.66% 19.75% / 5% 3.5%,
+    radial-gradient(farthest-side at 160% 100%, #fff 90%, #0002 99%, #0000 99.99%) 21% 20.25% / 5% 3%,
+    radial-gradient(farthest-side at 100% -00%, #fff 70%, #0002 99%, #0000 99.99%) 20.66% 22.875% / 5% 1.5%,
+    radial-gradient(farthest-side at 0 0, #fffc 75%, #fff0) 24.75% 19.75% / 1.5% 6%,
+    /* top back */
+    radial-gradient(95% 100% at 50% 0, var(--plastic3) 60%, var(--plastic2) 99%, #0000 99.99%) 39.75% 21% / 35.5% 10%,
+    
+    /* base front */
+    radial-gradient(farthest-side at 0 50%, #0007, #0000) 28% 88% / 15% 19%,
+    radial-gradient(farthest-side at 100% 50%, #323c, #0000) 56% 88% / 15% 18%,
+    radial-gradient(50% 60% at 50% 0%, #0000 92%, var(--plastic) 0 99.99%, #0000 0) 39% 75% / 39% 6%,
+    
+    radial-gradient(50% 50% at 50% 0%, #0000 92%, var(--plastic) 0 99.99%, #0000 0) 39% 75% / 39% 6%,
+    
+    radial-gradient(45% 86% at 50% 0%,#0000 93%, #fff2 0 98%, var(--plastic2) 99.99%) 40.5% 74% / 30% 2%,
+    radial-gradient(55% 60% at 50% 0%, #0000 90%, var(--plastic2) 0) 39% 75% / 39% 6%,
+    linear-gradient(var(--plastic2) 0 0) 39% 87.5% / 39% 14%,
+    /* body */
+    linear-gradient(90deg, #0003, #ffe2 7%, #0000, #0001, #18080044 47% 53%, #0001, #0000, #eeeedd18 94%, #0004) 39.25% 50% / 37.5% 65%,
+    radial-gradient(250% 100% at 50% 0, #ddd 40%, #a8aaac 90%, #0000 0) 43.75% 24% / 2% 15%,
+    radial-gradient(farthest-side, #e9d5ba 99%, #e9d5ba00 99.99%) 39.5% 33% / 36% 4.5%,
+    linear-gradient( #e9d59a 0 0) 39.5% 34.25% / 36% 2%,
+    radial-gradient(farthest-side, #e9d59a 99%, #e9d5ba00 99.99%) 39.5% 35% / 36% 4.5%,
+    linear-gradient(90deg, #674231, #371201 30%, #321, #371201 70%, #674231) 39.5% 64% / 36% 46%,
+    /* base back */
+    radial-gradient(farthest-side, var(--plastic) 99%, #0000 99.99%) 39% 72% / 39% 6%,
+    radial-gradient(farthest-side, var(--plastic2) 99%, #0000 99.99%) 39% 93% / 39% 9%,
+    /* handle */
+    radial-gradient(farthest-side at 0 100%, var(--plastic3) 0, var(--plastic) 99.99%, #0000 99.99%)70.5% 16.75% / 19.5% 2.75%,
+    radial-gradient(100% 190% at 0 100%, #0000 90%, var(--plastic3) 0, var(--plastic) 99.99%, #0000 99.99%) 70% 19% / 32% 5%,
+    radial-gradient(farthest-side at 0 0, #0000 90%, var(--plastic3) 0, var(--plastic) 99.99%, #0000 99.99%) 70% 64% / 32% 65%,
+    /* shade */
+    radial-gradient(farthest-side, #0007, #0000) 40% 95% / 55% 10%,
+    #f000;
+  background-repeat: no-repeat;
+}
+
+
+/* divtober free */
+.free-container {
+  background: #ffc8;
+}
+
+.free {
+  --skin: #eba;
+  font-size: 1vmin;
+  width: 90em;
+  height: 70em;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    /* table */
+    linear-gradient(#a00 0 0) 29% 84% / 55% 25%,
+    repeating-linear-gradient(90deg, #a00 0 0.5%, #0000 0 1%) 29% 86% / 55% 25%,
+    radial-gradient(50% 800% at 50% 250%, #fff 99.99%, #0000 0) 25% 65% / 63% 3%,
+    conic-gradient(at 10% 250%, #0000 10deg, #642 0 12deg, #0000 0) 0 100% / 50% 35%,
+    conic-gradient(at 90% 250%, #0000 348deg, #642 0 350deg, #0000 0) 60% 100% / 50% 35%,
+    /* ice cream */
+    radial-gradient(farthest-side at 50% 0, #999 99.99%, #0000 0) 64% 57% / 9% 5%,
+    radial-gradient(circle at 64.5% 54%, hotpink 3%, #0000 0),
+    radial-gradient(circle at 61% 54%, #ffa 3%, #0000 0),
+    radial-gradient(circle at 62.5% 51%, brown 3%, #0000 0),
+    linear-gradient(#999 0 0) 63.125% 64% / 1% 10%,
+    linear-gradient(#999 0 0) 63.4% 64% / 4% 2.5%,
+    /* cheese */
+    conic-gradient(at 50% 2000%, #aaa 15deg, #0000 0 345deg, #aaa 0) 12% 62.5% / 20% 1.5%,
+    radial-gradient(circle at 17% 58%, #fc5 0.75%, #0000 0),
+    radial-gradient(circle at 21.5% 59%, #fc5 0.5%, #0000 0),
+    radial-gradient(circle at 20% 60%, #fc5 1%, #0000 0),
+    linear-gradient(#fe5 0 0) 16% 60% / 9% 7%,
+    /* chicken */
+    conic-gradient(at 50% 1700%, #aaa 15deg, #0000 0 345deg, #aaa 0) 40% 62.5% / 20% 2.5%,
+    radial-gradient(farthest-side at 0 60%, #963 99.99%, #0000 0) 46.5% 59% / 7% 10%,
+    radial-gradient(farthest-side at 100% 60%, #963 99.99%, #0000 0) 37.5% 59% / 10% 10%,
+    /* bottle */
+    radial-gradient(circle at 54.075% 46.5%, #383 4.33%, #0000 0),
+    linear-gradient(#8335 0 0) 54.25% 58% / 5% 10%,
+    linear-gradient(#383 0 0) 54.25% 56% / 6% 17%,
+    linear-gradient(#383 0 0) 54.275% 50% / 2% 20%,
+    linear-gradient(#383 0 0) 54.25% 40% / 3% 1%,
+    /* legs */
+    linear-gradient(#369 0 0) 27% 95% / 6% 10%,
+    linear-gradient(#369 0 0) 37% 95% / 6% 10%,
+    radial-gradient(at 28.5% 100%, #000 4%, #0000 0),
+    radial-gradient(at 37.5% 100%, #000 4%, #0000 0),
+    radial-gradient(farthest-side at 0% 100%, #000 99.99%, #0000 0) 41% 100% / 5% 5%,
+    /* chair */
+    linear-gradient(#963 0 0) 23.5% 100% / 2% 15%,
+    linear-gradient(#963 0 0) 42% 100% / 2% 15%,
+    /* hand */
+    conic-gradient(at 50% 0, #0000 170deg, #999 0 190deg, #0000 0) 24% 51% / 1% 4%,
+    conic-gradient(at 50% 0, #0000 170deg, #999 0 190deg, #0000 0) 25% 51% / 1% 4%,
+    conic-gradient(at 50% 0, #0000 170deg, #999 0 190deg, #0000 0) 26% 51% / 1% 4%,
+    radial-gradient(farthest-side at 50% 0, #999 99.99%, #0000 0) 24.5% 54% / 3% 2%,
+    linear-gradient(#999 0 0) 25% 57% / 1% 4%,
+    radial-gradient(circle at 25% 62%, var(--skin) 3.5%, #0000 0),
+    /* neck */
+    linear-gradient(#da9 0 0) 31.5% 44% / 4% 10%,
+    /* body */
+    radial-gradient(50% 100% at 50% 100%, #fff 99.99%, #0000 0) 28% 61% / 20% 20%,
+    /* bubble link */
+    conic-gradient(#0000 40deg, #fc8 0 49deg, #0000 0) 27% 22% / 50% 30%,
+    /* base */
+    radial-gradient(farthest-side at 50% 50%, #d3c7e999 99.99%, #0000 0) 10% 50% / 90% 90%,
+    #f000;
+  background-repeat: no-repeat;
+}
+
+.free::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  background: 
+    /* chicken leg */
+    radial-gradient(circle at 52% 52%, #ffe 1.5%, #0000 0),
+    radial-gradient(circle at 52% 54%, #ffe 1.5%, #0000 0),
+    linear-gradient(#ffe 0 0) 50.5% 53% / 3.5% 2%,
+    radial-gradient(70% 60% at 45% 53%, #852 6%, #0000 0),
+    /* hair */
+    radial-gradient(circle at 38% 19%, #c93 2%, #0000 0),
+    radial-gradient(circle at 40% 19.25%, #c93 1.5%, #0000 0),
+    radial-gradient(circle at 36% 19.5%, #c93 1.66%, #0000 0),
+    radial-gradient(circle at 34.5% 20.75%, #c93 1.25%, #0000 0),
+    /* face */
+    radial-gradient(farthest-side at 50% 20%, #000 99.99%, #0000 0) 36.5% 27% / 2% 1.25%,
+    radial-gradient(farthest-side at 50% 20%, #000 99.99%, #0000 0) 40.5% 27.25% / 2% 1.25%,
+    conic-gradient(at 30% 50%, #0000 270deg, #c006 0 330deg, #0000 0) 41.5% 31% / 6% 7%,
+    radial-gradient(circle at 38% 35%, #000 0.75%, #0000 0),
+    radial-gradient(30% 50% at 38% 28%, var(--skin) 20%, #0000 0),
+    #f000;
+  background-repeat: no-repeat;
+}
+
+.free::after {
+  content: "...and a sugar-free soda, please!";
+  font: 3em Arial;
+  white-space: pre-wrap;
+  text-align: center;
+  position: absolute;
+  left: 60%;
+  top: 5%;
+  width: 30%;
+  background: #fc8;
+  padding: 1em;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* divg=tober monster 2 */
+.bill-container {
+  background: #999;
+}
+
+.bill {
+  font-size: 0.8vmin;
+  width: 40em;
+  height: 40em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 1em #ffc);
+  background: 
+    /* legs */
+    radial-gradient(farthest-side at 65% 30%, #0000 70%, #000 72% 98%, #0000 99.99%) 40% 100% / 10% 20%,
+    radial-gradient(farthest-side at 35% 50%, #0000 70%, #000 72% 98%, #0000 99.99%) 60% 98% / 10% 26%,
+    /* arms */
+    radial-gradient(farthest-side, #0000 70%, #000 72% 98%, #0000 99.99%) 10% 68% / 25% 7%,
+    radial-gradient(farthest-side at 20% 40%, #0000 87%, #000 89% 98%, #0000 99.99%) 90% 58% / 20% 20%,
+    /* hands */
+    radial-gradient(circle at 24% 73%, #000 3%, #0000 3.25%),
+    radial-gradient(circle at 87.25% 42.75%, #000 4%, #0000 4.25%),
+    radial-gradient(farthest-side at 0 50%, #000 97%, #0000 99.99%) 85.5% 37.5% / 3% 8%;
+  background-repeat: no-repeat;
+}
+
+.bill::after {
+  content: "";
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  transform: translate(-50%, -50%);
+  background:
+    /* eye */
+    radial-gradient(farthest-side, #000 98%, #0000 99.99%) 50% 48.5% / 4% 11%,
+    radial-gradient(50% 100% at 50% 140%, #fff 92%, #000 93% 99%, #0000 99.99%) 50% 40% / 35% 15%,
+    radial-gradient(50% 100% at 50% -40%, #fff 92%, #000 93% 99%, #0000 99.99%) 50% 57% / 35% 15%,
+    /* eyelashes */
+    linear-gradient(45deg, #0000 45%, #000 46% 54%, #0000 55%) 43% 44% / 10% 10%,
+    linear-gradient(77deg, #0000 45%, #000 46% 54%, #0000 55%) 47% 41% / 10% 10%,
+    linear-gradient(-77deg, #0000 45%, #000 46% 54%, #0000 55%) 53% 41% / 10% 10%,
+    linear-gradient(-45deg, #0000 45%, #000 46% 54%, #0000 55%) 57% 44% / 10% 10%,
+    linear-gradient(-45deg, #0000 45%, #000 46% 54%, #0000 55%) 43% 53% / 10% 10%,
+    linear-gradient(-77deg, #0000 45%, #000 46% 54%, #0000 55%) 47% 56% / 10% 10%,
+    linear-gradient(77deg, #0000 45%, #000 46% 54%, #0000 55%) 53% 56% / 10% 10%,
+    linear-gradient(45deg, #0000 45%, #000 46% 54%, #0000 55%) 57% 53% / 10% 10%,
+    /* bowtie */
+    conic-gradient(#0000 245deg, #000 0 295deg, #0000 0) 54% 90% / 30% 20%,
+    conic-gradient(#0000 65deg, #000 0 115deg, #0000 0) 46% 90% / 30% 20%,
+    /* bricks */
+    repeating-linear-gradient(#dd3 0 4%, #0000 0 33.3333%) 50% 100% / 100% 27%,
+    repeating-linear-gradient(90deg, #0000 0 38%, #dd3 0 39%) 50% 100% / 100% 9%,
+    repeating-linear-gradient(90deg, #0000 0 34%, #dd3 0 35%) 50% 91% / 100% 9%,
+    repeating-linear-gradient(90deg, #0000 0 24.5%, #dd3 0 25.5%) 50% 81% / 100% 9%,
+    /* hat correction */
+    linear-gradient(#000 0.75%, #0000 0),
+    /* base color */
+    #ff5
+    ;
+  background-repeat: no-repeat;
+}
+
+.bill::before {
+  content: "";
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(4deg);
+  background: 
+    /* hat */
+    linear-gradient(#000 0 0) 48% 18.5% / 14% 2.5%,
+    linear-gradient(#000 0 0) 48% 0% / 5% 19%,
+    /* feet */
+    radial-gradient(farthest-side, #000 99.99%, #0000 0) 56% 96% / 3% 12%,
+    radial-gradient(farthest-side, #000 99.99%, #0000 0) 49% 97.5% / 3% 12%;
+  background-repeat: no-repeat;
+}
+
+
 /* divtober monster */
 .monster {
   --railing-color1: #eb3647;
