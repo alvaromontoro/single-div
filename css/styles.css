@@ -114,6 +114,23 @@ header > div:last-child a {
   color: #ccc;
 }
 
+body > nav {
+  height: auto;
+  min-height: 6rem;
+  background: #444;
+  text-align: center;
+  color: #eee;
+}
+
+body > nav h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.25em;
+}
+
+body > nav a {
+    margin: 0 0.5em;
+}
+
 h1 {
   font-size: 1rem;
   margin: 0;
