@@ -1,3 +1,334 @@
+/* death */
+/*
+Design inspired by:
+
+- La Santa Muerte by Christian Korn - https://dribbble.com/shots/2261887-La-Santa-Muerte
+- Death & Coffee by David Espinosa - https://dribbble.com/shots/2960917-Death-Coffee
+*/
+.death-container {
+    background: #c9c8;
+}
+
+.death {
+    --cape: #000;
+    --bone: #ffc;
+    position: absolute;
+    transform-origin: 50% 100%;
+    font-size: 1vmin;
+    aspect-ratio: 45 / 37.5;
+    width: 40em;
+    bottom: 0;
+    left: 15%;
+    background:
+      linear-gradient(var(--bone) 0 0) 55% 31% / 4% 15%,
+      linear-gradient(var(--bone) 0 0) 61% 31% / 4% 15%,
+      linear-gradient(var(--bone) 0 0) 67% 31% / 4% 15%,
+      conic-gradient(at 50% -30%, #0000 160deg, var(--cape) 0 200deg, #0000 0),
+      linear-gradient(to bottom left, var(--cape) 50%, #0000 0) 10% 0 / 40% 20%,
+      #f000;
+    background-repeat: no-repeat;
+    
+  }
+  
+  .death::before {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 22%;
+    border-radius: 2em;
+    top: 13%;
+    left: 45%;
+    background:
+      radial-gradient(circle at 35% 65%, #000 1.2em, #0000 1.24em),
+      radial-gradient(circle at 70% 65%, #000 1.2em, #0000 1.24em),
+      var(--bone);
+  }
+  
+  .death::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    border-radius: 100% 0 0 0 / 20%;
+    background: 
+      linear-gradient(var(--bone) 0 0) 100% 67% / 1.75em 0.5em no-repeat,
+      linear-gradient(var(--bone) 0 0) 100% 70% / 1.75em 0.5em no-repeat,
+      linear-gradient(var(--bone) 0 0) 100% 73% / 1.75em 0.5em no-repeat,
+      linear-gradient(90deg, #0000 96%, indianred 0),
+      linear-gradient(-185deg, gray 10%, darkgray 0 12%, #0000 0);
+    transform-origin: 100% 100%;
+    transform: rotate(-10deg);
+    bottom: -5%;
+    left: -15%;
+  }
+
+/* whale */
+.whale-container {
+  background: #59a3;
+}
+.whale {
+  --whale-color: #206282;
+  --whale-color-dark: #004262;
+  --whale-color-light: #ccc;
+  --whale-left: 50%;
+  --whale-top: 50%;
+  position: absolute;
+  font-size: 0.5vmin;
+  aspect-ratio: 11 / 5;
+  width: 60em;
+  top: 65%;
+  left: 50%;
+  background-repeat: no-repeat;
+  border-radius: 50% / 0 10% 90% 100%;
+  background:
+    radial-gradient(farthest-side at 0 50%, var(--whale-color-dark) 99%, #0000) 75% 50% / 7% 60%,
+    radial-gradient(farthest-side at 50% 0, var(--whale-color-dark) 99%, #0000) 2% 2% / 22% 14%,
+  #f000;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+.whale::before {
+  position: absolute;
+  border-radius: 100% 50% 100% 100% / 10% 40% 10% 10%;
+  content: "";
+  top: 0;
+  left:60%;
+  aspect-ratio: 100 / 25;
+  width: 80%;
+  -webkit-mask:
+    radial-gradient(farthest-side at 0 0, #000 99%, #0000) 100% 0 / 36% 100% no-repeat,
+    radial-gradient(105% 115% at 100% -15%, #000 99%, #0000) 0 0 / 66% 100% no-repeat
+  ;
+  background:
+    radial-gradient(circle at 70% 40%, #000 1.5%, #0000 0),
+    radial-gradient(farthest-side at 100% 100%, #0000 74%, #0004 75%, #0000 76%) 100% 100% / 25% 50% no-repeat,
+    radial-gradient(farthest-side at 100% 100%, #0000 74%, #0004 75%, #0000 76%) 100% 100% / 33.3% 66.6% no-repeat,
+    radial-gradient(farthest-side at 100% 100%, #0000 74%, #0004 75%, #0000 76%) 100% 100% / 42.66% 83.33% no-repeat,
+    radial-gradient(farthest-side at 100% 100%, #ccc 75%, #0000 76%) 100% 100% / 50% 100% no-repeat,
+    /*       radial-gradient(200% 70% at 50% 100%, #ccc 25%, #0000 26%) 50% 100% / 50% 100% no-repeat, */
+    radial-gradient(100% 100% at 50% 0%, #0000 85%, var(--whale-color-light) 86%) 30% 105% / 60% 90% no-repeat,
+    var(--whale-color);
+  transform: translate(-50%, 0);
+}
+
+.whale::after {
+  --fin: radial-gradient(farthest-side at 0 50%, var(--whale-color) 99%, #0000) 75.5% 31% / 6% 35%;
+  position: absolute;
+  content: "";
+  width: 120%;
+  height: 150%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -45%) rotate(15deg);
+  background: 
+  radial-gradient(farthest-side at 50% 0, var(--whale-color) 99%, #0000) 18% 23% / 17% 10%,
+  var(--fin),
+  #00f0;
+  background-repeat: no-repeat;
+}
+
+  
+/* chibi */
+.chibi-container {
+  background: #c8c6;
+}
+
+.chibi {
+  --skin: #fca;
+  --skin-dark: #fb9;
+  --skin-dark-semi: #fb9c;
+  --eye: #b6b;
+  --hair: #c8c;
+  --hair-dark: #b7b;
+  --hair-light: #d9d;
+  --cheeks: #f002;
+  --cheeks-bright: #f003;
+  --hair-clip: #324;
+  /* color alternative */
+  /*   
+  --skin: #963;
+  --skin-dark: #852;
+  --skin-dark-semi: #852c;
+  --eye: #6b6;
+  --hair: #321;
+  --hair-dark: #2c1c10;
+  --hair-light: #432;
+  --cheeks: #a002;
+  --cheeks-bright: #a003;
+  --hair-clip: darkturquoise;
+  */
+  font-size: 1vmin;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.chibi::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    /* ears */
+    radial-gradient(farthest-side at 100% 0, var(--hair) 94%, #000 94.1% 99.9%, #0000) 23% 46% / 5% 10%,
+    radial-gradient(farthest-side at 0 0, var(--hair) 96%, #000 96.1% 99.9%, #0000) 76% 46% / 8% 8%,
+    radial-gradient(farthest-side, #6001 90%, #000 90.1% 99.9%, #0000) 28% 60% / 5% 6%,
+    radial-gradient(farthest-side, #6001 90%, #000 90.1% 99.9%, #0000) 71.5% 60.5% / 5% 6%,
+    radial-gradient(farthest-side at 100% 70%, #0000 94%, #000 94.1% 99.9%, #0000) 26% 52% / 5% 10%,
+    radial-gradient(farthest-side at 0% 70%, #0000 94%, #000 94.4% 99.9%, #0000) 73.5% 53% / 5% 10%,
+    radial-gradient(20% 30%, var(--skin-dark) 96.5%, #000 97% 99.5%, #0000) 15% 56% / 50% 50%,
+    radial-gradient(19% 29%, var(--skin-dark) 95.75%, #000 96.3% 99.5%, #0000) 85% 57% / 50% 50%,
+    /* neck */
+    linear-gradient(90deg, #0000 2%, var(--skin) 0 98%, #0000 0) 50% 100% / 19% 40%,
+    radial-gradient(40% 20% at 50% 108.5%, var(--skin) 98.8%, #000 99% 99.98%, #0000),
+    linear-gradient(#000 0 0) 50% 100% / 19% 40%,
+    radial-gradient(40% 24% at 50% 110%, var(--hair-dark) 94%, #0000),
+    /* hair back */
+    radial-gradient(farthest-side, var(--hair-dark) 89.9%, #0000) 51% 60% / 48% 70%,
+    radial-gradient(farthest-side, var(--hair-dark) 89.9%, #0000) 49% 120% / 30% 40%,
+    radial-gradient(farthest-side, var(--hair-dark) 59.9%, #0000) 36% 84% / 15% 15%,
+    radial-gradient(farthest-side at 100% 0, var(--hair-dark) 89.9%, #0000) 27% 60% / 20% 30%,
+    radial-gradient(farthest-side at 0 0, var(--hair-dark) 89.9%, #0000) 73% 53% / 20% 20%,
+    
+    radial-gradient(at 50% 100%, var(--hair-dark) 10%, #0000 50%),
+    /* hair */
+    linear-gradient(var(--hair) 0 0) 50% 100% / 60% 60%,
+    radial-gradient(70% 60% at 52% 15%, var(--hair) 23%, #0000 23.1%),
+    radial-gradient(circle at 32% 24%, var(--hair) 14%, #0000 15.6%),
+    radial-gradient(70% 90% at 22.5% 46%, var(--hair) 20%, #0000 21.6%),
+    radial-gradient(90% 80% at 22% 73%, var(--hair) 12%, #0000 13.1%),
+    radial-gradient(circle at 30% 23%, var(--hair-light) 15%, #0000 15.1%),
+    radial-gradient(circle at 22% 46%, var(--hair-light) 20%, #0000 20.1%),
+    
+    radial-gradient(100% 80% at 22% 72%, var(--hair-light) 13%, #0000 13.1%),
+    radial-gradient(circle at 17% 82%, var(--hair) 4%, #0000 4.1%),
+    radial-gradient(100% 80% at 25% 100%, var(--hair) 21%, #0000 24.1%),
+    radial-gradient(100% 80% at 22% 100%, var(--hair-light) 23%, #0000 23.1%),
+    radial-gradient(100% 130% at 72% 100%, var(--hair) 22%, #0000 23.1%),
+    radial-gradient(circle at 74% 70%, var(--hair) 13%, #0000 14.1%),
+    radial-gradient(circle at 72% 100%, var(--hair-dark) 23%, #0000 23.1%),
+    
+    radial-gradient(80% 75% at 80% 50%, var(--hair) 14%, #0000 15.1%),
+    radial-gradient(56% 60% at 66% 20%, var(--hair) 29%, #0000 29.1%),
+    radial-gradient(circle at 80% 29.5%, var(--hair) 12%, #0000 13.1%),
+    radial-gradient(circle at 82% 30%, var(--hair-dark) 13%, #0000 13.1%),
+    
+    radial-gradient(80% 70% at 83% 50%, var(--hair-dark) 15%, #0000 15.1%),
+    radial-gradient(circle at 77% 70%, var(--hair-dark) 14%, #0000 14.1%),
+    radial-gradient(circle at 40% 85%, var(--hair) 14%, #0000 14.1%),
+    
+    #f000;
+  background-repeat: no-repeat;
+  filter: drop-shadow(-0.35em 0) drop-shadow(0 -0.2em) drop-shadow(0.35em 0);
+}
+
+.chibi::after {
+  content: "";
+  width: 49em;
+  height: 60em;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100% / 70% 70% 130% 130%;
+  border: 0.25em solid;
+  border-bottom: 0.5em solid;
+  box-shadow: 
+    /* neck-shadow */
+    0 20em 1em -14em var(--skin-dark),
+    /* hair-clip */
+    0 -1em 1em -0.75em var(--hair-clip),
+    0 -3em 2em -1.5em #fff3,
+    0 -4em var(--hair-clip),
+    0 -4.1em 0 0.15em,
+    /* neck */
+/*     0 37em 0 -15em var(--skin),
+    -0.05em 37em 0 -14.7em, */
+    0 0;
+  background: 
+  /* freckles */
+  radial-gradient(circle at 30% 64%, #6001 0.5%, #0000 0),
+  radial-gradient(circle at 25% 63%, #6001 0.5%, #0000 0),
+  radial-gradient(circle at 20% 65%, #6001 0.5%, #0000 0),
+  
+  radial-gradient(circle at 70.5% 64.2%, #6001 0.5%, #0000 0),
+  radial-gradient(circle at 75% 62.9%, #6001 0.5%, #0000 0),
+  radial-gradient(circle at 79.7% 64.9%, #6001 0.5%, #0000 0),
+  /* eye 1 */
+  radial-gradient(farthest-side, #fff 0 90%, #0000 95%) 27% 43.5% / 3% 2.5% no-repeat,
+  radial-gradient(farthest-side, #fff 0 90%, #0000 95%) 24.5% 47% / 6% 5% no-repeat,
+  radial-gradient(farthest-side, #fff 0 90%, #0000 95%) 33% 51% / 7% 7% no-repeat,
+  radial-gradient(farthest-side, #000 0 90%, #0000 95%) 27% 48% / 12% 14% no-repeat,
+  radial-gradient(farthest-side, #000, var(--eye) 50%, #0000 60%) 26% 51% / 20% 21% no-repeat,
+  radial-gradient(farthest-side, #000 0 90%, #0000 91%) 26% 50% / 20% 21% no-repeat,
+  radial-gradient(farthest-side, #fff 90%, #0000 91%) 20% 49% / 27% 23% no-repeat,
+  
+  /* eyelids 1*/
+  radial-gradient(65% 50% at 50% 100%, #0000 85%, #000 85.5% 99.5%, #0000 0) 25% 33.5% / 12% 6% no-repeat,
+  radial-gradient(farthest-side, #000 90%, #0000 91%) 19% 48% / 27% 23% no-repeat,
+  radial-gradient(farthest-side, #000 90%, #0000 0) 20% 47% / 27% 24% no-repeat,
+  radial-gradient(60% 100% at 50% 100%, #0000 90%, #000 91% 99.5%, #0000 0) 19% 44% / 25% 18% no-repeat,
+  radial-gradient(farthest-side, #000 90%, #0000 91%) 20% 45% / 27% 23% no-repeat,
+  radial-gradient(farthest-side, var(--skin-dark) 50%, #0000) 15% 33.5% / 35% 23% no-repeat,
+  
+  /* eye 2 */
+  radial-gradient(farthest-side, #fff 0 90%, #0000 95%) 67.25% 43.5% / 3% 2.5% no-repeat,
+  radial-gradient(farthest-side, #fff 0 90%, #0000 95%) 66% 47% / 6% 5% no-repeat,
+  radial-gradient(farthest-side, #fff 0 90%, #0000 95%) 75.5% 51% / 7% 7% no-repeat,
+  radial-gradient(farthest-side, #000 0 90%, #0000 95%) 72% 48% / 12% 14% no-repeat,
+  radial-gradient(farthest-side, #000, var(--eye) 50%, #0000 60%) 74% 51% / 20% 21% no-repeat,
+  radial-gradient(farthest-side, #000 0 90%, #0000 91%) 74% 50% / 20% 21% no-repeat,
+  radial-gradient(farthest-side, #fff 90%, #0000 91%) 80% 49% / 27% 23% no-repeat,
+  /* eyelids 2 */
+  radial-gradient(65% 50% at 50% 100%, #0000 85%, #000 85.5% 99.9%, #0000 0) 75% 33.5% / 12% 6% no-repeat,
+  radial-gradient(farthest-side, #000 90%, #0000 91%) 81% 48% / 27% 23% no-repeat,
+  radial-gradient(farthest-side, #000 90%, #0000 91%) 80% 47% / 27% 24% no-repeat,
+  radial-gradient(60% 100% at 50% 100%, #0000 90%, #000 91% 99.5%, #0000 0) 81% 44% / 25% 18% no-repeat,
+  radial-gradient(farthest-side, #000 90%, #0000 91%) 80% 45% / 27% 23% no-repeat,
+  radial-gradient(farthest-side, var(--skin-dark) 50%, #0000) 85% 34% / 35% 23% no-repeat,
+  /* eyebrows */
+  radial-gradient(farthest-side at 60% 60%, var(--skin) 99.5%, #0000 ) 13% 33% / 33% 17% no-repeat,
+  radial-gradient(farthest-side at 70% 60%, #000 99%, #0000) 14.5% 31% / 30% 17% no-repeat,
+  radial-gradient(farthest-side at 40% 60%, var(--skin) 99.5%, #0000) 87% 33% / 33% 17% no-repeat,
+  radial-gradient(farthest-side at 30% 60%, #000 99%, #0000) 86% 31% / 29.5% 17% no-repeat,
+  /* cheeks */
+  radial-gradient(farthest-side, var(--cheeks) 30%, #f000) 12% 63% / 30% 15% no-repeat,
+  radial-gradient(farthest-side, var(--cheeks) 30%, #f000) 88% 63% / 30% 15% no-repeat,
+  radial-gradient(circle at 15% 70%, var(--cheeks-bright), #f000 30%),
+  radial-gradient(circle at 85% 70%, var(--cheeks-bright), #f000 30%),
+  /* nose 1 & 2*/
+  linear-gradient(-30deg, #0000 47%, #000 0 52%, #0000 0) 49% 67% / 5% 5% no-repeat,
+  linear-gradient(-20deg, #0000 45%, #000 0 52%, #0000 0) 51% 67.25% / 4% 4% no-repeat,
+  /* linear-gradient(-30deg, #0000 47%, #000 0 52%, #0000 0) 49% 67% / 5% 5% no-repeat,
+    linear-gradient(-25deg, #0000 45%, #000 0 52%, #0000 0) 49.85% 67.25% / 4% 4% no-repeat,
+    linear-gradient(-20deg, #0000 45%, #000 0 52%, #0000 0) 51.5% 67.5% / 4% 4% no-repeat, */
+  radial-gradient(farthest-side at 50% 20%, var(--skin-dark) 70%, #0000) 49.5% 69% / 10% 3% no-repeat,
+  /* mouth */
+  linear-gradient(var(--skin) 0 0) 46% 86% / 2.5% 20% no-repeat,
+  radial-gradient(80% 100% at 50% 0, #0000 80%, #000 0 86%, #0000 0) 50% 86% / 20% 8% no-repeat,
+  /* hair */
+  radial-gradient(40% 20% at 14.5% -6%, var(--hair-dark) 76%, #000 76.1% 78%, #0000 78.1%),
+  radial-gradient(70% 40% at 104.5% -12%, var(--hair-dark) 77%, #000 77.1% 78%, #0000 78.1%),
+  radial-gradient(130% 100% at 30% 0.1%, var(--skin-dark) 10%, #0000 10.1%),
+  radial-gradient(130% 100% at 30.5% 0.05%, #000 10%, #0000 10.1%),
+  radial-gradient(130% 100% at 33% -0.5%, var(--hair) 10%, #0000 10.1%),
+  radial-gradient(190% 100% at 35% -0.5%, var(--hair-dark) 10%, #0000 10.1%),
+  radial-gradient(190% 100% at 35.4% 0%, #000 10%, #0000 10.1%),
+  /* base */
+  radial-gradient(53% 54% at 50% 55%, #0000 88%, var(--skin-dark-semi)),
+  linear-gradient(var(--skin-dark) 5%, var(--skin) 20%),
+  var(--skin);
+}
+
 /* divtober brew */
 /*  Based on: https://secure.img1-fg.wfcdn.com/im/27140039/resize-h3200-w3200%5Ecompr-r85/5916/59164908/Bodum+Brazil+French+Press+Coffee+Maker.jpg */
 .brew {
