@@ -1,3 +1,369 @@
+/* Woman + tulip frame */
+.framed-container {
+  background: #2472;
+}
+
+.framed {
+  --c: #247;
+  --s: 1.5vmin;
+  --p: #f773;
+  width: calc(var(--s) * 12);
+  aspect-ratio: 0.55;
+  border: var(--s) solid #fff;
+  outline: var(--s) solid var(--c);
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: calc(var(--s) * 6);
+  background: 
+    /* ears */
+/*     radial-gradient(at 12% 47%, var(--p) 2%, #fff0 0),
+    radial-gradient(at 88% 47%, var(--p) 2%, #fff0 0), */
+    radial-gradient(circle at 10% 44.85%, #fff 10%, #fff0 0),
+    radial-gradient(circle at 90% 44.85%, #fff 10%, #fff0 0),
+    /* shoulders */
+    radial-gradient(at 0 0, #0000 50%, #fff 50.5%) 0% 90% / 51% 40%,
+    radial-gradient(at 100% 0, #0000 50%, #fff 50.5%) 100% 90% / 51% 40%,
+    linear-gradient(var(--c) 90%, #fff 0),
+    #0000;
+  background-repeat: no-repeat;
+  overflow: hidden
+}
+
+.framed::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 55%;
+  border-radius: 100% / 80% 80% 120% 120%;
+  box-shadow: 
+    0 calc(var(--s) * 2) 0 calc(-1.5 * var(--s)) var(--p);
+/*     calc(var(--s) * 0.025) calc(var(--s) * -1) 0 calc(var(--s) * 0.3) var(--c); */
+  background:
+    /* eyes */
+    radial-gradient(farthest-side at 50% 0, var(--p) 99%, #0000) 20% 50% / 25% 1.7%, 
+    radial-gradient(farthest-side at 50% 0, var(--p) 99%, #0000) 80% 50% / 25% 1.7%, 
+    radial-gradient(64% 15% at 27% 42%, #fff 30%, #0000 0),
+    radial-gradient(66% 15% at 73% 42%, #fff 30%, #0000 0),
+    linear-gradient(#fff 0 0) 50% 40% / 19% 10%,
+    radial-gradient(55% 18% at 28% 40%, var(--c) 27%, #0000 0),
+    radial-gradient(55% 18% at 72% 40%, var(--c) 27%, #0000 0),
+    /* lips */
+    radial-gradient(farthest-side at 50% 100%, var(--c) 99%, #0000) 45% 80% / 19% 3.5%,
+    radial-gradient(farthest-side at 50% 100%, var(--c) 99%, #0000) 55% 80% / 19% 3.5%,
+    radial-gradient(farthest-side at 50% 0%, #fff2 99%, #0000) 50% 84.4% / 28% 5%,
+    radial-gradient(farthest-side at 50% 0%, var(--c) 99%, #0000) 50% 84.4% / 28% 5%,
+    /* hair */
+    radial-gradient(37% 92% at 0 0, var(--c) 50%, #0000 0),
+    radial-gradient(30% 92% at 100% 0, var(--c) 50%, #0000 0),
+    radial-gradient(130% 70% at 0 -5%, var(--c) 40%, #0000 0),
+    radial-gradient(150% 80% at 90% -10%, var(--c) 40%, #0000 0),
+    #fff;
+  background-repeat: no-repeat;
+  aclip-path: ellipse(62% 92% at 50% 100%);
+}
+
+.framed::after {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 25%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: 
+    /* petals */
+    radial-gradient(farthest-side at 0 100%, var(--c) 99%, #0000) 0 0 / 50% 40%,
+    radial-gradient(farthest-side at 100% 100%, var(--c) 99%, #0000) 100% 0 / 50% 40%,
+    radial-gradient(farthest-side at 0 100%, var(--c) 99%, #0000) 60% 0 / 20% 40%,
+    radial-gradient(farthest-side at 100% 100%, var(--c) 99%, #0000) 40% 0 / 20% 40%,
+    radial-gradient(farthest-side at 50% 0%, var(--c) 99%, #0000) 50% 55% / 100% 30%,
+    /* leaves */
+    radial-gradient(farthest-side at 50% 100%, var(--c) 99%, #0000) 100% 100% / 50% 10%,
+    radial-gradient(farthest-side at 50% 100%, var(--c) 99%, #0000) 0% 90% / 50% 7%,
+    /* stem */
+    linear-gradient(90deg, #0000 46%, var(--c) 0 54%, #0000 0) 50% 100% / 100% 60%;
+  background-repeat: no-repeat;
+}
+
+/* realistic coffee mug */
+.coffee-mug-1 {
+  --c: #358;
+  --cm: #3588;
+  position: absolute;
+  background: #f003;
+  font-size: 0.6vmin;
+  width: 51.5em;
+  height: 2em;
+  position: absolute;
+  top: calc(50% + 24em);
+  left: 48%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, #bbc8 90%, #bbc0) 0 0 / 80% 100% no-repeat,
+    radial-gradient(farthest-side, #000, #0000) 0 0 / 80% 100% no-repeat,
+    radial-gradient(farthest-side, #bbc6 90%, #bbc0) 100% 50% / 90% 40% no-repeat,
+    radial-gradient(farthest-side, #000, #0000 50%) 0 0 / 80% 100% no-repeat,
+    radial-gradient(25% 50% at 30% 50%, #000, #0000 90%) 0 0 / 80% 100% no-repeat
+    ;
+  background-repeat: no-repeat;
+}
+
+.coffee-mug-1::before {
+  content: "CSS \a IS \a AWESOME";
+  content: "";
+  white-space: pre;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  color: #fff8;
+  width: 35em;
+  height: 47.5em;
+  background: #f003;
+  bottom: 1em;
+  left: 5em;
+  border-radius: 0 0 10em 10em;
+  border-radius: 0.25em 0.25em 11em 10em / 0.5em 0.5em 7em 8em;
+  background:
+    /* metallic texture*/
+    repeating-linear-gradient(#0000 0 13%, #ffffff04 0 calc(13% + 1px), #0000 0) 30% 1.7em / 40% 4.1em,
+    repeating-linear-gradient(#0000 0 7%, #ffffff06 0 calc(7% + 1px), #0000 0) 70% 1.7em / 33% 4.1em,
+    repeating-linear-gradient(#0000 0 11%, #ffffff04 0 calc(11% + 1px), #0000 0) -10% 1.7em / 35% 4.1em,
+    repeating-linear-gradient(#0000 0 17%, #ffffff08 0 calc(17% + 1px), #0000 0) 110% 1.7em / 27% 4.1em,
+    repeating-linear-gradient(#0000 0 13%, #00000004 0 calc(13% + 1px), #0000 0) 60% 1.7em / 33% 4.1em,
+    repeating-linear-gradient(#0000 0 8%, #00000004 0 calc(8% + 1px), #0000 0) 21% 1.7em / 27% 4.1em,
+    repeating-linear-gradient(#0000 0 11%, #00000002 0 calc(8% + 1px), #0000 0) 31% 1.7em / 19% 4.1em,
+    /* metallic */
+    linear-gradient(90deg, #555, #333 10%, #ccc 33%, #666 48% 52%, #fff 66% 75%, #555 90% 95%, #ccc) 0 1.7em / 100% 4.1em,
+    /* reflections blue */
+    radial-gradient(farthest-side, #fff4, #0000 90%) 50% 5.8em / 100% 0.8%,
+    /* textures blue */
+    repeating-linear-gradient(90deg, #0000 0 13%, #ffffff01 0 calc(13% + 1px), #0000 0) 30% 5.9em / 100% 40% ,
+    repeating-linear-gradient(90deg, #0000 0 7%, #ffffff03 0 calc(7% + 1px), #0000 0) 70% 5.9em / 100% 33% ,
+    repeating-linear-gradient(90deg, #0000 0 11%, #ffffff01 0 calc(11% + 1px), #0000 0) -10% 5.9em / 100% 35% ,
+    repeating-linear-gradient(90deg, #0000 0 17%, #ffffff03 0 calc(17% + 1px), #0000 0) 110% 5.9em /  100% 27%,
+    repeating-linear-gradient(90deg, #0000 0 13%, #00000002 0 calc(13% + 1px), #0000 0) 60% 10em / 100% 33% ,
+    repeating-linear-gradient(90deg, #0000 0 8%, #00000001 0 calc(8% + 1px), #0000 0) 21% 5em / 100% 27% ,
+    repeating-linear-gradient(90deg, #0000 0 8%, #00000001 0 calc(8% + 1px), #0000 0) 31% 7em / 100% 19% ,
+    
+    repeating-linear-gradient(90deg, #0000 0 13%, #ffffff01 0 calc(13% + 1px), #0000 0) 30% 100% / 100% 50% ,
+    repeating-linear-gradient(90deg, #0000 0 7%, #ffffff03 0 calc(7% + 1px), #0000 0) 70% 100% / 100% 47% ,
+    repeating-linear-gradient(90deg, #0000 0 11%, #ffffff01 0 calc(11% + 1px), #0000 0) -10% 100% /  100% 29%,
+    repeating-linear-gradient(90deg, #0000 0 17%, #ffffff03 0 calc(17% + 1px), #0000 0) 110% 100% /  100% 37%,
+    repeating-linear-gradient(90deg, #0000 0 13%, #00000002 0 calc(13% + 1px), #0000 0) 60% 100% / 100% 43% ,
+    repeating-linear-gradient(90deg, #0000 0 8%, #00000001 0 calc(8% + 1px), #0000 0) 21% 100% / 94% 50% ,
+    repeating-linear-gradient(90deg, #0000 0 8%, #00000001 0 calc(8% + 1px), #0000 0) 31% 100% / 100% 45% ,
+    /* shadows blue */
+    radial-gradient(200% 100% at 50% 0, #0000 80%, var(--c)) 0 100% / 100% 41.7em,
+    linear-gradient(90deg, #0005, #0003 10%, #0000 33%, #00000004 48% 52%, #0000 66% 75%, #0003 90% 95%, #0000) 0 100% / 100% 41.7em,
+    radial-gradient(100% 10% at 60% 95%, #def2, #0000 50%),
+    radial-gradient(150% 10% at 50% 99%, #0005, #0000 30%),
+    /* base colors */
+    linear-gradient(#000 1.7em, #ccc 0 5.8em, var(--c) 0)
+    ;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 1.5em, 99% 1.7em, 100% 1.8em, 100% 5.65em, 99.25% 5.8em, 100% 5.95em, 100% 11.25em, 110% 13em, 105% 13em, 100% 14.25em, 100% 33.75em, 105% 35.5em, 100% 36.75em, 100% 100%, 100% 100%, 0 100%, 0 5.95em, 0.75% 5.8em, 0 5.65em, 0 1.8em, 1% 1.7em, 0 1.5em);
+  box-shadow: 
+    inset 0 -5em 3em -2em #0016,
+    10em -1.25em 0 -9.5em var(--c);
+}
+
+.coffee-mug-1::after {
+  content: "";
+  position: absolute;
+  border-radius: 0 100% 100% 0 / 50%;
+  width: 15em;
+  height: 25em;
+  left: 39.9em;
+  bottom: 12em;
+  -webkit-mask:
+    radial-gradient(farthest-side at 0 50%, #0000 80%, #000 0)
+    ;
+  background:
+    radial-gradient(at 60% 80%, var(--c) 20%, #0000 50%),
+    radial-gradient(at 0% 0%, var(--c), #0000 20%),
+    radial-gradient(at 0% 100%, var(--c), #0000 20%),
+    radial-gradient(farthest-side at 0 50%, #0000 90%, #fff0 0, #fff2 95%, #fff0 98%),
+    var(--c)
+    ;
+  background-repeat: no-repeat;
+}
+
+/* logos (part deux) */
+.figma-logo {
+  --red: #eb4b1b;
+  --pink: #f86e5f;
+  --purple: #9c56f6;
+  --blue: #1bb5f6;
+  --green: #0fc97e;
+  display: inline-block;
+  margin: 5px;
+  aspect-ratio: 2 / 3;
+  width: 10vh;
+  background: 
+    /* circles */
+    radial-gradient(farthest-side, var(--red)  99.99%, #0000) 0 0 / 50% 33.333% no-repeat,
+    radial-gradient(farthest-side, var(--pink) 99.99%, #0000) 100% 0 / 50% 33.333% no-repeat,
+    radial-gradient(farthest-side, var(--purple) 99.99%, #0000) 0 50% / 50% 33.333% no-repeat,
+    radial-gradient(farthest-side, var(--blue) 99.99%, #0000) 100% 50% / 50% 33.333% no-repeat,
+    radial-gradient(farthest-side, var(--green) 99.99%, #0000) 0 100% / 50% 33.333% no-repeat,
+    /* connection */
+    linear-gradient(90deg, var(--red) 50%, var(--pink) 0) 50% 0 / 50% 33.333% no-repeat,
+    linear-gradient(90deg, var(--purple) 50%, #0000 0) 50% 0 / 50% 66.666% no-repeat,
+    linear-gradient(90deg, var(--green) 50%, #0000 0) 50% 0 / 50% 83.333% no-repeat;
+}
+
+.css-logo {
+  position: relative;
+  margin: 5px;
+  width: 13.2vh;
+  aspect-ratio: 22 / 25;
+  background: #24d;
+  clip-path: polygon(0 0, 100% 0, 90% 90%, 50% 100%, 10% 90%);
+}
+
+.css-logo::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ffffff18;
+  clip-path: polygon(50% 8%, 91% 8%, 83% 84%, 50% 92%);
+  mix-blend-mode: plus-lighter;
+}
+
+.css-logo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #eee;
+  clip-path: polygon(18.5% 18.5%, 81.5% 18.5%, 76% 74%, 50% 80.5%, 24% 74%, 22.25% 57%, 34.25% 57%, 35% 65.5%, 50% 69%, 65% 65.5%, 66% 51.5%, 22% 51.5%, 20.75% 40.5%, 66.5% 40.5%, 67.5% 29.5%, 19.5% 29.5%);
+}
+
+.html-logo {
+  position: relative;
+  margin: 5px;
+  width: 13.2vh;
+  aspect-ratio: 22 / 25;
+  background: conic-gradient(at 50% 100%, #f73d01 75deg, silver 0 285deg, #f73d01 0);
+  clip-path: polygon(0 0, 100% 0, 90% 90%, 55% 99%, 55% 300%, 45% 300%, 45% 99%,10% 90%);
+}
+
+.html-logo::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff1;
+  clip-path: polygon(50% 8%, 91% 8%, 83% 84%, 50% 92%);
+  mix-blend-mode: plus-lighter;
+}
+
+.html-logo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #eee;
+  clip-path: polygon(18.50% 18.45%, 81.06% 18.45%, 79.96% 29.51%, 32.38% 29.51%, 33.48% 40.78%, 78.85% 40.78%, 75.55% 74.56%, 50.00% 80.97%, 24.23% 74.56%, 22.47% 57.28%, 35.02% 57.28%, 35.90% 66.02%, 49.78% 69.51%, 63.66% 66.02%, 65.20% 51.84%, 21.81% 51.84%);
+}
+
+.adidas-logo {
+  display: inline-block;
+  margin: 5px;
+  width: 20.8125vh;
+  aspect-ratio: 111 / 80;
+  border-radius: 73% / 0% 0% 100% 100%;
+  background:
+    linear-gradient(#0000 66%, currentColor 0 80%, #0000 0),
+    radial-gradient(48% 75% at -04.5% 105%, currentColor 99.9%, #0000 100%),
+    radial-gradient(48% 75% at 104.25% 105%, currentColor 99.9%, #0000 100%),
+    radial-gradient(46% 54% at 120% 51.25%, currentColor 99.9%, #0000 101%) 0% 100% / 50.125% 100% no-repeat,
+    radial-gradient(46% 54% at -20% 51.25%, currentColor 99.9%, #0000 101%) 100% 100% / 50.125% 100% no-repeat;
+  -webkit-mask: linear-gradient(#000 0 62%,#0000 0 67%, #000 0 72%, #0000 0 78%, #000 0 83%, #0000 0 88%, #000 0);
+}
+
+.webtorrent-logo {
+  --red: #f04;
+  --gray: #323b46;
+  --darkgray: #252b34;
+  content: "";
+  margin: 5px;
+  display: inline-block;
+  height: 15vh;
+  aspect-ratio: 0.85;
+  background:
+    radial-gradient(circle at 38.5% 43%, var(--red) 14%, #0000 0),
+    radial-gradient(circle at 61.5% 43%, var(--red) 14%, #0000 0),
+    radial-gradient(circle at 50% 50%, var(--red) 14%, #0000 0),
+    conic-gradient(from 0.8815turn at 50% 100%, var(--red) 0.237turn, #0000 0) 50% 62% / 50% 20% no-repeat,
+    linear-gradient(90deg, var(--red) 5.5%, #0000 0 94.5%, var(--red) 0),
+    linear-gradient(30deg, var(--red) 20.75%, #0000 0 79.25%, var(--red) 0),
+    linear-gradient(-30deg, var(--red) 20.75%, #0000 0 79.25%, var(--red) 0),
+    linear-gradient(43deg, #0000 34%, var(--darkgray) 0 68%, #0000 0) 100% 100% / 50% 50% no-repeat,
+    linear-gradient(43deg, #0000 34%, var(--darkgray) 0 68%, #0000 0) 113% 70% / 50% 50% no-repeat,
+    var(--gray);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+
+.discord-logo {
+  --blurple: #5865F2;
+  display: inline-block;
+  position: relative;
+  color: var(--blurple);
+  width: 18.75vh;
+  aspect-ratio: 1;
+  border-radius: 100% / 130% 130% 55% 55%;
+  overflow: hidden;
+}
+
+.discord-logo::before {
+  content: "";
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  width: 120%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  border-radius: 50% 50% 48% 48%;
+  background:
+    radial-gradient(105% 55% at 50% 19%, currentColor 22%, #0000 22.4%),
+    radial-gradient(66% 80% at -5.5% 25%, currentColor 73%, #0000 73.25%),
+    radial-gradient(66% 80% at 105.5% 25%, currentColor 73%, #0000 73.25%),
+    radial-gradient(59% 99.5% at 50% 0, currentColor 84.5%, #0000 84.75% 88%, currentColor 88.25%) 50% 100% / 100% 92% no-repeat,
+    radial-gradient(50% 80% at 4% 35%, currentColor 73%, #0000 0),
+    radial-gradient(50% 80% at 96% 35%, currentColor 73%, #0000 0)
+    ;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 71.5% 100%, 65.5% 85%, 50% 87%, 34.5% 85%, 28.5% 100%, 0 100%);
+  -webkit-mask:
+    radial-gradient(34% 58% at 36.2% 53.5%, #0000 22%, #000 22.25%),
+    radial-gradient(34% 58% at 63.8% 53.5%, #0000 22%, #000 22.25%);
+  -webkit-mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+  mask:
+    radial-gradient(34% 58% at 36.2% 53.5%, #0000 22%, #000 22.25%),
+    radial-gradient(34% 58% at 63.8% 53.5%, #0000 22%, #000 22.25%);
+  mask-composite: intersect;
+  mask-composite: destination-in;
+}
+
+
 /* death */
 /*
 Design inspired by:
