@@ -112,6 +112,10 @@ header > div {
 header > div:last-child a {
   margin-left: 0.5rem;
   color: #ccc;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 body > nav {
