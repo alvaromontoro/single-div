@@ -208,13 +208,17 @@ label::after {
   content: " on";
 }
 
-.tweet-icon {
+
+.share-icon {
   display: inline-block;
   position: relative;
   height: 1.75rem;
   width: 1.75rem;
   text-indent: -1000in;
   overflow: hidden;
+}
+
+.tweet-icon {
   background:
     radial-gradient(circle at 69% 30%, #1DA1F2 19%, #0000 0),
     conic-gradient(at 100% 40%, #0000 230deg, #1DA1F2 0 260deg, #0000 0) 100% 18% / 30% 30%, 
@@ -249,15 +253,17 @@ label::after {
 }
 
 .coffee-icon {
-  display: inline-block;
-  height: 1.75rem;
-  width: 1.75rem;
-  text-indent: -1000in;
-  overflow: hidden;
   background: 
     conic-gradient(from 0.47turn at 50% -1500%, #fff 0.06turn, #0000 0) 50% 7.5% / 90% 15%,
     linear-gradient(#ccc 0 0) 50% 0% / 75% 10%,
     conic-gradient(from -0.02turn at 50% 350%, orange 0.04turn, #0000 0) 50% 100% / 100% 90%;
+  background-repeat: no-repeat;
+}
+
+.patreon-icon {
+  background: 
+    radial-gradient(closest-side circle at 64% 34%, #fff 99%, #0000),
+    linear-gradient(#fff 0 0) 0 0 / 17% 100%;
   background-repeat: no-repeat;
 }
 
