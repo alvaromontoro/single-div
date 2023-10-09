@@ -1,3 +1,96 @@
+/* divtober'23 - 08 - mix */
+.mix-container {
+  overflow: hidden;
+  background: #fc02;
+}
+
+@keyframes mix-mix {
+  0%, 100% {
+    transform: rotate(-30deg) translate(0, 0) skewY(0)
+  }
+  50% {
+    transform: rotate(-25deg) translate(2em, 2em) skewY(5deg);
+  }
+}
+
+.mix {
+  --dough: #fda;
+  --lid: #278e9b;
+  --lid2: #278e9b88;
+  scale: 0.7;
+  transform-origin: 50% 100%;
+  font-size: 1vmin;
+  width: 80em;
+  height: 80em;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background: 
+    radial-gradient(50% 250% at 50% 50%, var(--lid) 99.5%, #0000) 50% 58% / 100% 4em, 
+    radial-gradient(circle at 50% 60%, var(--dough) 15%, #0000 0),
+    radial-gradient(circle at 86% 60%, var(--dough) 12%, #0000 0),
+    radial-gradient(circle at 70% 55%, var(--dough) 15%, #0000 0),
+    radial-gradient(circle at 82% 41%, var(--dough) 4%, #0000 0),
+    radial-gradient(circle at 74% 38%, var(--dough) 3%, #0000 0),
+    radial-gradient(circle at 54% 41%, var(--dough) 7%, #0000 0),
+    radial-gradient(circle at 30% 58%, var(--dough) 10%, #0000 0),
+    #f000;
+  background-repeat: no-repeat;
+}
+
+.mix::after {
+  content: "";
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 4em solid var(--lid);
+  -webkit-mask: 
+    radial-gradient(49% 120% at 50% 0, var(--lid) 99%, #0000);
+  background:
+    linear-gradient(#0001 5%, #0000 0),
+    radial-gradient(55% 100% at 50% 100%, #0000 80%, var(--lid2) 0 99%, #0000) 50% 28em / 20em 5em repeat-x,
+    radial-gradient(55% 100% at 50% 0%, #0000 80%, var(--lid2) 0 99%, #0000) calc(50% - 10em) 5em / 20em 5em repeat-x,
+    radial-gradient(66% 100% at 50% 0%, #fffc 50%, #0000 0) calc(50% - 10em) 0em / 20em 10em repeat-x,
+    #9fe4e9;
+}
+
+.mix::before {
+  --handle: #963;
+  --handle-dark: #741;
+  content: "";
+  animation: mix-mix 2s infinite;
+  width: 100%;
+  height: 120%;
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  transform: rotate(-30deg);
+  transform-origin: 50% 20%;
+  -webkit-mask:
+    radial-gradient(circle at 50% 4%, #0000 1.5%, #000 0);
+  background:
+    linear-gradient(90deg, #aaa 20%, #ccc 0) 50% 31em / 7em 3em,
+    /* handle */
+      radial-gradient(circle at calc(50% + 0.5em) 4%, var(--handle-dark) 1.5%, #0000 0),
+    radial-gradient(farthest-side at 50% 100%, var(--handle) 99%, #0000) calc(50% + 0.5em) 0em / 10em 5em,
+    radial-gradient(50% 110% at 50% 0%, var(--handle) 99%, #0000) calc(50% + 0.5em) 4.9em / 10em 28em,
+    radial-gradient(farthest-side at 50% 100%, var(--handle-dark) 99%, #0000) calc(50% - 0.5em) 0em / 10em 5em,
+    radial-gradient(50% 110% at 50% 0%, var(--handle-dark) 99%, #0000) calc(50% - 0.5em) 4.9em / 10em 28em,
+    radial-gradient(farthest-side at 50% 100%, red 99%, #0000) 50% 0em / 11em 5em,
+    /* mix */
+    radial-gradient(100% 65% at 100% 52%, #0000 95%, #000 0 99%, #0000) 50% 32.75em / 19em 50%,
+    radial-gradient(100% 65% at 100% 52%, #0000 94%, #000 0 99%, #0000) 50% 32.75em / 13em 50%,
+    radial-gradient(100% 65% at 100% 52%, #0000 89%, #000 0 99%, #0000) 50% 32.75em / 6em 50%,
+    radial-gradient(100% 65% at 0% 52%, #0000 95%, #000 0 99%, #0000) 50% 32.75em / 19em 50%,
+    radial-gradient(100% 65% at 0% 52%, #0000 94%, #000 0 99%, #0000) 50% 32.75em / 13em 50%,
+    radial-gradient(100% 65% at 0% 52%, #0000 89%, #000 0 99%, #0000) 50% 32.75em / 6em 50%,
+    #f000;
+  background-repeat: no-repeat;
+}
+
 /* divtober'23 - 07 - treat */
 .treat-container {
   background: #e0ffd0
