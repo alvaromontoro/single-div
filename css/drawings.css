@@ -1,3 +1,78 @@
+/* divtober'23 - 10 - sparkle */
+.sparkle-container {
+  font-size: 0.5vmin;
+  font-size: max(0.5vmin, 0.5vh);
+  background: 
+    radial-gradient(circle at 55% calc(100% - 40em), #4328, #000c), 
+     linear-gradient(#fff2, #0002), 
+    #210;
+}
+
+.sparkle {
+  width: 1.5em;
+  height: 50em;
+  background: 
+    radial-gradient(farthest-side at 50% 0, orange 5%, #fc0 10%,red, gray,#444 30%, #222 40%) 50% 100% / 60% 100%,
+    #0000
+    ;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  transform: rotate(10deg);
+  transform-origin: 50% 100%;
+  mix-blend-mode: lighten;
+  
+}
+
+.sparkle::before {
+  content: "";
+  position: absolute;
+  width: 50em;
+  height: 50em;
+  background:
+    repeating-conic-gradient(#fff 0 1.65%, #0000 0 7%),
+    repeating-conic-gradient(#0000 0 8.1%, #ff0 0 8.5%),
+    repeating-conic-gradient(from 20deg, #0000 0 7.5%, #fff 0 8.5%) 50% 50% / 40% 40%,
+    repeating-conic-gradient(from 47deg, #0000 0 7.75%, #f0f6 0 8.5%) 50% 50% / 60% 40%,
+    repeating-conic-gradient(from 35deg, #0000 0 7.5%, #fff 0 8.5%) 50% 50% / 50% 50%,
+    radial-gradient(#fff 7%, #0000 0)
+    #000;
+  background-repeat: no-repeat;
+  filter: blur(1.5em) contrast(50) brightness(0.8) sepia(80) hue-rotate(10deg);
+  box-shadow: 0 0 0 50px #000;
+  border-radius: 50% 40% 60% 00%;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.65) rotate(-10deg);
+  transform-origin: 50% 50%;
+  mix-blend-mode: lighten;
+}
+
+.sparkle::after {
+  content: "";
+  position: absolute;
+  width: 50em;
+  height: 50em;
+  background:
+    repeating-conic-gradient(#0000 0 10%, #fff 0 13%) 50% / 40% 40%,
+    repeating-conic-gradient(from 30deg, #0000 0 16%, #fff 0 19%) 50% / 30% 20%,
+    repeating-conic-gradient(#0000 0 17%, #ffb 0 18.75%),
+    repeating-conic-gradient(from 33deg,#0000 0 17%, #fff 0 18.5%),
+    radial-gradient(#fff 7%, #0000 0),
+
+    #000;
+  background-repeat: no-repeat;
+ filter: blur(1.5em) contrast(50) brightness(0.8) sepia(60%) hue-rotate(-10deg);
+  box-shadow: 0 0 0 50px #000;
+  border-radius: 0% 40% 60% 00%;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8) rotate(45deg);
+  transform-origin: 50% 50%;
+  mix-blend-mode: lighten;
+}
+
 /* divtober'23 - 09 - space */
 @keyframes space-float {
   0% {
