@@ -1,3 +1,87 @@
+/* divtober'23 - 09 - space */
+@keyframes space-float {
+  0% {
+    transform: translate(-110vw, -40%) rotate(0);
+  }
+  100% {
+    transform: translate(55vw, -60%) rotate(500deg);
+  }
+}
+
+.space {
+  font-size: 0.5vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background:
+    /* planet */
+    radial-gradient(50% 25% at 7% 3%, #e70 8%, #0000 0),
+    radial-gradient(circle at 17% 10%, #e70 2%, #0000 0),
+    radial-gradient(circle at 20% 2%, #e70 3.5%, #0000 0),
+    radial-gradient(circle at 10% 0, darkorange 15%, #0000 0),
+    /* stars */
+    radial-gradient(circle at 20% 20%, #fff8 0.25%, #0000 0),
+    radial-gradient(circle at 40% 34%, #fff8 0.5%, #0000 0) 20% 50% / 60% 60%,
+    radial-gradient(circle at 40% 34%, #fff8 0.5%, #0000 0) 50% 20% / 60% 60%,
+    radial-gradient(circle at 30% 38%, #fff8 0.25%, #0000 0),
+    radial-gradient(circle at 40% 34%, #fff8 0.65%, #0000 0) 10% -10% / 50% 50%,
+    /* base */
+    linear-gradient(#0000, #0002),
+    #123;
+}
+.space::before {
+  animation: space-float 30s linear infinite;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60em;
+  height: 60em;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  background:
+    /* head */
+    radial-gradient(circle at 54% 11%, #cffc 2%, #0000 0),
+    radial-gradient(circle at 59% 14%, #cffc 3%, #0000 0),
+    radial-gradient(50% 45% at 50% 50%, #123 99%, #0000) 50% 6.6% / 31% 25%,
+    radial-gradient(50% 50% at 50% 50%, #aaa 99%, #0000) 50% 5% / 32% 25%,
+    radial-gradient(farthest-side at 50% 0, #889 99%, #0000) 50% 20% / 32% 16%,
+    radial-gradient(closest-side circle at 50% 16%, #eee 99%, #eee0),
+    radial-gradient(40% 50% at 35% 17%, #eee 10%, #0000 0),
+    radial-gradient(40% 50% at 65% 17%, #eee 10%, #0000 0),
+    /* body */
+    linear-gradient(#aaa 0 0) 40% 64.5% / 5% 8%,
+    linear-gradient(#aaa 0 0) 60% 64.5% / 5% 8%,
+    linear-gradient(#ccc 0 0) 50% 64% / 35.5% 6%,
+    linear-gradient(orange 0 0) 46% 46% / 3% 7%,
+    radial-gradient(circle at 54% 45%, red 1%, #0000 0),
+    radial-gradient(circle at 54% 48%, green 1%, #0000 0),
+    linear-gradient(#ccc 0 0) 50% 46% / 14% 10%,
+    radial-gradient(85% 25% at 50% 67%, #eee 20.25%, #0000 20.5%),
+    radial-gradient(farthest-side at 50% 100%, #eee 99%, #0000) 50% 45% / 35% 40%,  
+    /* arms */
+    radial-gradient(closest-side circle at 14% 8%, #ccc 99%, #0000 0),
+    radial-gradient(farthest-side at 80% 20%, #0000 70%, #eee 0 99%, #0000) 14% 14% / 33% 30%,
+    radial-gradient(circle at 85% 65%, #ccc 7%, #0000 0),
+    radial-gradient(farthest-side at 30% 80%, #0000 70%, #eee 0 99%, #0000) 83% 44% / 40% 32%,
+    /* legs */
+    linear-gradient(12deg, #0000 50%, #0002 0 55%, #0000 0) 32% 90% / 11% 10%,
+    linear-gradient(-14deg, #0000 50%, #0002 0 55%, #0000 0) 71.5% 89% / 13% 10%,
+    linear-gradient(12deg, #ccc 55%, #0000 0) 23.5% 100% / 22.5% 10%,
+    linear-gradient(-12deg, #ccc 50%, #0000 0) 83.75% 98% / 21% 10%,
+    radial-gradient(farthest-side at 100% 80%, #0000 55%, #eee 0 99%, #0000) 37.5% 100% / 25% 50%,
+    linear-gradient(65deg, #0000 30%, #eee 0 55%, #0000 0) 85% 97% / 40% 35%,
+    radial-gradient(140% 120% at 80% 93%, #eee 5%, #0000 0),
+    radial-gradient(140% 120% at 25% 95%, #eee 5%, #0000 0),
+    /* backpack */
+    radial-gradient( 66% 66%, #89a 99%, #0000 0) 50% 48% / 39% 40%,
+    #f000;
+  background-repeat: no-repeat;
+}
+
 /* divtober'23 - 08 - mix */
 .mix-container {
   overflow: hidden;
