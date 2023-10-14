@@ -1,3 +1,370 @@
+/* divtober'23 - 13 - small */
+.small-container {
+  background: #4cf6;  
+}
+
+.small {
+  transform-origin: 50% 100%;
+  font-size: 0.66vmin;
+  width: 50em;
+  height: 80em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0.5);
+  background: 
+    /* beak */
+     radial-gradient(circle at 48% 40.5%, #0001 0.5%, #0000 0),
+    radial-gradient(circle at 52% 40.5%, #0001 0.5%, #0000 0),
+    radial-gradient(farthest-side at 50% 100%, darkorange 99%, #0000) 50% 40% / 11% 3%,
+    radial-gradient(farthest-side at 50% 0, orange 99%, #0000) 50% 42% / 10% 3%,
+    /* eyes */
+    radial-gradient(circle at 35% 36%, #fff 1.25%, #0000 0),
+    radial-gradient(circle at 61% 36%, #fff 1.25%, #0000 0),
+    radial-gradient(circle at 37% 37%, #000 3.5%, #0000 0),
+    radial-gradient(circle at 63% 37%, #000 3.5%, #0000 0),
+    /* cheeks */
+    radial-gradient(120% 50% at 34% 40%, #fcc 4%, #0000 0),
+    radial-gradient(120% 50% at 66% 40%, #fcc 4%, #0000 0),
+    /* body */
+    radial-gradient(circle at 50% 30%, #fe5 27%, #0000 0),
+    radial-gradient(farthest-side at 50% 100%, #fe5 80%, #0000 0) 50% 60%/ 90% 50%,
+    /* egg shell back */
+    conic-gradient(#0000 160deg, #ccc 0 200deg, #0000 0) 7% 52% / 20% 20%,
+    conic-gradient(#0000 140deg, #ccc 0 210deg, #0000 0) 93% 52% / 20% 20%,
+    #f000;
+  background-repeat: no-repeat;
+}
+
+.small::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#fff 40%, #fff);
+  border-radius: 100% / 125% 125% 80% 80%;
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 85% 23%, 80% 30%, 70% 24%, 63% 33%, 53% 23%, 44% 34%, 35% 26%, 27% 34%, 24% 30%, 20% 34%, 18% 24%, 10% 30%, 12% 24%, 0% 30%, 0% 55%, 3% 60%, 10% 53%, 15% 60%, 20% 55%, 25% 64%, 28% 60%, 32% 65%, 40% 56%, 50% 65%, 60% 54%, 70% 65%, 80% 53%, 90% 60%, 97% 50%, 100% 55%, 100% 100%, 0 100%);
+}
+
+/* divtober'23 - 13 - collect */
+.collect-container {
+  position: relative;
+  perspective: 1000px;
+  margin: 0;
+  overflow: hidden;
+  background: #d7a7;
+}
+
+@keyframes flip {
+  0%, 30% { 
+    transform: translate(-50%, -50%) rotate3d(1,0,1,-10deg) rotate3d(0,1,0,0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate3d(1,0,1,-10deg) rotate3d(0,1,0,-360deg);
+  }
+}
+
+.collect {
+  animation: flip 8s infinite;
+  font-size: 1.5vmin;
+  line-height: 1em;
+  width: 15em;
+  height: 22em;
+  border-radius: 0.75em;
+  box-sizing: border-box;
+  border: 0.75em solid #fff;
+  box-shadow: inset 0 0 0 0.1em;
+  transform: translate(-50%, -50%) rotate3d(1,0,1,-10deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  text-align: center;
+  padding-top: 17.4em;
+  font-family: 'Zen Kurenaido', Helvetica, Arial, sans-serif;
+  background: 
+    /* logo */
+    radial-gradient(farthest-side at 100% 0, #0000 99%, #fff 0) 78.5% 13% / 5% 3%,
+    radial-gradient(70% 60% at 20% 50%, #fff 99%, #0000 0) 88.5% 12.125% / 4% 3%,
+    conic-gradient(at 55% 60%, #0000 90deg, red 0) 85% 5% / 12.25% 11%,
+    radial-gradient(farthest-side circle at 86.2% 13.25%, #f00 2.5%, #0000 0),
+    radial-gradient(circle at 81% 12.5%, #fff 10%, #000 0 10.5%, #0000 0),
+    /* name plate */
+    linear-gradient(#fe8 0 0) 50% 92% / 71% 12%,
+    linear-gradient(#000 0 0) 50% 92.6% / 73% 13.5%,
+    /* hat */
+    radial-gradient(70% 100% at 50% 100%, #0000 89%, #369 0 99%, #0000) 50% 35% / 55% 17%,
+    linear-gradient(20deg, #0000 45%, #369 0 55%, #0000 0) 50% 18.5% / 5% 4%,
+    linear-gradient(-30deg, #0000 45%, #369 0 55%, #0000 0) 50% 20% / 5% 4%,
+    linear-gradient(30deg, #0000 45%, #369 0 55%, #0000 0) 50% 22% / 5% 4%,
+    linear-gradient(-20deg, #0000 45%, #369 0 55%, #0000 0) 50% 23.5% / 5% 4%,
+    radial-gradient(farthest-side at 50% 100%, #0002 99%, #0000 0) 50% 16.25% / 35% 17.5%,
+    radial-gradient(70% 100% at 50% 100%, #0000 89%, #fff 0 99%, #fff) 50% 32% / 50% 14%,
+    radial-gradient(farthest-side at 50% 100%, #fff 99%, #0000) 50% 16% / 50% 15%,
+    radial-gradient(circle at 50% 15%, #369 3%, #0000 0),
+    /* face features */
+    radial-gradient(30% 35% at 40% 44%, #000 8%, #0000 0),
+    radial-gradient(30% 35% at 60% 44%, #000 8%, #0000 0),
+    radial-gradient(90% 80% at 40% 20%, #0000 80%, #000 0 99%, #0000) 51% 57% / 14% 5%,
+    radial-gradient(farthest-side at 0 50%, #eb9 99%, #0000) 52% 50% / 4% 4%,
+    radial-gradient(86% 100% at 60% 100%, #0000 70%, #963 0 99%, #0000) 37% 38% / 13% 4%,
+    radial-gradient(86% 100% at 40% 100%, #0000 70%, #963 0 99%, #0000) 63% 38% / 13% 4%,
+    /* face */
+    radial-gradient(farthest-side, #fca 99%, #0000) 50% 59% / 37% 15%,
+    conic-gradient(at 50% 330%, #fca 10deg, #0000 0 350deg, #fca 0) 50% 40% / 46% 30%,
+    radial-gradient(farthest-side at 50% 0, #963 99%, #0000 0) 50% 42% / 52% 17%,
+    /* ears */
+    radial-gradient(70% 80% at 30% 47%, #eb9 10%, #0000 0),
+    radial-gradient(70% 80% at 70% 47%, #eb9 10%, #0000 0),
+    /* neck */
+    linear-gradient(#c004, #c000 80%) 50% 60% / 20% 35%,
+    linear-gradient(#eb9 0 0) 50% 60% / 20% 35%,
+    radial-gradient(farthest-side at 50% 0, #eb9 99%, #0000) 50% 76% / 30% 5%,
+    /* body */
+    radial-gradient(50% 55% at 50% 50%, #fff 99%, #0000) 50% 80.2% / 75% 10%,
+    linear-gradient(#fff 0 0) 50% 100% / 75% 23%,
+    radial-gradient(farthest-side at 100% 100%, #369 99%, #0000) -3% 100% / 22% 25%,
+    radial-gradient(farthest-side at 0% 100%, #369 99%, #0000) 100% 100% / 20% 25%,
+    /* base */
+    linear-gradient(#fff8, #fff0),
+    linear-gradient(#bef 65%, #4b5 68%),
+    #f003;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  font-weight: 900;
+}
+
+.collect::after {
+  backface-visibility: hidden;
+  border-radius: 0.75em;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  transform: rotateY(180deg);
+  box-shadow: inset 0 0 0 0.5em #369;
+  background:
+    /* bat and ball */
+    conic-gradient(at -15% 115%, #0000 29.5deg, #fff 0 37deg, #0000 0) 50% 50% / 17% 17%,
+    radial-gradient(circle at 57.25% 42.35%, #fff 2.1%, #0000 0),
+    radial-gradient(circle at 57% 56%, #fff 3%, #0000 0),
+    linear-gradient(35deg, #0000 45%, #fff 0 60%, #0000 0) 41.75% 58.5% / 3% 3%,
+    /* cricle */
+    radial-gradient(60% 50%, #369 32%, #fff 0 33%, #369 0 34%, #0000 0),
+    /* base */
+    repeating-linear-gradient(45deg, #0000 0 1.5%, #369 0 2%),
+    repeating-linear-gradient(-45deg, #0000 0 1.5%, #369 0 2%),
+    #fff;
+  background-repeat: no-repeat;
+}
+
+.collect::before {
+  content: "RED \a SOCSS";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0.5em;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 6.5em 2.25em 0em 19em ;
+  font-weight: 800;
+  background: #0000;
+}
+
+/* divtober'23 - 12 - glass */
+.glass {
+  font-size: 0.45vmin;
+  width: 90em;
+  height: 90em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  border-radius: 0 0 0 2.5em;
+  background: 
+    linear-gradient(#aaa 0 0) 50% 0 / 0.7% 50%,
+    radial-gradient(farthest-side circle at 50% 50%, #0000 42%, #000 0 43%, #fff 0 46%, #000 0 47%, #0000 0),
+    linear-gradient(to bottom right, #0000 45%, #000 0 55%, #0000 0) 0 100% / 34.5% 34.5%,
+    #0000;
+  background-repeat: no-repeat;
+}
+
+@property --x {
+  syntax: '<length>';
+  initial-value: 0;
+  inherits: true;
+}
+
+@keyframes moveSpider {
+  0%, 20% { --x: 0; }
+  90%, 100% { --x: 37em; }
+}
+
+.glass::before,
+.glass::after {
+  --x: 0;
+  --g: radial-gradient(farthest-side circle at 50% 50%, #0000 42%, #000 0 43%, #fff 0 46%, #000 0 47%, #0000 0),;
+/*   --g: 
+    radial-gradient(circle at 56.5% 37%, #fff6 6.25%, #0000 0),
+    radial-gradient(circle at 64% 41.5%, #fff6 3%, #0000 0),
+    radial-gradient(farthest-side circle at 50% 50%, #0ff1 42%, #000 0 43%, #fff 0 46%, #000 0 47%, #0000 0),; */
+  animation: moveSpider 8s cubic-bezier(.8,-.5,.2,1.2) alternate infinite;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-mask: radial-gradient(farthest-side circle at 50% 50%, #000 47%, #0000 0);
+  background: 
+    var(--g)
+    /* mouth */
+    radial-gradient(farthest-side at 50% 0, #0000 70%, #fff 0 99%, #0000) 50% calc(54.5% - var(--x)) / 3% 1.5%,
+    /* eyes */
+    radial-gradient(circle at 46.25% 50.5%, #fff 0 0.5%, #0000 0) 50% calc(0em - var(--x)),
+    radial-gradient(circle at 52.75% 50.5%, #fff 0 0.5%, #0000 0) 50% calc(0em - var(--x)),
+    radial-gradient(circle at 46.75% 51%, #000 1.4%, #fff 0 3%, #0000 0) 50% calc(0em - var(--x)),
+    radial-gradient(circle at 53.25% 51%, #000 1.4%, #fff 0 3%, #0000 0) 50% calc(0em - var(--x)),
+    /* cheeks */
+    radial-gradient(40% 25% at 45% 53.5%, #f88 3.5%, #0000 0) 50% calc(0em - var(--x)),
+    radial-gradient(40% 25% at 55% 53.5%, #f88 3.5%, #0000 0) 50% calc(0em - var(--x)),
+    /* body */
+    radial-gradient(28% 25% at 50% 50%, #000 30%, #0000 0) 50% calc(0em - var(--x)),
+    /* legs */
+    radial-gradient(farthest-side at 90% 100%, #0000 80%, #000 0 99%, #0000) 38% calc(47em - var(--x)) / 10% 10%,
+    radial-gradient(farthest-side at 70% 100%, #0000 80%, #000 0 99%, #0000) 35.5% calc(44em - var(--x)) / 12% 10%,
+    radial-gradient(farthest-side at 60% 100%, #0000 80%, #000 0 99%, #0000) 35% calc(40em - var(--x)) / 14% 10%,
+    radial-gradient(farthest-side at 10% 100%, #0000 80%, #000 0 99%, #0000) 62% calc(47em - var(--x)) / 12% 10%,
+    radial-gradient(farthest-side at 30% 100%, #0000 80%, #000 0 99%, #0000) 64.5% calc(44em - var(--x)) / 12% 10%,
+    radial-gradient(farthest-side at 40% 100%, #0000 80%, #000 0 99%, #0000) 65% calc(40.5em - var(--x)) / 16% 10%,
+    /* silk */
+    linear-gradient(#aaa 0 0) 50% calc(-50em - var(--x)) / 1.5% 90em,
+    #fff;
+  background-repeat: no-repeat;
+}
+
+.glass::before {
+  --g:;
+  top: 19%;
+  transform-origin: 50% 0;
+  transform: scale(0.45);
+  -webkit-mask: none;
+}
+
+/* divtober'23 - 11 - bones */
+.bones-container {
+  background: #fa5;
+}
+
+.bones {
+  --bone-light: #fff;
+  --bone-dark: #d0d8ee; 
+  font-size: 0.5vh;
+  width: 80em;
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background:
+    /* arm */
+    radial-gradient(circle at 13% 76%, var(--bone-dark) 5%, #0000 0),
+    linear-gradient(#000 0 0) 12% 70% / 5% 2%,
+    linear-gradient(45deg, #0000 30%, #000 0 65%, #0000 0) 18% 62% / 5% 4%,
+    radial-gradient(farthest-side at 100% 100%, #0000 80%, var(--bone-dark) 0 90%, #0000 0) 12% 66% / 26% 18%,
+    radial-gradient(farthest-side at 100% 100%, #0000 68%, #000 0 99.5%, #0000) 12% 66% / 26% 18%,
+    radial-gradient(circle at 13% 76%, #000 7%, #0000 0),
+    
+     /* arm */
+    radial-gradient(circle at 87% 76%, var(--bone-dark) 5%, #000 0 7%, #0000 0),
+    linear-gradient(-45deg, #0000 30%, #000 0 65%, #0000 0) 82% 62% / 5% 4%,
+    radial-gradient(farthest-side at 0% 100%, #0000 80%, var(--bone-dark) 0 90%, #0000 0) 88% 66% / 26% 18%,
+    radial-gradient(farthest-side at 0% 100%, #0000 68%, #000 0 99.5%, #0000) 88% 66% / 26% 18%,
+    radial-gradient(circle at 87% 76%, #000 7%, #0000 0),
+    
+    /* foot */
+    linear-gradient(#000 0 0) 30% 100.1% / 19% 1.5%,
+    linear-gradient(#000 0 0) 74% 100.1% / 19% 1.5%,
+    radial-gradient(farthest-side, var(--bone-dark) 70%, #000 0 99%, #0000 0) 29% 107% / 20% 12%,
+    radial-gradient(farthest-side, var(--bone-dark) 70%, #000 0 99%, #0000 0) 75% 107% / 20% 12%,
+    /* leg bones */
+    linear-gradient(var(--bone-dark) 0 0) 38% 95.5% / 3.25% 15%,
+    linear-gradient(80deg, #0000 38%, var(--bone-dark) 0 52%, #0000 0) 68% 96% / 20% 15%,
+    /* legs */
+    linear-gradient(#000 0 0) 37% 100% / 10% 20%,
+    linear-gradient(80deg, #0000 28%, #000 0 70%, #0000 0) 67% 100% / 20% 20%,
+    #f000;
+  background-repeat: no-repeat;
+}
+
+.bones::before {
+  content: "";
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100% / 175% 175% 50% 50%;
+  background: 
+    /* ribs */
+    radial-gradient(farthest-side, var(--bone-dark) 99%, #0000) 23% 40% / 7% 7%,
+    radial-gradient(farthest-side, var(--bone-dark) 99%, #0000) 20% 55% / 7% 7%,
+    radial-gradient(farthest-side, var(--bone-dark) 99%, #0000) 23% 70% / 7% 7%,
+    radial-gradient(farthest-side, var(--bone-dark) 99%, #0000) 77% 40% / 7% 7%,
+    radial-gradient(farthest-side, var(--bone-dark) 99%, #0000) 80% 55% / 7% 7%,
+    radial-gradient(farthest-side, var(--bone-dark) 99%, #0000) 77% 70% / 7% 7%,
+    linear-gradient(var(--bone-dark) 0 0) 50% 70% / 9% 70%,
+    linear-gradient(var(--bone-dark) 0 0) 50% 40% / 50% 7%,
+    linear-gradient(var(--bone-dark) 0 0) 50% 55% / 55% 7%,
+    linear-gradient(var(--bone-dark) 0 0) 50% 70% / 50% 7%,
+    /* pelvis */
+    radial-gradient(30% 17% at 28% 86%, #000 30%, #0000 0),
+    radial-gradient(30% 17% at 72% 86%, #000 30%, #0000 0),
+    radial-gradient(25% 10% at 35% 86%, var(--bone-dark) 80%, #0000 0),
+    radial-gradient(25% 10% at 65% 86%, var(--bone-dark) 80%, #0000 0),
+    #000;
+  background-repeat: no-repeat;
+}
+
+.bones::after {
+  content: "";
+  width: 70%;
+  height: 58%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border-radius: 51% 52% 50% 52%;
+  background: 
+    /* border around the skull */
+    radial-gradient(49% 50% at 50% 50%, #0000 93%, #000 0),
+    /* teeth */
+    linear-gradient(var(--bone-dark) 0 0) 50% 100% / 11% 17%,
+    linear-gradient(var(--bone-dark) 0 0) 33% 100% / 11% 17%,
+    linear-gradient(var(--bone-dark) 0 0) 67% 100% / 11% 17%,
+    /* eyes */
+    radial-gradient(50% 80% at 33% 55%, #000 20%, #0000 0),
+    radial-gradient(50% 80% at 67% 55%, #000 20%, #0000 0),
+    /* nose */
+    radial-gradient(50% 80% at 47% 74%, #000 4%, #0000 0),
+    radial-gradient(50% 80% at 53% 74%, #000 4%, #0000 0),
+    /* skull shape */
+    radial-gradient(48% 44% at 50% 46.6%, #0000 95%, #000 0),
+    /* skull color */
+    linear-gradient(var(--bone-light), var(--bone-dark) 85%),
+    #000;
+  background-repeat: no-repeat;
+}
+
 /* divtober'23 - 10 - sparkle */
 .sparkle-container {
   font-size: 0.5vmin;
