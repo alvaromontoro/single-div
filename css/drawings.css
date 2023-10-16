@@ -1,3 +1,109 @@
+/* divtober'23 - 16 - tangled */
+.tangled-container {
+  background: #4cfa;  
+}
+
+.tangled {
+  --skin: #fb8;
+  --wood: #963;
+  --wood-dark: #852;
+  --rock: #f0f4f8;
+  --rock-dark: #e8edf2; 
+  --rock-darker: #e0e4e8;
+  --roof: #369;
+  --roof-dark: #258;
+  --hair: gold;
+  font-size: 0.5vh;
+  width: 25em;
+  height: 80em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    /* arm */
+    radial-gradient(circle at 52% 28%, var(--skin) 1%, #0000 0),
+    linear-gradient(to top right, #0000 50%, hotpink 0) 48% 27.85% / 6.5% 1%,
+    /* hair */
+     conic-gradient(#0000 15deg, var(--hair) 0 35deg, #0000 0) 26.8% 46% / 15% 10%,
+    conic-gradient(#0000 3deg, var(--hair) 0 20deg, #0000 0) 55% 102% / 15% 10%,
+    conic-gradient(#0000 10deg, var(--hair) 0 25deg, #0000 0) 52.5% 101.75% / 15% 10%,
+    conic-gradient(#0000 340deg, var(--hair) 0 350deg, #0000 0) 47.2% 69.5% / 15% 10%,
+    conic-gradient(#0000 300deg, var(--hair) 0 320deg, #0000 0) 70% 70.3% / 15% 15%,
+    radial-gradient(60% 87% at 0% 53%, #0000 62%, var(--hair) 0 99.9%, #0000) 51.5% 29.9% / 25% 7.5%,
+    radial-gradient(40% 150% at 0% 33%, #0000 55%, var(--hair) 0 99.9%, #0000 0) 55.5% 30% / 45% 8%,
+    radial-gradient(100% 80% at 100% 42%, #0000 75%, var(--hair) 0 99.9%, #0000) 55% 50% / 40% 30%,
+    radial-gradient(100% 80% at 0% 45%, #0000 75%, var(--hair) 0 99.9%, #0000) 39% 92.75% / 50% 30.1%,
+    radial-gradient(70% 90% at 40% -21%,#0000 50%, var(--hair) 0 99.9%, #0000) 24% 98.5% / 42% 5%,
+    /* window shelf */
+    linear-gradient(var(--wood) 0 0) 50% 28% / 30% 1%,
+    /* rapunzel */
+    radial-gradient(100% 100% at 60% 0%, #0000 80%, #a00 0 99%, #0000 0) 51.5% 24.4% / 3% 0.75%,
+    radial-gradient(100% 20% at 51.5% 22.5%, var(--hair) 2.5%, #0000 0),
+    radial-gradient(circle at 50% 24%, #963 0.25%, #0000 0),
+    radial-gradient(circle at 53% 24%, #963 0.25%, #0000 0),
+    radial-gradient(100% 40% at 51% 24%, var(--skin) 4%, #0000 0),
+    radial-gradient(farthest-side at 50% 100%, hotpink 99%, #0000) 51% 26% / 12% 3%,
+    radial-gradient(110% 60% at 51% 24.75%, var(--hair) 5%, #0000 0),
+    radial-gradient(farthest-side at 100% 100%, var(--hair) 99%, #0000) 44% 23.5% / 10% 6%,
+    /* tower bricks (everywhere ) */
+    linear-gradient(var(--rock-dark) 0 0) 50% 70% / 8% 1.5%,
+    linear-gradient(var(--rock-dark) 0 0) 32% 19% / 8% 1.5%,
+    linear-gradient(var(--rock-darker) 0 0) 54% 71.5% / 8% 1.5%,
+    linear-gradient(var(--rock-dark) 0 0) 42% 56% / 8% 1.5%,
+    linear-gradient(var(--rock-darker) 0 0) 63% 41.5% / 8% 1.5%,
+    linear-gradient(var(--rock-darker) 0 0) 36% 81.5% / 8% 1.5%,
+    linear-gradient(var(--rock-dark) 0 0) 75% 91.5% / 8% 1.5%,
+    linear-gradient(var(--rock-darker) 0 0) 72% 93% / 8% 1.5%,
+    /* window */
+    radial-gradient(closest-side circle at 50% 50%, #333 99%, #0000) 50% 20.5% / 20.5% 8.5%,
+    linear-gradient(#333 0 0) 50% 24.5% / 20.5% 5%,
+    /* side windows */
+    radial-gradient(closest-side circle, #555 99%, #f000 0) 27% 22% / 5% 3%,
+    linear-gradient(#555 0 0) 27% 23.5% / 5% 3%,
+    radial-gradient(closest-side circle, #555 99%, #f000 0) 73% 22% / 5% 3%,
+    linear-gradient(#555 0 0) 73% 23.5% / 5% 3%,
+    /* connection */
+    linear-gradient(var(--wood) 0 0) 50% 31% / 58% 0.75%,
+    conic-gradient(at 50% 220%, var(--rock-darker) 10deg, var(--wood-dark) 0 20deg, var(--rock-darker) 0 33deg, var(--wood-dark) 0 40deg, var(--rock-darker) 0 45deg, #0000 0 315deg, var(--rock-darker) 0 320deg, var(--wood-dark) 0 327deg, var(--rock-darker) 0 340deg, var(--wood-dark) 0 350deg, var(--rock-darker) 0) 50% 32.5% / 100% 4%,
+    /* tower room */
+    linear-gradient(90deg, var(--rock), var(--rock) 30% 70%, var(--rock)) 50% 20.1% / 57% 14%,
+    /* roof back */
+    radial-gradient(farthest-side at 50% 0, var(--roof-dark) 99%, #0000) 50% 17.75% / 77% 2%,
+    
+    /* tower base */
+    conic-gradient(at 50% -100%, #0000 176deg, var(--rock) 0 184deg, #0000 0) 50% 100% / 100% 65%,
+    #f000;
+  background-repeat: no-repeat;
+  clip-path: 
+    polygon(0 -100%, 100% -100%, 100% 100%, 0 100%, 15% 97%, 20% 96%, 14% 95%, 20% 95%, 10% 90%);
+}
+
+.tangled::before {
+  content: "";
+  width: 108%;
+  height: 33%;
+  position: absolute;
+  top: -14.5%;
+  left: 50%;
+  translate: -50% 0;
+  border-radius: 100% / 20%;
+  -webkit-mask:
+    radial-gradient(farthest-side at 0 0, #0000 99%, #000) 0 100% / 50% 95% no-repeat,
+    radial-gradient(farthest-side at 100% 0, #0000 99%, #000) 100% 100% / 50% 95% no-repeat,
+    linear-gradient(#000 0 0) 50% 0 / 5% 100% no-repeat;
+  background:
+    radial-gradient(circle at 50% 26%, #aaa 2%, #0000 0),
+    radial-gradient(circle at 50% 30%, #999 3%, #0000 0),
+    conic-gradient(at 50% 0%, #0000 179deg, #aaa 0 181deg, #0000 0) 50% 0 / 100% 30%,
+    
+    radial-gradient(98% 100% at 0 0, #0000 99.9%, var(--roof)) 0 100% / 50.2% 70% no-repeat,
+    radial-gradient(98% 100% at 100% 0, #0000 99.9%, var(--roof)) 100% 100% / 50.2% 70% no-repeat,
+    #f000;
+  background-repeat: no-repeat;
+}
+
+
 /* divtober'23 - 15 - remember */
 .remember-container {
   background: #fff  
