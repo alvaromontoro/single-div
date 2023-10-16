@@ -1,4 +1,57 @@
-/* divtober'23 - 13 - small */
+/* divtober'23 - 15 - remember */
+.remember-container {
+  background: #fff  
+}
+
+.remember {
+  font-size: 0.45vh;
+  width: 50em;
+  height: 80em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    /* knot */
+    radial-gradient(farthest-side, #a00 99%, #0000) 19.75em 9.75em / 1.5em 1.5em,
+    radial-gradient(farthest-side, #0000 70%, #c00 0 99.9%, #0000) 13.75em 9em / 7em 3em,
+    radial-gradient(farthest-side at 45% 50%, #0000 70%, #c00 0 99.9%, #0000) 20.5em 9.1em / 7em 2.8em,
+    radial-gradient(farthest-side at 0 0, #0000 86%, #d00 0 99.9%, #0000) 16em 10em / 5em 6em,
+    radial-gradient(farthest-side at 100% 0, #0000 86%, #d00 0 99.9%, #0000) 20em 10em / 6em 6em,
+    radial-gradient(50% 100% at 50% 50%, #b00 99%, #0000) 16.5em 10em / 8em 1em,
+    /* shadows */
+    radial-gradient(farthest-side at 0% 50%, #c002, #f000) 24em 20em / 1.5em 10em,
+    radial-gradient(farthest-side at 0% 50%, #c002, #f000) 31em 21.5em / 1.5em 10em,
+    radial-gradient(farthest-side at 0% 50%, #c002, #f000) 38em 24em / 1.5em 8em,
+    /* suit */
+    linear-gradient(#000 0 0) 16em 100% / 30em 20em,
+    linear-gradient(#def 0 0) 17em 100% / 28em 22em,
+    /* arm */
+    linear-gradient(#fca 0 0) 20em 100% / 22em 26em,
+    /* hand */
+    radial-gradient(50% 170% at 50% 0, #fca 99.9%, #0000) 17em 50em / 28em 4em,
+    linear-gradient(#fca 0 0) 17em 30em / 28em 20.05em,
+    /* fingers */
+    radial-gradient(50% 80% at 50% 100%, #fff6 99.9%, #0000) 18em 0.5em / 5em 4em,
+    linear-gradient(#fff6 0 0) 18em 4.5em / 5em 1.5em,
+    linear-gradient(#fca 0 0) 17em 4em / 7em 27em,
+    radial-gradient(farthest-side, #fca 99.9%, #0000) 17em 0 / 7em 7em,
+    linear-gradient(#fca 0 0) 24em 22em / 7em 17em,
+    radial-gradient(farthest-side, #fca 99.9%, #0000) 24em 18em / 7em 7em,
+    linear-gradient(#fca 0 0) 31em 24em / 7em 20em,
+    radial-gradient(farthest-side, #fca 99.9%, #0000) 31em 20em / 7em 7em,
+    linear-gradient(#fca 0 0) 38em 26em / 7em 20em,
+    radial-gradient(farthest-side, #fca 99.9%, #0000) 38em 22em / 7em 7em,
+    /* thumb */
+    radial-gradient(farthest-side at 100% 50%, #c006, #f000) 15.5em 30em / 2em 15em,
+    radial-gradient(farthest-side at 100% 100%, #fca 99.9%, #0000) 11em 30.05em / 7em 10em,
+    radial-gradient(farthest-side at 100% 0, #fca 99.9%, #0000) 11em 40em / 9em 14em,
+    #0000
+    ;
+  background-repeat: no-repeat;
+}
+
+/* divtober'23 - 14 - small */
 .small-container {
   background: #4cf6;  
 }
