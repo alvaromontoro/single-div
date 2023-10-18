@@ -1,3 +1,164 @@
+/* divtober'23 - 17 - brave */
+.brave {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 1vmin;
+  width: 90vmin;
+  aspect-ratio: 1;
+  /* person */
+  background:
+    /* body */
+    linear-gradient(100deg, #0000 20%, #ddd 0 80%, #0000 0) 10em 48em / 13em 20em,
+    /* pants */
+    radial-gradient(farthest-side at 50% 0, #369 99%, #0000) 10em 68em / 9.75em 5em,
+    linear-gradient(210deg, #0000 30%, #369 0 55%, #0000 0) 16em 68em / 15em 13em,
+    linear-gradient(70deg, #0000 30%, #369 0 65%, #0000 0) 10em 68em / 10em 13em,
+    linear-gradient(-70deg, #0000 25%, #369 0 65%, #0000 0) 10em 80.9em / 10em 7em,
+    linear-gradient(#369 0 0) 26em 75em / 5em 13em,
+    radial-gradient(farthest-side at 50% 100%, #000 99%, #0000 0) 11em 100% / 7em 3em,
+    radial-gradient(farthest-side at 50% 100%, #000 99%, #0000 0) 25.5em 100% / 5em 3em,
+    radial-gradient(farthest-side at 0% 100%, #000 99%, #0000 0) 28em 100% / 7em 2.5em,
+    /* head */
+    radial-gradient(20% 25% at 19em 41em, #fca 5em, #0000 0),
+    #f000;
+  background: #f000;
+  /* mouse */
+  background:
+    /* arm */
+    radial-gradient(farthest-side at 60% 0%, #0000 90%, #000 0 99.9%, #0000 0) 23em 83em / 4em 3em,
+    radial-gradient(farthest-side at 100% 100%, #0000 80%, #000 0 99.9%, #0000 0) 26.9em 84.1em / 1em 1em,
+    radial-gradient(farthest-side at 100% 100%, #0000 80%, #000 0 99.9%, #0000 0) 26.9em 83.6em / 1em 1.5em,
+    radial-gradient(farthest-side at 100% 100%, #0000 80%, #000 0 99.9%, #0000 0) 26.9em 84.5em / 1.25em 0.75em,
+    /* eye */
+    radial-gradient(circle at 24.75em 78em, #fff 0.2em, #0000 0),
+    radial-gradient(circle at 25em 78em, #000 0.5em, #0000 0),
+    /* nose */
+    radial-gradient(circle at 28em 76.45em, pink 0.35em, #0000 0),
+    /* mouth */
+    conic-gradient(#0000 220deg, lightgray 0 260deg, #0000 0) 24em 72.5em / 8em 8em,
+    conic-gradient(#0000 230deg, lightgray 0 270deg, #0000 0) 23.5em 74em / 8em 8em,
+    /* head and body */
+    radial-gradient(farthest-side at 100% 70%, lightgray 99.9%, #0000 0) 22em 77em / 3em 4em,
+    radial-gradient(farthest-side at 80% 100%, lightgray 99.9%, #0000 0) 20em 100% / 5em 10em,
+    radial-gradient(farthest-side at 80% 80%, #000 99.9%, #0000 0) 20.1em 81.5em / 4em 6em,
+    linear-gradient(#000 0 0) 22.25em 100% / 3em 2em,
+    /* tail */
+    radial-gradient(farthest-side at 100% 0%, #0000 80%, pink 0 99.9%, #0000 0) 16.5em 100% / 4em 6em,
+    radial-gradient(farthest-side at 0% 100%, #0000 75%, pink 0 99.9%, #0000 0) 14.25em calc(100% - 5.9em) / 3em 2em,
+    /* ears */
+    radial-gradient(circle at 22em 77.75em, pink 0 1em, #0000 0),
+    radial-gradient(circle at 21.5em 77.5em, lightgray 0 1.75em, #0000 0),
+    radial-gradient(circle at 23em 77em, darkgray 1.75em, #0000 0),
+    radial-gradient(circle at 20.9em 77.7em, #000 0 1.5em, #0000 0),
+    #f000;
+  background-repeat: no-repeat;
+}
+
+@property --x {
+  syntax: '<number>';
+  initial-value: 19;
+  inherits: true;
+}
+
+@keyframes moveMouth {
+  0% { --x: 19; }
+  100% { --x: 20; }
+}
+
+.brave::before {
+  --x: 19;
+  aanimation: moveMouth 2s alternate infinite;
+  transform-origin: 50% 100%;
+  transform: scale(1);
+  content: "";
+  width: 50em;
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background:
+    /* random lines */
+    radial-gradient(100% 80% at 100% 60%, #0000 85%, #000 0 99%, #0000) 44.25em 31em / 2em 6em,
+    /* ears */
+    conic-gradient(at 50% 60%, #0000 155deg, gold 0 200deg, #0000 0) 8em 0em / 9em 10.5em,
+    conic-gradient(at 50% 60%, #0000 155deg, #000 0 200deg, #0000 0) 8em 2em / 9em 6em,
+    conic-gradient(at 50% 60%, #0000 155deg, gold 0 200deg, #0000 0) 15.5em 0em / 9em 10.5em,
+    conic-gradient(at 50% 60%, #0000 155deg, #000 0 200deg, #0000 0) 15.5em 0.2em / 9em 9em,
+    /* eyes */
+    radial-gradient(farthest-side at 50% 20%, #fff 99%, brown 0 99%, #0000) 11.25em 17em / 1em 0.5em,
+    radial-gradient(farthest-side at 50% 20%, #fff 99%, brown 0 99%, #0000) 16.25em 17em / 1em 0.5em,
+    radial-gradient(farthest-side at 50% 20%, #000 99%, brown 0 99%, #0000) 11em 17em / 2em 1.2em,
+    radial-gradient(farthest-side at 50% 20%, #000 99%, brown 0 99%, #0000) 16em 17em / 2em 1.2em,
+    /* nose */
+    conic-gradient(at 50% -10%, #0000 165deg, orange 0 200deg, #0000 0) 13em 18em / 3em 4em,
+    conic-gradient(at 50% 100%, #000 45deg, #0000 0 305deg, #000 0) 13em 22em / 3em 1.2em,
+    linear-gradient(#000 0 0) 14.375em 23em / 0.25em 1em,
+    /* mouth */
+    radial-gradient(farthest-side at 50% 0, gold 88%, #000 0 99.9%, #0000 0) 10.6em 24em / 4em 2em,
+    radial-gradient(farthest-side at 50% 0, gold 88%, #000 0 99.9%, #0000 0) 14.5em 24em / 4.5em 2em,
+    conic-gradient(gold 90deg, #0000 0 352deg, gold 0) 3em 20em / 15em 8em,
+    conic-gradient(at 50% 100%, #fff 20deg, #0000 0 340deg, #fff 0) 11.5em 25em / 2em 2em,
+    conic-gradient(at 50% 100%, #fff 20deg, #0000 0 340deg, #fff 0) 15.75em 25em / 2em 2em,
+    radial-gradient(farthest-side, red 60%, gold 0 99%, #0000) 11.75em calc(var(--x) * 1em) / 6em 8em,
+    /* base head */
+    radial-gradient(farthest-side at 50% 0, orange 99%, #0000) 14em 11em / 13em 3.5em,
+    radial-gradient(farthest-side at 50% 0, orange 99%, #0000) 8em 11em / 7em 3em,
+    radial-gradient(farthest-side at 50% 0, orange 99%, #0000) 7.5em 11.5em / 7em 2em,
+    radial-gradient(farthest-side at 50% 0, gold 99.9%, #0000) 10em 20em / 12em 6em,
+    radial-gradient(50% 130% at 50% 100%, gold 99.9%, #0000) 10em 12.01em / 12em 8em,
+    /* mane */
+    radial-gradient(farthest-side, orange 99.9%, #0000) 6em 6em / 23em 30em,
+    conic-gradient(#0000 30deg, orange 0 60deg, #0000 0) 0.5em 15em / 10em 5em,
+    conic-gradient(#0000 330deg, orange 0 350deg, #0000 0) 5.75em 29.75em / 10em 9em,
+    conic-gradient(orange 0 60deg, #0000 0 300deg, orange 0) 7.5em 34.8em / 20em 5em,
+    conic-gradient(orange 19deg, #0000 0 330deg, orange 0) 16em 28em / 20em 10em,
+    /* paws */
+    radial-gradient(farthest-side at 100% 100%, #0000 85%, #000 0 99%, #0000) 13em 100% / 1.5em 1.75em,
+    radial-gradient(farthest-side at 100% 100%, #0000 85%, #000 0 99%, #0000) 14.25em 100% / 1.5em 1.5em,
+    radial-gradient(farthest-side at 100% 100%, #0000 85%, #000 0 99%, #0000) 19.5em 100% / 1.3em 1.6em,
+    radial-gradient(farthest-side at 100% 100%, #0000 85%, #000 0 99%, #0000) 20.75em 100% / 1.5em 1.4em,
+    linear-gradient(#000 0 0) 23.8em 100% / 0.25em 11em,
+    linear-gradient(gold 0 0) 14em 100% / 4em 20em,
+    linear-gradient(gold 0 0) 20em 100% / 4em 20em,
+    
+    radial-gradient(farthest-side at 100% 100%, gold 99%, #0000) 12.1em 100% / 2em 2em,
+    radial-gradient(farthest-side at 100% 100%, gold 99%, #0000) 18.5em 100% / 2em 2em,
+    /* back-legs */
+    radial-gradient(farthest-side at 80% 70%, gold 95%, #000 0 99%, #0000) 29em 39em / 8em 9em,
+    radial-gradient(farthest-side at 100% 70%, gold 90%, #000 0 99%, #0000) 27em 100% / 4em 2em,
+    radial-gradient(farthest-side at 80% 50%, gold 99%, #0000) 24em 100% / 8em 10em,
+    radial-gradient(farthest-side at 100% 70%, gold 99%, #0000) 23em 100% / 4em 2em,
+    /* body */
+    radial-gradient(100% 110% at 0 100%, #0000 60%, gold 0 99.9%, #0000) 9em 20em/33em 30em,
+    radial-gradient(100% 110% at 0 100%, #0000 60%, #000 0 99.9%, #0000) 18em 23em/22em 20em,
+    /* tail */
+    conic-gradient(#0000 190deg, orange 0 220deg, #0000 0) 45.9em 19em / 5em 10.5em,
+    conic-gradient(#0000 190deg, orange 0 220deg, #0000 0) 45.2em 18em / 5em 10.5em,
+    conic-gradient(#0000 184deg, orange 0 210deg, #0000 0) 44em 17.5em / 5em 12em,
+    radial-gradient(circle at 45.5em 29em, orange 2em, #0000 0),
+    radial-gradient(100% 150% at 0 20%, #0000 85%, gold 0 99%, #0000 0) 30em 100% / 15em 15em,
+    radial-gradient(100% 150% at 100% 70%, #0000 80%, gold 0 99%, #0000 0) 42.4em 30.1em / 10em 5em,
+    #00f0;
+  background-repeat: no-repeat;
+}
+
+.brave::after {
+  content: "Fuck you!";
+  font-size: 2em;
+  padding-bottom: 5em;
+  position: absolute;
+  bottom: 5.5em;
+  left: 14.5em;
+  font-family: 'Comic Neue', 'Comic Sans', 'Comic Sans MS', Helvetica, sans-serif;
+  background: 
+    radial-gradient(farthest-side at 0 0, #0000 94%, #000 0 99%, #0000) 0 60% / 60% 50%,
+    #f000;
+  background-repeat: no-repeat;
+  transform: rotate(-2deg) skewY(-5deg)
+}
+
 /* divtober'23 - 16 - tangled */
 .tangled-container {
   background: #4cfa;  
