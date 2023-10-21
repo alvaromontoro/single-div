@@ -1,3 +1,240 @@
+/* divtober'23 - 20 - seeing */
+.seeing-container {
+  background: repeating-conic-gradient(at 50% 57%, #0004 0 2.5%, #0002 0 7.5%, #0004 0 10%);
+}
+
+.seeing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40vh;
+  width: 1em;
+  aspect-ratio: 1.1;
+  aborder-radius: 50%;
+}
+
+.seeing::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: #000;
+  background-repeat: no-repeat;
+}
+
+.seeing::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  transform: translate(-50%, -48.5%) scale(0.54);
+  background: 
+    radial-gradient(at 47% 64%, #fff 2.5%, #0000 0),
+    radial-gradient(circle at 50% 67.25%, #000 7.6%, #0000 0 14%, #000 0 17%, #0000 0),
+    radial-gradient(104% 215% at 50% 120%, #f000 50%, #000 0 55%, #0000 0) 50% 70% / 76% 30%,
+    radial-gradient(104% 215% at 50% -20%, #0000 50%, #000 0 55%, #00f0 0) 50% 80% / 76% 25%,
+    radial-gradient(104% 215% at 50% 115%, #fff 55%, #0000 0) 50% 66.6% / 76% 20%,
+    radial-gradient(104% 215% at 50% -15%, #fff 55%, #0000 0) 50% 78% / 76% 20%,
+    repeating-radial-gradient(125% 105% at 50% 100%, #0000 0 4%, #000 0 8%) 50% 0 / 100% 66%,
+    repeating-radial-gradient(70% 117% at 50% -5%, #000 0 6%, #0000 0 12%) 50% 100% / 100% 36%,
+    #fff;
+  background-repeat: no-repeat;
+}
+
+/* divtober'23 - 19 - sticky */
+.sticky {
+  --v: 70%;
+  --shoe: #c34;
+  --pants: #36a;
+  --deco: #36c;
+  position: absolute;
+  top: 0;
+  left: calc(50% + 25vh);
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100vh;
+  height: 50vh;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  background: 
+    /* pants */
+    repeating-linear-gradient(#0000 0 5%, #fc08 0 12%) calc(100% - 43vh) 5% / 0.5vh 60%,
+    linear-gradient(90deg, #0000 calc(100% - 4vh), #0002 0) calc(100% - 40vh) 5% / 100vh 60%,
+    linear-gradient(var(--pants) 0 0) calc(100% - 40vh) 5% / 100vh 60%,
+    /* sole */
+    repeating-linear-gradient(#fff 0 0.5%, #ddd 0 1%) calc(100% - 20vh) 100% / 3vh 100%,
+    /* shoe decoration */
+    conic-gradient(from 160deg at 50% 0, var(--deco) 40deg, #0000 0)  calc(100% - 29.5vh) 20% / 5vh 5vh,
+    conic-gradient(from -20deg at 50% 100%, var(--deco) 40deg, #0000 0)  calc(100% - 29.5vh) 25% / 5vh 5vh,
+    conic-gradient(from 70deg at 0% 50%, var(--deco) 40deg, #0000 0)  calc(100% - 30.5vh) 22.5% / 5vh 5vh,
+    conic-gradient(from 250deg at 100% 50%, var(--deco) 40deg, #0000 0)  calc(100% - 28.5vh) 22.5% / 5vh 5vh,
+    radial-gradient(circle at calc(100% - 32vh) 25.5%, #fff 5vh, #0000 0),
+    /* shoe */
+    radial-gradient(100% 100% at 100% 0%, var(--shoe) 99.9%, #0000) calc(100% - 22vh) 100% / 20vh 80%,
+    radial-gradient(150% 100% at 100% 100%, var(--shoe) 99.9%, #0000) calc(100% - 22vh) 0% / 20vh 30%,
+    /* chewing gum */
+    radial-gradient(120% 105% at 45% 100%, #0000 90%, #fff 0) 100% 100% / 20vh 46%,
+    radial-gradient(140% 100% at 60% 0%, #0000 90%, #fff 0) 100% 0% / 20vh 56%,
+    var(--bg);
+  background-repeat: no-repeat;
+}
+
+.sticky::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: calc(100% - var(--v));
+  background: 
+    linear-gradient(90deg, #ffc, #eeb, #ffc),
+    var(--bg)
+    ;
+  background:
+     /* chewing gum */
+    radial-gradient(120% 105% at 45% 100%, #0000 90%, #ffc 0) 100% 100% / 100% 46%,
+    radial-gradient(140% 100% at 60% 0%, #0000 90%, #ffc 0) 100% 0% / 100% 56%,
+    var(--bg);
+  background-repeat: no-repeat;
+/*   -webkit-mask:
+    radial-gradient(120% 105% at 45% 100%, #0000 90%, #fff 0) 0 100% / 100% 46% no-repeat,
+    radial-gradient(140% 100% at 60% 0%, #0000 90%, #fff 0) 0 0% / 100% 56% no-repeat; */
+}
+
+.sticky::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--v);
+  background: 
+    /* pants */
+    repeating-linear-gradient(#0000 0 5%, #fc08 0 12%) calc(100% - 23vh) 5% / 0.5vh 60%,
+    linear-gradient(90deg, #0000 calc(100% - 4vh), #0002 0) calc(100% - 20vh) 5% / 100vh 60%,
+    linear-gradient(var(--pants) 0 0) calc(100% - 20vh) 5% / 100vh 60%,
+    /* sole */
+    repeating-linear-gradient(#fff 0 0.5%, #ddd 0 1%) 100% 100% / 3vh 100%,
+    /* shoe decoration */
+    conic-gradient(from 160deg at 50% 0, var(--deco) 40deg, #0000 0)  calc(100% - 9.5vh) 20% / 5vh 5vh,
+    conic-gradient(from -20deg at 50% 100%, var(--deco) 40deg, #0000 0)  calc(100% - 9.5vh) 25% / 5vh 5vh,
+    conic-gradient(from 70deg at 0% 50%, var(--deco) 40deg, #0000 0)  calc(100% - 10.5vh) 22.5% / 5vh 5vh,
+    conic-gradient(from 250deg at 100% 50%, var(--deco) 40deg, #0000 0)  calc(100% - 8.5vh) 22.5% / 5vh 5vh,
+    radial-gradient(circle at calc(100% - 12vh) 25.5%, #fff 5vh, #0000 0),
+    /* shoe */
+    radial-gradient(100% 100% at 100% 0%, var(--shoe) 99.9%, #0000) calc(100% - 2vh) 100% / 20vh 80%,
+    radial-gradient(150% 100% at 100% 100%, var(--shoe) 99.9%, #0000) calc(100% - 2vh) 0% / 20vh 30%,
+    var(--bg)
+    ;
+  background-repeat: no-repeat;
+}
+
+
+/* hide the range handler */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0 solid transparent;
+  width: 10%;
+  height: 10%;
+  display: block;
+}
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0 solid transparent;
+  width: 10%;
+  height: 10%;
+  display: block;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+
+/* divtober'23 - 18 - component - don't do this in CSS, use SVG */
+.component {
+  --c: #000;
+  font-size: 0.5vmin;
+  width: 80em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1.2;
+  background:
+    /* part 1 */
+    linear-gradient(var(--c) 0 0) 29% 52% / 0.5em 17%,
+    linear-gradient(var(--c) 0 0) 60% 49% / 0.5em 17%,
+    linear-gradient(var(--c) 0 0) 63% 49% / 0.5em 22%,
+    linear-gradient(27deg, #0000 40.5%, var(--c) 0 44%, #0000 0) 33.5% 64.75% / 14% 15%,
+    linear-gradient(27deg, #0000 40.5%, var(--c) 0 44%, #0000 0) 55.25% 28% / 17.5% 15%,
+    linear-gradient(-27deg, #0000 40.5%, var(--c) 0 44%, #0000 0) 57% 64.5% / 14% 15%,
+    linear-gradient(-27deg, #0000 40.5%, var(--c) 0 44%, #0000 0) 36.9% 27% / 14% 15%,
+    linear-gradient(var(--c) 0 0) 44% 14.5% / 0.5em 17%,
+    linear-gradient(var(--c) 0 0) 47.7% 14.5% / 0.5em 17%,
+    linear-gradient(var(--c) 0 0) 46% 85% / 0.5em 12%,
+    linear-gradient(152deg, #0000 41%, var(--c) 0 44%, #0000 0) 17% 66% / 15% 15%,
+    linear-gradient(152deg, #0000 41%, var(--c) 0 44%, #0000 0) 19% 70.25% / 14% 15%,
+    linear-gradient(-153deg, #0000 40%, var(--c) 0 44%, #0000 0) 16.5% 33% / 11% 15%,
+    /* part 2 */
+    linear-gradient(164deg, #0000 40.5%, var(--c) 0 44%, #0000 0) 74.5% 35% / 16% 15%,
+    linear-gradient(-164deg, #0000 40.25%, var(--c) 0 44%, #0000 0) 74.5% 66.6% / 16% 15%,
+    linear-gradient(51deg, #0000 40.5%, var(--c) 0 44%, #0000 0) 96% 40.5% / 12.5% 15%,
+    linear-gradient(-51.5deg, #0000 40.5%, var(--c) 0 44%, #0000 0) 92.75% 56.75% / 12.5% 14%,
+    linear-gradient(-51.5deg, #0000 40%, var(--c) 0 45%, #0000 0) 87.5% 55% / 10% 10%,
+    linear-gradient(-66.6deg, #0000 40%, var(--c) 0 45.5%, #0000 0) 87.5% 19% / 9% 10.5%,
+    /* Ns */
+    linear-gradient(var(--c) 0 0) 27% 38% / 0.5em 5.5%,
+    linear-gradient(var(--c) 0 0) 30% 38% / 0.5em 5.5%,
+    linear-gradient(55deg, #0000 48%, var(--c) 0 58%, #0000 0) 27.8% 38% / 3% 5.5%,
+    linear-gradient(var(--c) 0 0) 44.5% 72% / 0.5em 5.5%,
+    linear-gradient(var(--c) 0 0) 47.5% 72% / 0.5em 5.5%,
+    linear-gradient(55deg, #0000 48%, var(--c) 0 58%, #0000 0) 45.75% 72% / 3% 5.5%,
+    linear-gradient(var(--c) 0 0) 80.5% 68% / 0.5em 5.5%,
+    linear-gradient(var(--c) 0 0) 83.5% 68% / 0.5em 5.5%,
+    linear-gradient(55deg, #0000 48%, var(--c) 0 58%, #0000 0) 82.6% 68% / 3% 5.5%,
+    linear-gradient(var(--c) 0 0) 80.5% 30% / 0.5em 5.5%,
+    linear-gradient(var(--c) 0 0) 83.5% 30% / 0.5em 5.5%,
+    linear-gradient(55deg, #0000 48%, var(--c) 0 58%, #0000 0) 82.6% 30% / 3% 5.5%,
+    /* Os */
+    radial-gradient(farthest-side, #0000 76%, var(--c) 0 99%, #0000) 10% 71.5% / 3.75em 4em,
+    radial-gradient(farthest-side, #0000 76%, var(--c) 0 99%, #0000) 45.5% 4.5% / 3.75em 4em,
+    /* CH3s */
+    radial-gradient(60% 50% at 70% 50%, #0000 76%, var(--c) 0 99%, #0000) 9% 27.5% / 3.75em 4em,
+    linear-gradient(90deg, var(--c) 16%, #0000 0 84%, var(--c) 0) 2.5% 27.5% / 3em 4em,
+    linear-gradient(#0000 45%, var(--c) 0 55%, #0000 0) 2.5% 27.5% / 3em 4em,
+    radial-gradient(70% 50% at 25% 55%, #0000 55%, var(--c) 0 99%, #0000) 7% 30% / 1.5em 1.75em,
+    radial-gradient(70% 50% at 25% 45%, #0000 60%, var(--c) 0 99%, #0000) 7% 32.1% / 1.75em 2em,
+    
+    radial-gradient(60% 50% at 70% 50%, #0000 76%, var(--c) 0 99%, #0000) 90% 10% / 3.75em 4em,
+    linear-gradient(90deg, var(--c) 16%, #0000 0 84%, var(--c) 0) 95% 10% / 3em 4em,
+    linear-gradient(#0000 45%, var(--c) 0 55%, #0000 0) 95% 10% / 3em 4em,
+    radial-gradient(70% 50% at 25% 55%, #0000 55%, var(--c) 0 99%, #0000) 98% 12.5% / 1.5em 1.75em,
+    radial-gradient(70% 50% at 25% 45%, #0000 60%, var(--c) 0 99%, #0000) 98.25% 14.6% / 1.75em 2em,
+    
+    radial-gradient(60% 50% at 70% 50%, #0000 76%, var(--c) 0 99%, #0000) 45% 94% / 3.75em 4em,
+    linear-gradient(90deg, var(--c) 16%, #0000 0 84%, var(--c) 0) 50.5% 94% / 3em 4em,
+    linear-gradient(#0000 45%, var(--c) 0 55%, #0000 0) 50.5% 94% / 3em 4em,
+    radial-gradient(70% 50% at 25% 55%, #0000 55%, var(--c) 0 99%, #0000) 54.1% 94% / 1.5em 1.75em,
+    radial-gradient(70% 50% at 25% 45%, #0000 60%, var(--c) 0 99%, #0000) 54.2% 96.5% / 1.75em 2em;
+  background-repeat: no-repeat;
+}
+
 /* divtober'23 - 17 - brave */
 .brave {
   position: absolute;
