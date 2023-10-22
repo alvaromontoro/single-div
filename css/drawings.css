@@ -1,3 +1,91 @@
+/* divtober'23 - 22 - alive */
+.alive-container {
+  background: #c934;
+}
+
+.alive {
+  --c: #741;
+  --cs: #7414;
+  font-size: 0.5vh;
+  width: 75em;
+  aspect-ratio: 0.75;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Rye, Helvetica, Arial, sans-serif;
+  color: #741;
+  clip-path: polygon(0 5%, 8% 0, 50% 0.5%,100% 0, 99% 50%, 100% 100%, 50% 99.5%, 0 100%, 0.5% 50%);
+  background:
+    /* nail? */
+/*     radial-gradient(circle at 46.8% 2.8%, #fff4, #0000 0.5%),
+    radial-gradient(circle at 47% 3%, #321, #543 0.6%, #0000 0), */
+    /* corner bend */
+    conic-gradient(at 9% 4%, #0000 72.5%, #eb8 0 97.5%, #0000 0),
+    conic-gradient(at 7% 6%, #0000 78%, #0002 0),
+    /* dirt */
+    radial-gradient(1% 50% at 0 80%, #9633, #9630),
+    radial-gradient(2% 30% at 0 20%, #9632, #9630),
+    radial-gradient(1% 40% at 100% 60%, #9633, #9630),
+    radial-gradient(2% 60% at 100% 40%, #9632, #9630),
+    /* square */
+    linear-gradient(var(--c) 1em, #0000 0 calc(100% - 1em), var(--c) 0) 50% 38% / 80% 55%,
+    linear-gradient(90deg, var(--c) 1em, #0000 0 calc(100% - 1em), var(--c) 0) 50% 38% / 80% 55%,
+    /* eyes */
+    radial-gradient(circle at 40% 50%, var(--c) 3%, #0000 0),
+    radial-gradient(circle at 60% 50%, var(--c) 3%, #0000 0),
+    /* cheeks */
+    radial-gradient(80% 40% at 37.5% 52.5%, var(--cs) 4%, #0000 0),
+    radial-gradient(80% 40% at 62.5% 52.5%, var(--cs) 4%, #0000 0),
+    /* eyebrows */
+    radial-gradient(80% 100% at 55% 100%, #0000 70%, var(--c) 0 99%, #0000 0) 38% 45% / 8em 3.5em,
+    radial-gradient(80% 100% at 45% 100%, #0000 70%, var(--c) 0 99%, #0000 0) 62% 45% / 8em 3.5em,
+    /* mouth */
+    radial-gradient(farthest-side circle at 50% 0%, #0000 70%, var(--c) 0 99%, #0000 0) 50% 55% / 6em 3em,
+    /* hat? */
+    linear-gradient(var(--c) 0 0) 50% 38% / 65% 1.75%,
+    radial-gradient(farthest-side at 50% 200%, var(--c) 99%, #0000 0) 40% 28% / 32% 14%,
+    radial-gradient(farthest-side at 50% 200%, var(--c) 99%, #0000 0) 58% 27% / 36% 16%,
+    /* face line */
+    radial-gradient(60% 50% at 50% 30%, #fc9 75%, var(--c) 0 80%, #0000 0) 50% 60% / 50% 40%,
+    /* body */
+    radial-gradient(farthest-side at 50% 200%, var(--c) 99%, #0000 0) 50% 68% / 65% 10%,
+    #fc9;
+  background-repeat: no-repeat;
+}
+
+.alive::before {
+  content: "WANTED";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 0.35em;
+  font-size: 10em;
+}
+
+.alive::after {
+  content: "CSS SLINGER \a * DEAD OR ALIVE * \a $10,000";
+  white-space: pre;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 10.65em;
+  font-size: 7em;
+  background:
+    /* folds - maybe? */
+    conic-gradient(#fff3, #fff0 2% 24%, #fff2 25%, #4321 0, #0000 27% 48%, #fff2 50%, #9632 0, #fff0 52% 73%, #9632 75%, #fff3 0, #fff0 78% 97%, #9632);
+}
+
 /* divtober'23 - 21 - faraway */
 .faraway-container {
   background: #ffdc;
