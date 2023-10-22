@@ -1,3 +1,77 @@
+/* divtober'23 - 21 - faraway */
+.faraway-container {
+  background: #ffdc;
+}
+
+.faraway {
+  --c: #fb2;
+  --s: #ddd;
+  --f: #e92;
+  --f-dark: #e70;
+  font-size: 0.5vh;
+  width: 80em;
+  height: 80em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    linear-gradient(50deg, #0000 45%, var(--c) 0 55%, #0000 0) 20% 40% / 10% 10%,
+    conic-gradient(at 50% 100%, var(--f) 35deg, #0000 0 320deg, var(--f) 0) 20% 40% / 22% 9%,
+    linear-gradient(50deg, #0000 45%, var(--c) 0 60%, #0000 0) 30% 30% / 8% 8%,
+    
+    linear-gradient(50deg, #0000 45%, var(--c) 0 60%, #0000 0) 14% 51% / 8% 8%,
+    #f000;
+  background-repeat: no-repeat;
+}
+
+.faraway::before {
+  content: "";
+  position: absolute;
+  width: 170%;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  clip-path: polygon(50% 50%, 86% 100%, 14% 100%);
+  background: 
+    radial-gradient(100% 50% at 50% 0, #0000 60%, var(--c) 0 66%, #0000 0) 50% 100% / 32% 30% no-repeat,
+    linear-gradient(54deg, #0000 48%, var(--c) 0 50%, #0000 0),
+    linear-gradient(-54deg, #0000 48%, var(--c) 0 50%, #0000 0),
+    
+    radial-gradient(farthest-side, #0000 85%, var(--c) 0 90%, #0000 0 95%, var(--c) 0),
+    repeating-conic-gradient(var(--s) 0 1%, #000 0 1.1%),
+    #0000;
+  -webkit-mask:
+    radial-gradient(100% 50% at 50% 0, #0000 60%, var(--c) 0 66%, #0000 0) 50% 100% / 32% 30% no-repeat,
+    linear-gradient(54deg, #0000 48%, var(--c) 0 49%, #0000 0),
+    linear-gradient(-54deg, #0000 48%, var(--c) 0 49%, #0000 0),
+    radial-gradient(farthest-side, #0000 85%, var(--c) 0);
+}
+
+.faraway::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: 
+    linear-gradient(var(--c) 0 0) 50% 34.5% / 3% 13%,
+    linear-gradient(var(--c) 0 0) 86% 35.25% / 2% 9%,
+    linear-gradient(var(--f-dark) 0 0) 70% 35% / 30% 10%,
+    linear-gradient(var(--f) 0 0) 80% 35.5% / 30% 7%,
+    /* base */
+    linear-gradient(-80deg, var(--f) 50%, #0000 0) 37% 100% / 15% 22%,
+    linear-gradient(80deg, var(--f) 50%, #0000 0) 63% 100% / 15% 22%,
+    linear-gradient(var(--f) 0 0) 50% 100% / 10% 10%,
+    radial-gradient(closest-side circle at 50% 9%, #0000 20%, var(--f) 20.5% 99%, #0000),
+    linear-gradient(var(--f) 0 0) 50% 48% / 10% 68%,
+    #f000;
+  background-repeat: no-repeat;
+}
+
 /* divtober'23 - 20 - seeing */
 .seeing-container {
   background: repeating-conic-gradient(at 50% 57%, #0004 0 2.5%, #0002 0 7.5%, #0004 0 10%);
