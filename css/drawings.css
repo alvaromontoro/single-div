@@ -1,3 +1,96 @@
+/* divtober'23 - 26 - cold */
+.cold-container {
+  background: #00bede66;
+}
+
+.cold {
+  font-size: 25vmin;
+  width: 1em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 
+    inset 0 0 0.04em 0.02em #0067c8,
+    inset 0 -0.04em 0.02em 0.05em #00bede,
+    inset 0 0.04em 0.02em 0.01em #0067c8cc;
+  background:
+    radial-gradient(70% 90% at 34.75% 39%, #004979 2%, #002b5c 8%, #0000 8.35%),
+    radial-gradient(70% 90% at 64.25% 39%, #004979 2%, #002b5c 8%, #0000 8.35%),
+    radial-gradient(72% 90% at 34.75% 40.125%, #fffc 7%, #0000 8%, #0000 8.35%),
+    radial-gradient(72% 90% at 64.25% 40.125%, #fffc 7%, #0000 8%, #0000 8.35%),
+    linear-gradient(#eff5fd 5%, #00bede 60%)
+    ;
+  background-repeat: no-repeat;
+}
+
+.cold::after {
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 105%;
+  background:
+    /* front ones */
+    radial-gradient(farthest-side at 50% 40%, #fff 99.5%, #f000) 22.35% 74.65% / 3% 4.5%,
+    radial-gradient(50% 60% at 50% 100%, #f000 99.5%, #fff) 24.5% 74.9% / 2.5% 1.5%,
+    radial-gradient(farthest-side at 20% 100%, #fff 99.5%, #f000) 23.5% 73.1% / 6% 3%,
+    radial-gradient(farthest-side at 100% 100%, #fff 99.5%, #f000) 77.9% 72.6% / 5% 3%,
+    radial-gradient(circle at 39.55% 73.3%, #fff 1.25%, #fff0 0),
+    radial-gradient(100% 40% at 65% 76%, #fff 6%, #fff0 0),
+    radial-gradient(farthest-side at 50% 30%, #fff 99.5%, #fff0) 70% 75.25% / 30% 4%,
+    radial-gradient(farthest-side at 50% 40%, #fff 99.5%, #fff0) 28% 74.25% / 10% 3%,
+    radial-gradient(50% 60% at 50% 100%, #0000 99.5%, #fff) 74% 77% / 3% 2%,
+    conic-gradient(at 50% 105%, #fff 8deg, #f000 9deg 352deg, #fff 353deg) 28% 100% / 8% 27%,
+    conic-gradient(at 50% 110%, #fff 30deg, #f000 31deg 333deg, #fff 334deg) 38.9% 75.1% / 5% 2%,
+    conic-gradient(at 50% 105%, #fff 5deg, #f000 6deg 352deg, #fff 353deg) 71.5% 97% / 8% 23%,
+    conic-gradient(at 50% 110%, #fff 5deg, #f000 6deg 352deg, #fff 353deg) 78% 83% / 8% 10%,
+    conic-gradient(at 50% 110%, #fff 6deg, #f000 7deg 348deg, #fff 349deg) 59.5% 86% / 12% 12%,
+    /* background ones */
+    conic-gradient(at 50% 110%, #fff 6deg, #0000 7deg 354deg, #fff 355deg) 10% 100% / 6% 24%,
+    radial-gradient(farthest-side at 60% 0, #fff 99%, #0000) 9.5% 83% / 7.5% 12%,
+    conic-gradient(at 50% 110%, #fff 8deg, #0000 9deg 347deg, #fff 348deg) 18% 95% / 8% 10%,
+    radial-gradient(farthest-side at 60% 0, #fff 99%, #0000) 18.5% 90% / 4.5% 8%,
+    conic-gradient(at 50% 105%, #fff 20deg, #0000 21deg 345deg, #fff 346deg) 40% 98% / 8% 10%,
+    conic-gradient(at 60% 100%, #fff 34deg, #0000 35deg 325deg, #fff 326deg) 56% 98% / 8% 10%,
+    conic-gradient(at 60% 100%, #fff 26deg, #0000 27deg 325deg, #fff 326deg) 61.5% 98% / 8% 10%,
+    conic-gradient(at 50% 120%, #fff 6deg, #0000 7deg 354deg, #fff 355deg) 86.5% 99% / 6% 13%,
+    conic-gradient(at 80% 120%, #fff 10deg, #f000 7deg 305deg, #fff 0) 86% 86.5% / 7% 12%;
+  background-repeat: no-repeat;
+  -webkit-mask:
+    radial-gradient(closest-side at 50% 0.5em, #000 83%, #0000 0 99.9%, #000),
+    conic-gradient(at 50% 105%, #fff 8deg, #f003 9deg 352deg, #fff 353deg) 28% 100% / 8% 27% no-repeat,
+    conic-gradient(at 50% 105%, #fff 5deg, #f003 6deg 352deg, #fff 353deg) 71.5% 97% / 8% 23% no-repeat,
+    conic-gradient(at 50% 110%, #fff 5deg, #f003 6deg 352deg, #fff 353deg) 78% 83% / 8% 10% no-repeat,
+    conic-gradient(at 50% 110%, #fff 6deg, #f003 7deg 348deg, #fff 349deg) 59.5% 86% / 12% 12% no-repeat
+    ;
+}
+
+.cold::before {
+  content: "";
+  position: absolute;
+  top: 66.6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68%;
+  height: 23%;
+  border: 0.02em solid #003651;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  box-shadow: 0 0.015em 0.015em -0.01em #fffc;
+  background:
+    linear-gradient(#0000 47%, #337384 0 53%, #0000 0),
+    repeating-linear-gradient(90deg, #0000 0 17%, #337384 0 19%) -1.5em 0,
+    linear-gradient(#0000 40%, #0003 50%, #0000 60%),
+    repeating-linear-gradient(90deg, #0003 0, #0000 2% 7.5%, #0003 9.5%) -1.75em 0 / 200% 100%,
+    #f0f4f8
+    ;
+  
+}
+
 /* divtober'23 - 25 - cheesy */
 .cheesy-container {
   background: #ffc8;  
