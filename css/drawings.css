@@ -1,3 +1,243 @@
+/* divtober'23 - 28 - handmade */
+.handmade {
+  font-size: 0.5vmin;
+  width: 20em;
+  height: 20em;
+
+  border-radius: 50%;
+  border: 1.5em solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    radial-gradient(145% 130% at 75% 5%, #0000 55%, #000 0 58%, #fff0 0),
+    radial-gradient(140% 125% at 66% 10%, #0000 60%, #000 0 63%, #fff0 0),
+    radial-gradient(135% 120% at 60% 15%, #0000 65%, #000 0 68%, #fff0 0),
+    radial-gradient(150% 135% at 80% 0%, #0000 50%, #000 0 53%, #fff 0),
+    radial-gradient(140% 170% at 15% 80%, #0000 27%, #000 0 30%, #0000 0 35%, #000 0 38%, #fff0 0),
+    radial-gradient(135% 160% at 15% 80%, #0000 45%, #000 0 48%, #fff0 0),
+    radial-gradient(145% 150% at 5% 75%, #0000 55%, #000 0 58%, #fff0 0),
+    radial-gradient(140% 145% at 10% 66%, #0000 60%, #000 0 63%, #fff0 0),
+    #0000;
+}
+
+.handmade::before,
+.handmade::after {
+  content: "HAND";
+  display: flex;
+  align-items: center;
+  font-size: 5em;
+  font-family: helvetica, arial, sans-serif;
+  letter-spacing: 0.75em;
+  white-space: pre;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 450%;
+  height: 200%;
+  background: 
+    conic-gradient(at -20% 120%, #0000 66.7deg, #000 0 67.9deg, #0000 0) 40% 56% / 93% 90%,
+    conic-gradient(at 120% 120%, #0000 291.9deg, #000 0 293.1deg, #0000 0) 60% 50% / 93% 90%,
+    radial-gradient(circle at 6% 10%, #000 0.5em, #0000 0),
+    radial-gradient(circle at 94% 10%, #000 0.5em, #0000 0),
+    #f000;
+  background-repeat: no-repeat;
+  -webkit-mask: radial-gradient(circle, #0000 1.7em, #000 0)
+}
+
+.handmade::after {
+  content: "MADE";
+  align-items: center;
+  width: 470%; /* ????? */
+  justify-content: flex-end;
+  background: 
+    /* heart */
+    radial-gradient(closest-side at 25% 25%, #000 99.9%, #f000) 50% 0 /0.8em 0.8em,
+    radial-gradient(closest-side at 75% 25%, #000 99.9%, #f000) 50% 0 /0.8em 0.8em,
+    conic-gradient(at 50% 100%, #000 10%, #f000 0 90%, #000 0) 50% 0.2em / 0.8em 0.6em,
+    
+    radial-gradient(closest-side at 25% 25%, #000 99.9%, #f000) 40% 10% /0.8em 0.8em,
+    radial-gradient(closest-side at 75% 25%, #000 99.9%, #f000) 40% 10% /0.8em 0.8em,
+    conic-gradient(at 50% 100%, #000 10%, #f000 0 90%, #000 0) 40% calc(10% + 0.2em) / 0.8em 0.6em,
+    
+    radial-gradient(closest-side at 25% 25%, #000 99.9%, #f000) 60% 10% /0.8em 0.8em,
+    radial-gradient(closest-side at 75% 25%, #000 99.9%, #f000) 60% 10% /0.8em 0.8em,
+    conic-gradient(at 50% 100%, #000 10%, #f000 0 90%, #000 0) 60% calc(10% + 0.2em) / 0.8em 0.6em,
+    /* stitches */
+    linear-gradient(45deg, #0000 42%, #000 0 58%, #0000 0) 50% 100% / 0.8em 0.8em,
+    linear-gradient(-45deg, #0000 42%, #000 0 58%, #0000 0) 50% 100% / 0.8em 0.8em,
+    linear-gradient(45deg, #0000 42%, #000 0 58%, #0000 0) 60% 90% / 0.8em 0.8em,
+    linear-gradient(-45deg, #0000 42%, #000 0 58%, #0000 0) 60% 90% / 0.8em 0.8em,
+    linear-gradient(45deg, #0000 42%, #000 0 58%, #0000 0) 40% 90% / 0.8em 0.8em,
+    linear-gradient(-45deg, #0000 42%, #000 0 58%, #0000 0) 40% 90% / 0.8em 0.8em,
+    #f000;
+  background-repeat: no-repeat;
+}
+
+
+/* divtober'23 - 27 - rules */
+.rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  background:
+    /* row 0 (copy of row 4) */
+    /* circle */
+    radial-gradient(circle at 5em 35em, #37c 3.75em, #f34 3.8em 4.95em, #0000 5em),
+    radial-gradient(circle at 5em 34em, #0001 4.95em, #0000 5em),
+    /* triangle */
+    conic-gradient(at 10em 30em, #0000 42%, #f34 0 58%, #0000 0) 4.5em 32em,
+    conic-gradient(at 10em 29em, #0000 42%, #0001 0 58%, #0000 0) 4.5em 32em,
+    /* circle */
+    radial-gradient(circle at 24em 35em, #f34 3.8em 4.95em, #0000 5em),
+    radial-gradient(circle at 24em 34em, #0001 4.95em, #0000 5em),
+    /* circle */
+    radial-gradient(circle at 34.5em 35em, #fff 3.75em, #f34 3.8em 4.95em, #0000 5em),
+    radial-gradient(circle at 34.5em 34em, #0001 4.95em, #0000 5em),
+    
+    /* row 1 */
+    /* base circle 2*/
+    radial-gradient(circle at 0.5em 27em, #fff 3.75em, #f34 3.8em 4.95em, #0000 5em),
+    radial-gradient(circle at 0.5em 26em, #0001 4.95em, #0000 5em),
+    radial-gradient(circle at 40.5em 27em, #fff 3.75em, #f34 3.8em 4.95em, #0000 5em),
+    radial-gradient(circle at 40.5em 26em, #0001 4.95em, #0000 5em),
+    /* drawing triangle */
+    conic-gradient(at 1em 2.25em, #0000 75%, #000 0) 9.5em 28em,
+    conic-gradient(at 10em 30.5em, #0000 144deg, #000 145deg 215deg, #0000 216deg) 0 -4em,
+    /* base triangle */
+    conic-gradient(at 10em 25.5em, #0000 42%, #fff 0 58%, #0000 0) 0 -1em,
+    conic-gradient(at 10em 22em, #0000 42%, #f34 0 58%, #0000 0),
+    conic-gradient(at 10em 22em, #0000 42%, #0001 0 58%, #0000 0) 0 -1em,
+    
+    /* drawing circle */
+    linear-gradient(-45deg, #0000 7.75%, #f34 0 9.5%, #0000 0) 22.5em 30.2em,
+    conic-gradient(at 39em 29em, #0000 45deg, #000 0 135deg, #0000 0) 18em -3.125em,
+    radial-gradient(circle at 0% 100%, #0000 2.75em, #000 2.8em 3.5em, #0000 3.55em) 18em -3em,
+    /* base circle */
+    radial-gradient(circle at 19.5em 27em, #fff 3.75em, #f34 3.8em 4.95em, #0000 5em),
+    radial-gradient(circle at 19.5em 26em, #0001 4.95em, #0000 5em),
+    
+    /* drawing square */
+    conic-gradient(at 1.2em 3em, #0000 75%, #000 0) 29.4em 26em,
+    conic-gradient(at 1em 0.2em, #0000 75%, #000 0) 29em 26em,
+    conic-gradient(at 2em 0.2em, #0000 75%, #000 0) 29em 29em,
+    radial-gradient(circle at 30em 25.1em, #000 0.66em, #0000 0.7em),
+    /* base square */
+    conic-gradient(at 7em 7em, #0000 75%, #fff 0) 26.5em 23.5em,
+    conic-gradient(at 10em 10em, #0000 75%, #0ae 0) 25em 22em,
+    conic-gradient(at 10.5em 10em, #0000 75%, #0001 0) 24.75em 21em,
+    
+    /* row 2 */
+    /* drawing circle */
+    conic-gradient(at 4em 1.5em, #0000 75%, #000 0) 1.5em 18.25em,
+    conic-gradient(at 2em 29em, #0000 225deg, #000 0 315deg, #0000 0) 5.5em -9.95em,
+    conic-gradient(at 38em 29em, #0000 45deg, #000 0 135deg, #0000 0) 2em -9.95em,
+    /* square */
+    conic-gradient(at 10em 10em, #0000 75%, #fd0 0) -1.25em 14em,
+    conic-gradient(at 10.5em 10em, #0000 75%, #0001 0) -1.5em 13em,
+    /* drawing circle */
+    conic-gradient(at 3.5em 2em, #0000 75%, #fff 0) 11.5em 18em,
+    conic-gradient(at 3em 29em, #0000 232deg, #fff 233deg 308deg, #0000 0) 14.75em -9.98em,
+    /* circle */
+    radial-gradient(circle at 14.5em 19em, #0ae 4.95em, #0000 5em),
+    radial-gradient(circle at 14.5em 18em, #0001 4.95em, #0000 5em),
+    /* base triangle 2 */
+    conic-gradient(at 10em 6.5em, #fff 8%, #0000 0 92%, #fff 0) 14.25em 15.25em,
+    conic-gradient(at 10em 10em, #f34 8%, #0000 0 92%, #f34 0) 14.25em 14em,
+    conic-gradient(at 10em 10em, #0001 8%, #0000 0 92%, #0001 0) 14.25em 13em,
+    /* drawing triangle */
+    conic-gradient(at 3em 0.3em, #0000 75%, #000 0) 31em 20.125em,
+    conic-gradient(at 3em 0.3em, #0000 75%, #000 0) 31em 21.45em,
+    conic-gradient(at 0.3em 2em, #0000 75%, #000 0) 31.25em 19.9em,
+    conic-gradient(at 0.3em 2em, #0000 75%, #000 0) 31.8em 19.9em,
+    conic-gradient(at 0.3em 2em, #0000 75%, #000 0) 32.375em 19.9em,
+    conic-gradient(at 0.3em 2em, #0000 75%, #000 0) 32.95em 19.9em,
+    conic-gradient(at 0.3em 2em, #0000 75%, #000 0) 33.5em 19.9em,
+    /* triangle */
+    conic-gradient(at 10em 25.5em, #0000 42%, #fff 0 58%, #0000 0) 22.5em 22.75em,
+    conic-gradient(at 10em 22em, #0000 42%, #f34 0 58%, #0000 0) 22.5em 24em,
+    conic-gradient(at 10em 22em, #0000 42%, #0001 0 58%, #0000 0) 22.5em 23em,
+    
+    /* row 3*/
+    /* drawing triangle */
+    conic-gradient(at 1.25em 3em, #0000 75%, #000 0) 6em 11em,
+    conic-gradient(at 1.125em 31em, #0000 144deg, #000 145deg 215deg, #0000 216deg) 5.5em -20.95em,
+    conic-gradient(at 2em 0.6em, #0000 75%, #000 0) 6em 12.25em,
+    /* triangle */
+    conic-gradient(at 10em 25.5em, #0000 42%, #fff 0 58%, #0000 0) -3.5em -17.25em,
+    conic-gradient(at 10em 22em, #0000 42%, #f34 0 58%, #0000 0) -3.5em -16em,
+    conic-gradient(at 10em 22em, #0000 42%, #0001 0 58%, #0000 0) -3.5em -17em,
+    /* base diamond */
+    conic-gradient(at 5em 29em, #0000 135deg, #fd0 0 225deg, #0000 0) 10.75em -21em,
+    conic-gradient(at 5em 3em, #fd0 45deg, #fff0 0 315deg, #fd0 0) 10.75em 10.98em,
+    conic-gradient(at 5em 27em, #0000 135deg, #fff 0 225deg, #0000 0) 10.75em -21em,
+    conic-gradient(at 5em 5.01em, #fff 45deg, #fff0 0 315deg, #fff 0) 10.75em 10.98em,
+    conic-gradient(at 5em 27em, #0000 135deg, #0001 0 225deg, #0000 0) 10.75em -22em,
+    conic-gradient(at 5em 5em, #0001 45deg, #fff0 0 315deg, #0001 0) 10.75em 10em,
+    /* drawing triangle */
+    radial-gradient(1.75% 12% at 19.5em 0, #000 75%, #0000 78%) 5.5em 10.25em,
+    radial-gradient(circle at 25em 14em, #000 0.5em, #0000 0.55em),
+    radial-gradient(circle at 25em 10.25em, #000 0.5em, #0000 0.55em),
+    /* triangle */
+    conic-gradient(at 10em 22em, #0000 42%, #fd0 0 58%, #0000 0) 15em -16em,
+    conic-gradient(at 10em 22em, #0000 42%, #0001 0 58%, #0000 0) 15em -17em,
+    /* drawing square */
+    conic-gradient(at 1.35em 7.5em, #0000 75%, #fff 0) 32.75em 7.25em,
+    conic-gradient(at 1.35em 7.5em, #0000 75%, #fff 0) 38em 7.25em,
+    conic-gradient(at 4em 1.35em, #0000 75%, #fff 0) 34em 10.25em,
+    /* square */
+    conic-gradient(at 10em 10em, #0000 75%, #0ae 0) -9em 6em,
+    conic-gradient(at 10.5em 10em, #0000 75%, #0001 0) -9.25em 5em,
+    
+    /* row 4 */
+    /* drawing circle */
+    linear-gradient(-45deg, #0000 8.4%, #f34 0 10%, #0000 0) 8.35em 6.25em,
+    linear-gradient(45deg, #0000 8.4%, #f34 0 10%, #0000 0) 1.66em 6.2em,
+    /* circle */
+    radial-gradient(circle at 5em 3em, #37c 3.75em, #f34 3.8em 4.95em, #0000 5em),
+    radial-gradient(circle at 5em 2em, #0001 4.95em, #0000 5em),
+    /* triangle */
+    conic-gradient(at 10em 25.5em, #0000 42%, #fff 0 58%, #0000 0) 4.5em -25em,
+    conic-gradient(at 10em 22em, #0000 42%, #f34 0 58%, #0000 0) 4.5em -24em,
+    conic-gradient(at 10em 22em, #0000 42%, #0001 0 58%, #0000 0) 4.5em -25em,
+    /* drawing circle */
+    conic-gradient(at 6.5em 2em, #0000 75%, #fff 0) 20.75em 2em,
+    /* circle */
+    radial-gradient(circle at 24em 3em,  #f34 3.8em 4.95em, #0000 5em),
+    radial-gradient(circle at 24em 2em, #0001 4.95em, #0000 5em),
+     /* drawing circle */
+    radial-gradient(1.75% 12% at 19.5em 0, #000 75%, #0000 78%) 15em 1.25em,
+    radial-gradient(circle at 19.5em 29em, #000 0.5em, #0000 0.55em) 15em 40em,
+    radial-gradient(circle at 19.5em 25.1em, #000 0.5em, #0000 0.55em) 15em 40em,
+    /* circle */
+    radial-gradient(circle at 34.5em 3em, #fff 3.75em, #f34 3.8em 4.95em, #0000 5em),
+    radial-gradient(circle at 34.5em 2em, #0001 4.95em, #0000 5em),
+    
+    /* sticks? */
+    conic-gradient(at 1em 20em, #0000 75%, #a0a0a0 0) 4.5em 3em,
+    conic-gradient(at 1em 20em, #0000 75%, #a0a0a0 0) 23.75em 3em,
+    conic-gradient(at 1em 20em, #0000 75%, #a0a0a0 0) 34em 3em,
+    conic-gradient(at 1em 20em, #0000 75%, #a8a8a8 0) 6em 13em,
+    conic-gradient(at 1em 20em, #0000 75%, #a8a8a8 0) 15.25em 14em,
+    conic-gradient(at 1em 20em, #0000 75%, #a8a8a8 0) 24.5em 13em,
+    conic-gradient(at 1em 20em, #0000 75%, #a8a8a8 0) 36em 13em,
+    conic-gradient(at 1em 20em, #0000 75%, #aaa 0) 3em 26em,
+    conic-gradient(at 1em 20em, #0000 75%, #aaa 0) 14.1em 23em,
+    conic-gradient(at 1em 20em, #0000 75%, #aaa 0) 23.5em 22em,
+    conic-gradient(at 1em 0em, #0000 50%, #aaa 0) 9.5em 23em,
+    conic-gradient(at 1em 0em, #0000 50%, #aaa 0) 19em 23em,
+    conic-gradient(at 1em 0em, #0000 50%, #aaa 0) 29.5em 23em,
+    conic-gradient(at 1em 0em, #0000 50%, #aaa 0) 39.5em 23em,
+    #aaaa;
+  background-size: 40em 32em;
+}
+
 /* divtober'23 - 26 - cold */
 .cold-container {
   background: #00bede66;
