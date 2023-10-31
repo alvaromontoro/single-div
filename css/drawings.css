@@ -1,3 +1,153 @@
+/* divtober'23 - 31 - witchy */
+.witchy-container {
+  background: #ad98;
+}
+
+.witchy {
+  --skin: #8d9;
+  --skin-dark:#7c8;;
+  font-size: 1vmin;
+  width: 80em;
+  height: 80em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    /* chest */
+/*     radial-gradient(140% 100% at 0 0, #0000 90%, #000 93% 95%, #0000) 45em 94% / 8.5em 3em,
+    radial-gradient(140% 100% at 100% 0, #0000 90%, #000 93% 95%, #0000) 26.5em 94% / 8.5em 3em, */
+    radial-gradient(51% 100% at 50% 0%, #0000 96%, #000 97% 98%, #444 98.5%) 50% 100% / 30.2em 9.75em, 
+    radial-gradient(100% 150% at 50% 150%, var(--skin-dark), var(--skin) 99.5%, #0000) 50% 100% / 30em 12em,
+     radial-gradient(50% 155% at 50% 120%, #444 98.5%, #000 0 99.5%, #0000) 50% 100% / 50em 10em,
+    /* hair curve */
+    radial-gradient(farthest-side at 100% 100%, #000 99%, #0000) 24em 37em / 6em 8em,
+    radial-gradient(farthest-side at 0% 100%, #000 99%, #0000) 52em 54% / 3em 9em,
+    
+    /* hat back*/
+    radial-gradient(farthest-side at 100% -40%, #333, #222 96%, #000 96.5% 99%, #0000) 0.25em 38.4em / 30em 5em,
+    radial-gradient(farthest-side at 0% -5%, #333, #222 95%, #000 96% 99%, #0000) 49.5em 41em / 30em 4em,
+    /* ears */
+    radial-gradient(50% 70% at 37% 65.5%, #0003, #0000 4%),
+    radial-gradient(50% 70% at 63% 65.5%, #0003, #0000 4%),
+    radial-gradient(50% 50% at 62% 65.5%, #0000 3%, #000 0 3.5%, #0000 0),
+    radial-gradient(50% 50% at 37.85% 65.5%, #0000 3%, #000 0 3.5%, #0000 0),
+    radial-gradient(farthest-side at 50% 100%, #0000 85%, #000 0 99%, #0000) 27.5em 63% / 3em 3em,
+    radial-gradient(farthest-side at 50% -30%, #0000 90%, #000 0 99%, #0000) 28.75em 69% / 5em 2em,
+    radial-gradient(farthest-side at 50% 100%, #0000 88%, #000 0 99%, #0000) 48em 63% / 4em 3em,
+    radial-gradient(farthest-side at 50% -30%, #0000 90%, #000 0 99%, #0000) 46.2em 69.2% / 5em 2em,
+    radial-gradient(54% 70% at 39% 64%, var(--skin-dark) 10%, #0000 10.2%),
+    radial-gradient(50% 70% at 61% 64%, var(--skin-dark) 10%, #0000 10.2%),
+    /* neck */
+    radial-gradient(100% 100% at 50% 0, var(--skin-dark) 46%, var(--skin) 60%) 50% 90% / 9em 15em,
+    /* hair */
+    linear-gradient(#000 0 0) 50% 100% /30em 38em,
+    radial-gradient(95% 105% at -5% -5%, #0000 99%, #000) 21em 44em / 4.25em 20em,
+    radial-gradient(90% 120% at -5% -20%, #0000 99%, #000) 16em 100% / 9.5em 20em,
+    radial-gradient(farthest-side at 115% 4%, #0000 99.5%, #000) 54.7em 43em / 5em 25em,
+    radial-gradient(60% 70% at 0% 100%, #000 99%, #0000) 53em 100% / 15em 20em,
+    #0000
+    ;
+  background-repeat: no-repeat;
+}
+
+.witchy::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 40%;
+  border-radius: 100% / 60% 60% 145% 145%;
+  border: 0.25em solid;
+  border-bottom: 0.4em solid;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-1deg);
+  background:
+    /* hair top */
+    radial-gradient(farthest-side at 100% 100%, #0000 99.5%, #000) 0 25% / 60% 20%,
+    radial-gradient(farthest-side at 100% 100%, #0000 99%, #000) 100% 25% / 76% 5%,
+    radial-gradient(100% 105% at 130% 0%, #000 96%, #0000) 100% 25% / 12.5% 35%,
+    conic-gradient(from 48deg at 7% 33%, #000 15deg, #0000 0),
+    /* eye 1 */
+    radial-gradient(circle at 29.5% 46.7%, #fff 1.7%, #0000 2%),
+    radial-gradient(40% 36% at 26.5% 50%, #fff 6%, #0000 7%),
+    radial-gradient(40% 36% at 35% 52%, #fff 9%, #0000 10%),
+    radial-gradient(35% 34% at 30% 50.5%, #000 15%, #0000 16%),
+    radial-gradient(33% 33% at 31% 52%, var(--skin) 14%, #0000 17%),
+    radial-gradient(40% 36% at 31.5% 51.5%, #000 22%, #0000 23%),
+    radial-gradient(40% 33% at 29% 50.5%, #fff 30%, #0000 31%),
+    radial-gradient(40% 30% at 28.5% 49%, #000 33%, #0000 34%),
+    radial-gradient(40% 30% at 26% 50%, var(--skin) 33%, #0000 34%),
+    radial-gradient(42% 30% at 27% 48%, #000 33%, #0000 34%),
+    radial-gradient(40% 35% at 29% 52%, #000 25%, #0000 27%),
+    /* eye 2 */
+    radial-gradient(circle at 66% 46.7%, #fff 1.7%, #0000 2%),
+    radial-gradient(40% 36% at 63.5% 50%, #fff 6%, #0000 7%),
+    radial-gradient(40% 36% at 72.5% 52%, #fff 9%, #0000 10%),
+    radial-gradient(35% 34% at 68.5% 50.5%, #000 15%, #0000 16%),
+    radial-gradient(33% 33% at 68.5% 52%, var(--skin) 14%, #0000 17%),
+    radial-gradient(40% 36% at 68.5% 51.5%, #000 22%, #0000 23%),
+    radial-gradient(40% 33% at 71% 50.5%, #fff 30%, #0000 31%),
+    radial-gradient(40% 30% at 71.5% 49%, #000 33%, #0000 34%),
+    radial-gradient(40% 30% at 74% 50%, var(--skin) 33%, #0000 34%),
+    radial-gradient(42% 30% at 73% 48%, #000 33%, #0000 34%),
+    radial-gradient(40% 35% at 71% 52%, #000 25%, #0000 27%),
+    /* eyebrow 1 */
+    radial-gradient(130% 60% at 27% 43%, var(--skin) 14.5%, #f000 15%),
+    radial-gradient(113% 70% at 26% 42%, #000 14.5%, #f000 15%),
+    /* eyebrow 2 */
+    radial-gradient(130% 66% at 73% 43%, var(--skin) 14.5%, #f000 15%),
+    radial-gradient(115% 76% at 74% 42%, #000 14.5%, #f000 15%),
+    /* mole */
+/*     radial-gradient(circle at 70% 80%, #0001 1.6%, #0000 2%), */
+    radial-gradient(circle at 70% 80%, #000 0.8%, #0000 1%),
+    /* mouth */
+    radial-gradient(250% 100% at 48% 80%, var(--skin) 5%, #0000 5.25%),
+    radial-gradient(180% 100% at 47% 81%, #000 5%, #0000 5.25%),
+    
+    /* nose */
+    linear-gradient(-30deg, #0000 46%, #000 0 53%, #0000 0) 48.5% 69% / 1.6em 1em,
+    linear-gradient(-25deg, #0000 46%, #000 0 53%, #0000 0) 50.5% 69.5% / 3em 1em,
+    linear-gradient(-20deg, #0000 46%, #000 0 53%, #0000 0) 52.5% 70% / 2em 1em,
+    radial-gradient(120% 40% at 50% 70%, #0001 3%, #0000 7%),
+    /* cheeks */
+    radial-gradient(130% 60% at 25% 66%, #f002, #f000 15%),
+    radial-gradient(130% 60% at 75% 66%, #f002, #f000 15%),
+    /* shadows */
+    radial-gradient(at 0 100%, var(--skin-dark), #0000 30%),
+    radial-gradient(at 100% 100%, var(--skin-dark), #0000 30%),
+    var(--skin)
+    ;
+  background-repeat: no-repeat;
+  abox-shadow: -9em -3em 0 -8em, 9.75em -3.5em 0 -9em
+}
+
+.witchy::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    /* hat tip */
+    radial-gradient(farthest-side at 100% 50%, #333 70%, #000 0 95%, #0000) 1em 37.95em / 10em 1.125em,
+    radial-gradient(farthest-side at 0% 50%, #333 70%, #000 95%, #0000) 69.9em 40.45em / 10em 1.125em,
+    radial-gradient(120% 60% at 20% 100%, #f000 70%, #000 71% 75%, #333 76% 93%, #000 94% 99%, #0000) 10.05em 35.5em / 30.05em 6em,
+    radial-gradient(120% 60% at 80% 0%, #f000 70%, #000 71% 75%, #333 76% 93%, #000 94% 99%, #0000) 39.975em 38em / 30em 6em,
+    /* hat top */
+    linear-gradient(#000 0 0) 45% 0.15em / 4em 0.5em,
+    linear-gradient(190deg, #444 57%, #0000 0) 37.5em 17em / 8.6em 40em,
+    radial-gradient(100% 105% at 0% 100%, #0000 90%, #000 91% 98.5%, #444 ) 34.5em 0.08em / 3em 16em,
+    radial-gradient(100% 115% at 0% 0%, #0000 98%, #000 98.2% 99%, #444 99.2%) 12.5em 14em / 25.1em 25em,
+    radial-gradient(100% 100% at 0% 100%, #444 96%, #000 0 99%, #0000) 37.4em 0 / 9.1em 18em,
+    radial-gradient(100% 130% at 100% 0%, #0000 98%, #000 98.6% 99%, #444) 46.0em 17em / 25em 24em,
+    #f000 
+    ;
+  background-repeat: no-repeat;
+}
+
 /* divtober'23 - 30 - discontinued */
 .discontinued-container {
   background: #0cda;
