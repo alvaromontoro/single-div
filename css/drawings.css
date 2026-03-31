@@ -1,3 +1,89 @@
+/* picnic ant */
+@property --picnic-a1 {
+  syntax: "<angle>";
+  initial-value: 10deg;
+  inherits: true;
+}
+
+@property --picnic-a2 {
+  syntax: "<angle>";
+  initial-value: 10deg;
+  inherits: true;
+}
+
+@keyframes picnicMoveLeg2 {
+  0%, 100% {
+    --picnic-a2: -8deg;
+  }
+  50% {
+    --picnic-a2: 12deg;
+  }
+}
+
+@keyframes picnicMoveLeg1 {
+  0%, 100% {
+    --picnic-a1: -10deg;
+  }
+  50% {
+    --picnic-a1: 10deg;
+  }
+}
+
+@keyframes picnicMoveAnt {
+  0% { translate: -50% calc(60vh + 100%); }
+  100% { translate: -50% calc(-60vh - 100%); }
+}
+
+.picnic {
+  --c: #d003;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background:
+    /* crumbs */
+    radial-gradient(circle at calc(80% - 0.25em) calc(20% - 0.25em), #ff78 0.125em, #0000 calc(0.5em + 1px)),
+    radial-gradient(circle at 80% 20%, goldenrod 1em, #0000 calc(1em + 1px)),
+    radial-gradient(circle at calc(80% + 0.5em) calc(20% - 0.5em), goldenrod 0.6em, #0000 calc(0.6em + 1px)),
+    radial-gradient(circle at calc(80% + 0.4em) calc(20% + 0.4em), #0005 0.15em, #0000 calc(1.2em + 1px)),
+    /* checkered pattern */
+    repeating-linear-gradient(100deg, #0000 0 75px, var(--c) 0 150px),
+    repeating-linear-gradient(10deg, #0000 0 75px, var(--c) 0 150px),
+    #f000;
+  
+  &::before {
+    content: "";
+    animation: 
+      picnicMoveAnt 6s infinite linear,
+      picnicMoveLeg1 0.9s infinite,
+      picnicMoveLeg2 0.8s infinite;
+    filter: drop-shadow(5px 5px 10px #000a);
+    position: absolute;
+    width: 42px;
+    height: 70px;
+    top: 50%;
+    left: 50%;
+    background:
+      /* legs */
+      linear-gradient(var(--picnic-a1), #0000 47%, #000 0 53%, #0000 0) 0 40% / 100% 50%,
+      linear-gradient(calc(30deg - var(--picnic-a1)), #0000 47%, #000 0 53%, #0000 0) 0 20% / 60% 50% no-repeat,
+      linear-gradient(calc(-30deg + var(--picnic-a2)), #0000 47%, #000 0 53%, #0000 0) 100% 20% / 60% 50% no-repeat,
+      linear-gradient(calc(34deg - var(--picnic-a2) * 1.2), #0000 47%, #000 0 53%, #0000 0) 100% 55% / 60% 50% no-repeat,
+      linear-gradient(calc(-34deg + var(--picnic-a1) * 1.2), #0000 47%, #000 0 53%, #0000 0) 0% 55% / 60% 50% no-repeat,
+      /* body */
+      radial-gradient(farthest-side at 100% 50%, #000 calc(100% - 1px), #0000) 40% 0 / 5px 10px,
+      radial-gradient(farthest-side at 0% 50%, #000 calc(100% - 1px), #0000) 60% 0 / 5px 10px,
+      radial-gradient(26% 13% at 50% 22%, #000 calc(100% - 1px), #0000),
+      radial-gradient(circle at 50% 39%, #000 calc(10% - 1px), #0000 10%),
+      radial-gradient(circle at 50% 49%, #000 calc(12% - 1px), #0000 12%),
+      radial-gradient(26% 23% at 50% 75%, #000 calc(100% - 1px), #0000)
+      #0700;
+    background-repeat: no-repeat;
+  }
+}
+
 /* divtober'23 - 31 - witchy */
 .witchy-container {
   background: #ad98;
